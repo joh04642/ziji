@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FACB22EC16E3FCCD005CE096 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB22EB16E3FCCD005CE096 /* UIKit.framework */; };
+		FACB22EE16E3FCCD005CE096 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB22ED16E3FCCD005CE096 /* Foundation.framework */; };
+		FACB22F016E3FCCD005CE096 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB22EF16E3FCCD005CE096 /* CoreGraphics.framework */; };
+		FACB22F616E3FCCD005CE096 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FACB22F416E3FCCD005CE096 /* InfoPlist.strings */; };
+		FACB22F816E3FCCD005CE096 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FACB22F716E3FCCD005CE096 /* main.m */; };
+		FACB22FC16E3FCCD005CE096 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FACB22FB16E3FCCD005CE096 /* AppDelegate.m */; };
+		FACB22FF16E3FCCD005CE096 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACB22FE16E3FCCD005CE096 /* RootViewController.m */; };
+		FACB230216E3FCCD005CE096 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACB230116E3FCCD005CE096 /* DataViewController.m */; };
+		FACB230516E3FCCD005CE096 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACB230416E3FCCD005CE096 /* ModelController.m */; };
+		FACB230816E3FCCD005CE096 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACB230616E3FCCD005CE096 /* MainStoryboard_iPhone.storyboard */; };
+		FACB230B16E3FCCD005CE096 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACB230916E3FCCD005CE096 /* MainStoryboard_iPad.storyboard */; };
+		FACB231316E3FCCD005CE096 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB231216E3FCCD005CE096 /* SenTestingKit.framework */; };
+		FACB231416E3FCCD005CE096 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB22EB16E3FCCD005CE096 /* UIKit.framework */; };
+		FACB231516E3FCCD005CE096 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB22ED16E3FCCD005CE096 /* Foundation.framework */; };
+		FACB231D16E3FCCD005CE096 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FACB231B16E3FCCD005CE096 /* InfoPlist.strings */; };
+		FACB232016E3FCCD005CE096 /* initialzijiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FACB231F16E3FCCD005CE096 /* initialzijiTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FACB231616E3FCCD005CE096 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FACB22DE16E3FCCC005CE096 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FACB22E616E3FCCC005CE096;
+			remoteInfo = initialziji;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FACB22E716E3FCCD005CE096 /* initialziji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = initialziji.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACB22EB16E3FCCD005CE096 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FACB22ED16E3FCCD005CE096 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FACB22EF16E3FCCD005CE096 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FACB22F316E3FCCD005CE096 /* initialziji-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "initialziji-Info.plist"; sourceTree = "<group>"; };
+		FACB22F516E3FCCD005CE096 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FACB22F716E3FCCD005CE096 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FACB22F916E3FCCD005CE096 /* initialziji-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "initialziji-Prefix.pch"; sourceTree = "<group>"; };
+		FACB22FA16E3FCCD005CE096 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FACB22FB16E3FCCD005CE096 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FACB22FD16E3FCCD005CE096 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		FACB22FE16E3FCCD005CE096 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		FACB230016E3FCCD005CE096 /* DataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		FACB230116E3FCCD005CE096 /* DataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		FACB230316E3FCCD005CE096 /* ModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
+		FACB230416E3FCCD005CE096 /* ModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
+		FACB230716E3FCCD005CE096 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		FACB230A16E3FCCD005CE096 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		FACB231116E3FCCD005CE096 /* initialzijiTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = initialzijiTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACB231216E3FCCD005CE096 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		FACB231A16E3FCCD005CE096 /* initialzijiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "initialzijiTests-Info.plist"; sourceTree = "<group>"; };
+		FACB231C16E3FCCD005CE096 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FACB231E16E3FCCD005CE096 /* initialzijiTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = initialzijiTests.h; sourceTree = "<group>"; };
+		FACB231F16E3FCCD005CE096 /* initialzijiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = initialzijiTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FACB22E416E3FCCC005CE096 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACB22EC16E3FCCD005CE096 /* UIKit.framework in Frameworks */,
+				FACB22EE16E3FCCD005CE096 /* Foundation.framework in Frameworks */,
+				FACB22F016E3FCCD005CE096 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACB230D16E3FCCD005CE096 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACB231316E3FCCD005CE096 /* SenTestingKit.framework in Frameworks */,
+				FACB231416E3FCCD005CE096 /* UIKit.framework in Frameworks */,
+				FACB231516E3FCCD005CE096 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FACB22DC16E3FCCC005CE096 = {
+			isa = PBXGroup;
+			children = (
+				FACB22F116E3FCCD005CE096 /* initialziji */,
+				FACB231816E3FCCD005CE096 /* initialzijiTests */,
+				FACB22EA16E3FCCD005CE096 /* Frameworks */,
+				FACB22E816E3FCCD005CE096 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FACB22E816E3FCCD005CE096 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FACB22E716E3FCCD005CE096 /* initialziji.app */,
+				FACB231116E3FCCD005CE096 /* initialzijiTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FACB22EA16E3FCCD005CE096 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FACB22EB16E3FCCD005CE096 /* UIKit.framework */,
+				FACB22ED16E3FCCD005CE096 /* Foundation.framework */,
+				FACB22EF16E3FCCD005CE096 /* CoreGraphics.framework */,
+				FACB231216E3FCCD005CE096 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FACB22F116E3FCCD005CE096 /* initialziji */ = {
+			isa = PBXGroup;
+			children = (
+				FACB22FA16E3FCCD005CE096 /* AppDelegate.h */,
+				FACB22FB16E3FCCD005CE096 /* AppDelegate.m */,
+				FACB22FD16E3FCCD005CE096 /* RootViewController.h */,
+				FACB22FE16E3FCCD005CE096 /* RootViewController.m */,
+				FACB230016E3FCCD005CE096 /* DataViewController.h */,
+				FACB230116E3FCCD005CE096 /* DataViewController.m */,
+				FACB230316E3FCCD005CE096 /* ModelController.h */,
+				FACB230416E3FCCD005CE096 /* ModelController.m */,
+				FACB230616E3FCCD005CE096 /* MainStoryboard_iPhone.storyboard */,
+				FACB230916E3FCCD005CE096 /* MainStoryboard_iPad.storyboard */,
+				FACB22F216E3FCCD005CE096 /* Supporting Files */,
+			);
+			path = initialziji;
+			sourceTree = "<group>";
+		};
+		FACB22F216E3FCCD005CE096 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FACB22F316E3FCCD005CE096 /* initialziji-Info.plist */,
+				FACB22F416E3FCCD005CE096 /* InfoPlist.strings */,
+				FACB22F716E3FCCD005CE096 /* main.m */,
+				FACB22F916E3FCCD005CE096 /* initialziji-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FACB231816E3FCCD005CE096 /* initialzijiTests */ = {
+			isa = PBXGroup;
+			children = (
+				FACB231E16E3FCCD005CE096 /* initialzijiTests.h */,
+				FACB231F16E3FCCD005CE096 /* initialzijiTests.m */,
+				FACB231916E3FCCD005CE096 /* Supporting Files */,
+			);
+			path = initialzijiTests;
+			sourceTree = "<group>";
+		};
+		FACB231916E3FCCD005CE096 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FACB231A16E3FCCD005CE096 /* initialzijiTests-Info.plist */,
+				FACB231B16E3FCCD005CE096 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FACB22E616E3FCCC005CE096 /* initialziji */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FACB232316E3FCCD005CE096 /* Build configuration list for PBXNativeTarget "initialziji" */;
+			buildPhases = (
+				FACB22E316E3FCCC005CE096 /* Sources */,
+				FACB22E416E3FCCC005CE096 /* Frameworks */,
+				FACB22E516E3FCCC005CE096 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = initialziji;
+			productName = initialziji;
+			productReference = FACB22E716E3FCCD005CE096 /* initialziji.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FACB231016E3FCCD005CE096 /* initialzijiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FACB232616E3FCCD005CE096 /* Build configuration list for PBXNativeTarget "initialzijiTests" */;
+			buildPhases = (
+				FACB230C16E3FCCD005CE096 /* Sources */,
+				FACB230D16E3FCCD005CE096 /* Frameworks */,
+				FACB230E16E3FCCD005CE096 /* Resources */,
+				FACB230F16E3FCCD005CE096 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FACB231716E3FCCD005CE096 /* PBXTargetDependency */,
+			);
+			name = initialzijiTests;
+			productName = initialzijiTests;
+			productReference = FACB231116E3FCCD005CE096 /* initialzijiTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FACB22DE16E3FCCC005CE096 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = FACB22E116E3FCCC005CE096 /* Build configuration list for PBXProject "initialziji" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FACB22DC16E3FCCC005CE096;
+			productRefGroup = FACB22E816E3FCCD005CE096 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FACB22E616E3FCCC005CE096 /* initialziji */,
+				FACB231016E3FCCD005CE096 /* initialzijiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FACB22E516E3FCCC005CE096 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACB22F616E3FCCD005CE096 /* InfoPlist.strings in Resources */,
+				FACB230816E3FCCD005CE096 /* MainStoryboard_iPhone.storyboard in Resources */,
+				FACB230B16E3FCCD005CE096 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACB230E16E3FCCD005CE096 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACB231D16E3FCCD005CE096 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FACB230F16E3FCCD005CE096 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FACB22E316E3FCCC005CE096 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACB22F816E3FCCD005CE096 /* main.m in Sources */,
+				FACB22FC16E3FCCD005CE096 /* AppDelegate.m in Sources */,
+				FACB22FF16E3FCCD005CE096 /* RootViewController.m in Sources */,
+				FACB230216E3FCCD005CE096 /* DataViewController.m in Sources */,
+				FACB230516E3FCCD005CE096 /* ModelController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FACB230C16E3FCCD005CE096 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACB232016E3FCCD005CE096 /* initialzijiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FACB231716E3FCCD005CE096 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FACB22E616E3FCCC005CE096 /* initialziji */;
+			targetProxy = FACB231616E3FCCD005CE096 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FACB22F416E3FCCD005CE096 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FACB22F516E3FCCD005CE096 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FACB230616E3FCCD005CE096 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FACB230716E3FCCD005CE096 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		FACB230916E3FCCD005CE096 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FACB230A16E3FCCD005CE096 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		FACB231B16E3FCCD005CE096 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FACB231C16E3FCCD005CE096 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FACB232116E3FCCD005CE096 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FACB232216E3FCCD005CE096 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FACB232416E3FCCD005CE096 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "initialziji/initialziji-Prefix.pch";
+				INFOPLIST_FILE = "initialziji/initialziji-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FACB232516E3FCCD005CE096 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "initialziji/initialziji-Prefix.pch";
+				INFOPLIST_FILE = "initialziji/initialziji-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FACB232716E3FCCD005CE096 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/initialziji.app/initialziji";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "initialziji/initialziji-Prefix.pch";
+				INFOPLIST_FILE = "initialzijiTests/initialzijiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		FACB232816E3FCCD005CE096 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/initialziji.app/initialziji";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "initialziji/initialziji-Prefix.pch";
+				INFOPLIST_FILE = "initialzijiTests/initialzijiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FACB22E116E3FCCC005CE096 /* Build configuration list for PBXProject "initialziji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACB232116E3FCCD005CE096 /* Debug */,
+				FACB232216E3FCCD005CE096 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FACB232316E3FCCD005CE096 /* Build configuration list for PBXNativeTarget "initialziji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACB232416E3FCCD005CE096 /* Debug */,
+				FACB232516E3FCCD005CE096 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FACB232616E3FCCD005CE096 /* Build configuration list for PBXNativeTarget "initialzijiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACB232716E3FCCD005CE096 /* Debug */,
+				FACB232816E3FCCD005CE096 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FACB22DE16E3FCCC005CE096 /* Project object */;
+}
