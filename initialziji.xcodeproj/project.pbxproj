@@ -455,6 +455,7 @@
 				FACB232516E3FCCD005CE096 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FACB232616E3FCCD005CE096 /* Build configuration list for PBXNativeTarget "initialzijiTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +464,7 @@
 				FACB232816E3FCCD005CE096 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
