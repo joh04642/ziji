@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface DataViewController : UIViewController
+{
+    IBOutlet UITextField *myLabel;
+}
+-(IBAction)myAction:(id)sender;
+
 @property (strong, nonatomic) IBOutlet UILabel *dataLabel;
 @property (strong, nonatomic) id dataObject;
 @end
