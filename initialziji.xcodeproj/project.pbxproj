@@ -120,11 +120,11 @@
 			isa = PBXGroup;
 			children = (
 				FACB22FA16E3FCCD005CE096 /* AppDelegate.h */,
-				FACB22FB16E3FCCD005CE096 /* AppDelegate.m */,
 				FACB22FD16E3FCCD005CE096 /* RootViewController.h */,
 				FACB22FE16E3FCCD005CE096 /* RootViewController.m */,
 				FACB230016E3FCCD005CE096 /* DataViewController.h */,
 				FACB230116E3FCCD005CE096 /* DataViewController.m */,
+				FACB22FB16E3FCCD005CE096 /* AppDelegate.m */,
 				FACB230316E3FCCD005CE096 /* ModelController.h */,
 				FACB230416E3FCCD005CE096 /* ModelController.m */,
 				FACB230616E3FCCD005CE096 /* MainStoryboard_iPhone.storyboard */,
