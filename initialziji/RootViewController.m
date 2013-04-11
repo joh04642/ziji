@@ -18,6 +18,7 @@
 
 @implementation RootViewController
 
+@synthesize timerlabel = _timerlabel;
 @synthesize pageViewController = _pageViewController;
 @synthesize modelController = _modelController;
 
@@ -57,10 +58,16 @@
 
     // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
     self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
+    
+    _timerlabel.text = @"Hello"; //no
+    
+    
+    
 }
 
 - (void)viewDidUnload
 {
+    [self setTimerlabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface RootViewController : UIViewController <UIPageViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *timerlabel;
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 

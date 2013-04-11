@@ -8,16 +8,17 @@
 
 #import "DataViewController.h"
 
-NSString *Mystring; //
+NSString *datestring; //
 
 @implementation DataViewController
--(IBAction)myAction:(id)sender{  //
-    [myLabel setText:Mystring];  //
-}
 
+int timer = 0;
 
 @synthesize dataLabel = _dataLabel;
 @synthesize dataObject = _dataObject;
+@synthesize timerlabel = _timerlabel;
+@synthesize timerlabel2 = _timerlabel2;
+@synthesize estimatedtimelabel = _estimatedtimelabel;
 
 - (void)didReceiveMemoryWarning
 {
@@ -37,14 +38,30 @@ NSString *Mystring; //
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateFormatter *dateformat = [[NSDateFormatter alloc] init]; //format date
     [dateformat setDateFormat:@"yyyy-MM-dd--HH-mm-ss"];
-    NSString *Mystring = [dateformat stringFromDate:currentDate]; //Hopefully a string display date
+    NSString *datestring = [dateformat stringFromDate:currentDate]; //Hopefully a string display date
     //[dateformat release];  //memory
     
     
+    NSTimer *timer1 = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerfired) userInfo:nil repeats:YES]; 
+    //self.timerlabel.text = datestring; //works
+    //self.timerlabel2.text = datestring; //doesnt work
+    
 }
+
+-(void)timerfired
+{
+    timer = timer + 1; //this counts by 2s?
+    //self.timerlabel.text = @"%d", timer;
+    [self.timerlabel setText:[NSString stringWithFormat:@"%d",timer]];
+}
+
+
 
 - (void)viewDidUnload
 {
+    [self setTimerlabel:nil];
+    [self setTimerlabel2:nil];
+    [self setEstimatedtimelabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

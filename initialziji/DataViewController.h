@@ -10,10 +10,13 @@
 
 @interface DataViewController : UIViewController
 {
-    IBOutlet UITextField *myLabel;
+
 }
 -(IBAction)myAction:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UILabel *dataLabel;
 @property (strong, nonatomic) id dataObject;
+@property (weak, nonatomic) IBOutlet UITextField *timerlabel;
+@property (weak, nonatomic) IBOutlet UILabel *timerlabel2;
+@property (weak, nonatomic) IBOutlet UILabel *estimatedtimelabel;
 @end
