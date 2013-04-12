@@ -39,20 +39,19 @@ int timer = 0;
     NSDateFormatter *dateformat = [[NSDateFormatter alloc] init]; //format date
     [dateformat setDateFormat:@"yyyy-MM-dd--HH-mm-ss"];
     NSString *datestring = [dateformat stringFromDate:currentDate]; //Hopefully a string display date
-    //[dateformat release];  //memory
+    //[dateformat release];  //memory , ARC does this function
     
     
-    NSTimer *timer1 = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerfired) userInfo:nil repeats:YES]; 
+    NSTimer *timer1 = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerfired) userInfo:nil repeats:YES]; //needs to be here for timer to work, why does it think it is not used?
     //self.timerlabel.text = datestring; //works
-    //self.timerlabel2.text = datestring; //doesnt work
+
     
 }
 
 -(void)timerfired
 {
     timer = timer + 1; //this counts by 2s?
-    //self.timerlabel.text = @"%d", timer;
-    [self.timerlabel setText:[NSString stringWithFormat:@"%d",timer]];
+    [self.timerlabel2 setText:[NSString stringWithFormat:@"%d sec",timer/2]]; //if I div by 2 it works properly
 }
 
 
