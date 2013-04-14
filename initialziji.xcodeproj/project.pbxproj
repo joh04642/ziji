@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA68937E171B2F0500F242EB /* sessions.m in Sources */ = {isa = PBXBuildFile; fileRef = FA68937C171B2F0500F242EB /* sessions.m */; };
-		FA68937F171B2F0500F242EB /* sessions.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA68937D171B2F0500F242EB /* sessions.xib */; };
 		FACB22EC16E3FCCD005CE096 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB22EB16E3FCCD005CE096 /* UIKit.framework */; };
 		FACB22EE16E3FCCD005CE096 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB22ED16E3FCCD005CE096 /* Foundation.framework */; };
 		FACB22F016E3FCCD005CE096 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB22EF16E3FCCD005CE096 /* CoreGraphics.framework */; };
@@ -38,9 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FA68937B171B2F0500F242EB /* sessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sessions.h; sourceTree = "<group>"; };
-		FA68937C171B2F0500F242EB /* sessions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sessions.m; sourceTree = "<group>"; };
-		FA68937D171B2F0500F242EB /* sessions.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sessions.xib; sourceTree = "<group>"; };
 		FACB22E716E3FCCD005CE096 /* initialziji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = initialziji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACB22EB16E3FCCD005CE096 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FACB22ED16E3FCCD005CE096 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -57,8 +52,8 @@
 		FACB230116E3FCCD005CE096 /* DataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
 		FACB230316E3FCCD005CE096 /* ModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
 		FACB230416E3FCCD005CE096 /* ModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
-		FACB230716E3FCCD005CE096 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		FACB230A16E3FCCD005CE096 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		FACB230716E3FCCD005CE096 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		FACB230A16E3FCCD005CE096 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		FACB231116E3FCCD005CE096 /* initialzijiTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = initialzijiTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACB231216E3FCCD005CE096 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		FACB231A16E3FCCD005CE096 /* initialzijiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "initialzijiTests-Info.plist"; sourceTree = "<group>"; };
@@ -135,9 +130,6 @@
 				FACB230616E3FCCD005CE096 /* MainStoryboard_iPhone.storyboard */,
 				FACB230916E3FCCD005CE096 /* MainStoryboard_iPad.storyboard */,
 				FACB22F216E3FCCD005CE096 /* Supporting Files */,
-				FA68937B171B2F0500F242EB /* sessions.h */,
-				FA68937C171B2F0500F242EB /* sessions.m */,
-				FA68937D171B2F0500F242EB /* sessions.xib */,
 			);
 			path = initialziji;
 			sourceTree = "<group>";
@@ -245,7 +237,6 @@
 				FACB22F616E3FCCD005CE096 /* InfoPlist.strings in Resources */,
 				FACB230816E3FCCD005CE096 /* MainStoryboard_iPhone.storyboard in Resources */,
 				FACB230B16E3FCCD005CE096 /* MainStoryboard_iPad.storyboard in Resources */,
-				FA68937F171B2F0500F242EB /* sessions.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +276,6 @@
 				FACB22FF16E3FCCD005CE096 /* RootViewController.m in Sources */,
 				FACB230216E3FCCD005CE096 /* DataViewController.m in Sources */,
 				FACB230516E3FCCD005CE096 /* ModelController.m in Sources */,
-				FA68937E171B2F0500F242EB /* sessions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
