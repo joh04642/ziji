@@ -46,7 +46,56 @@ int timer = 0;
     //self.timerlabel.text = datestring; //works
 
     
+    /*
+    
+    //call calibrate function
+    
+    NSTimer *samplingtimer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(samplingtimerfired) userInfo:nil repeats:YES]; //time not known
+    
+    int endtime = endtimefunction();
+    
+    if(timer == endtime || timer > endtime)
+    {
+        //store all data
+    }
+    
+    
+    */
 }
+
+-(void)samplingtimerfired
+{
+    /*
+    int degrees = yawfunction();
+    int degleft = defleftfunction();
+    int degright = degrightfunction();
+    
+    
+    
+    if(degrees == (degleft || degrees > degleft) && degrees > 0)
+    {
+        //record rep complete
+        //play sound : completed
+    }
+    
+    if(degrees < degleft && degrees > 0)
+    {
+        //play sound : rotate left
+    }
+    
+    if(degrees == (degright || degrees > degright) && degrees < 0)
+    {
+        //record rep complete
+        //play sound : completed
+    }
+    
+    if(degrees > degright && degrees < 0)
+    {
+        //play sound : rotate right
+    }
+    */
+}
+
 
 -(void)timerfired
 {
