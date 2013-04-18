@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01A33E00171CAAAB007080DB /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A33DFF171CAAAB007080DB /* background.png */; };
-		01A33E03171CAB29007080DB /* background-thereapy.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A33E02171CAB29007080DB /* background-thereapy.png */; };
-		01A33E05171CABAD007080DB /* session setup-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A33E04171CABAD007080DB /* session setup-1.png */; };
-		01A33E07171CAC3F007080DB /* new session-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A33E06171CAC3F007080DB /* new session-1.png */; };
-		01A33E09171CAD61007080DB /* patient-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A33E08171CAD61007080DB /* patient-1.png */; };
+		01A33E10171CAF77007080DB /* new session-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A33E0F171CAF77007080DB /* new session-1.png */; };
+		01A33E12171CAF7B007080DB /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A33E11171CAF7B007080DB /* background.png */; };
+		01A33E14171CAF7F007080DB /* background-thereapy.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A33E13171CAF7F007080DB /* background-thereapy.png */; };
+		01A33E16171CAF83007080DB /* patient-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A33E15171CAF83007080DB /* patient-1.png */; };
+		01A33E18171CAF87007080DB /* session setup-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A33E17171CAF87007080DB /* session setup-1.png */; };
 		FACB22EC16E3FCCD005CE096 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB22EB16E3FCCD005CE096 /* UIKit.framework */; };
 		FACB22EE16E3FCCD005CE096 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB22ED16E3FCCD005CE096 /* Foundation.framework */; };
 		FACB22F016E3FCCD005CE096 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB22EF16E3FCCD005CE096 /* CoreGraphics.framework */; };
@@ -41,11 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01A33DFF171CAAAB007080DB /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../../background.png; sourceTree = "<group>"; };
-		01A33E02171CAB29007080DB /* background-thereapy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-thereapy.png"; path = "../../background-thereapy.png"; sourceTree = "<group>"; };
-		01A33E04171CABAD007080DB /* session setup-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "session setup-1.png"; path = "../../session setup-1.png"; sourceTree = "<group>"; };
-		01A33E06171CAC3F007080DB /* new session-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "new session-1.png"; path = "../../new session-1.png"; sourceTree = "<group>"; };
-		01A33E08171CAD61007080DB /* patient-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "patient-1.png"; path = "../../patient-1.png"; sourceTree = "<group>"; };
+		01A33E0F171CAF77007080DB /* new session-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "new session-1.png"; path = "../../../new session-1.png"; sourceTree = "<group>"; };
+		01A33E11171CAF7B007080DB /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../../../background.png; sourceTree = "<group>"; };
+		01A33E13171CAF7F007080DB /* background-thereapy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-thereapy.png"; path = "../../../background-thereapy.png"; sourceTree = "<group>"; };
+		01A33E15171CAF83007080DB /* patient-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "patient-1.png"; path = "../../../patient-1.png"; sourceTree = "<group>"; };
+		01A33E17171CAF87007080DB /* session setup-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "session setup-1.png"; path = "../../../session setup-1.png"; sourceTree = "<group>"; };
 		FACB22E716E3FCCD005CE096 /* initialziji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = initialziji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACB22EB16E3FCCD005CE096 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FACB22ED16E3FCCD005CE096 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -129,11 +129,11 @@
 		FACB22F116E3FCCD005CE096 /* initialziji */ = {
 			isa = PBXGroup;
 			children = (
-				01A33E08171CAD61007080DB /* patient-1.png */,
-				01A33E06171CAC3F007080DB /* new session-1.png */,
-				01A33E04171CABAD007080DB /* session setup-1.png */,
-				01A33E02171CAB29007080DB /* background-thereapy.png */,
-				01A33DFF171CAAAB007080DB /* background.png */,
+				01A33E17171CAF87007080DB /* session setup-1.png */,
+				01A33E15171CAF83007080DB /* patient-1.png */,
+				01A33E0F171CAF77007080DB /* new session-1.png */,
+				01A33E13171CAF7F007080DB /* background-thereapy.png */,
+				01A33E11171CAF7B007080DB /* background.png */,
 				FACB22FA16E3FCCD005CE096 /* AppDelegate.h */,
 				FACB22FD16E3FCCD005CE096 /* RootViewController.h */,
 				FACB22FE16E3FCCD005CE096 /* RootViewController.m */,
@@ -252,11 +252,11 @@
 				FACB22F616E3FCCD005CE096 /* InfoPlist.strings in Resources */,
 				FACB230816E3FCCD005CE096 /* MainStoryboard_iPhone.storyboard in Resources */,
 				FACB230B16E3FCCD005CE096 /* MainStoryboard_iPad.storyboard in Resources */,
-				01A33E00171CAAAB007080DB /* background.png in Resources */,
-				01A33E03171CAB29007080DB /* background-thereapy.png in Resources */,
-				01A33E05171CABAD007080DB /* session setup-1.png in Resources */,
-				01A33E07171CAC3F007080DB /* new session-1.png in Resources */,
-				01A33E09171CAD61007080DB /* patient-1.png in Resources */,
+				01A33E10171CAF77007080DB /* new session-1.png in Resources */,
+				01A33E12171CAF7B007080DB /* background.png in Resources */,
+				01A33E14171CAF7F007080DB /* background-thereapy.png in Resources */,
+				01A33E16171CAF83007080DB /* patient-1.png in Resources */,
+				01A33E18171CAF87007080DB /* session setup-1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
