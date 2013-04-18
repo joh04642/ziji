@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#include <AudioToolbox/AudioToolbox.h>
 
 @interface DataViewController : UIViewController
 {
@@ -18,4 +19,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *timerlabel;
 @property (weak, nonatomic) IBOutlet UILabel *timerlabel2;
 @property (weak, nonatomic) IBOutlet UILabel *estimatedtimelabel;
+- (IBAction)timerSlider:(id)sender;
+- (IBAction)repSlider:(id)sender;
+- (IBAction)degLeftSlider:(id)sender;
+- (IBAction)degRightSlider:(id)sender;
+- (IBAction)SessionNameField:(id)sender;
+- (IBAction)SaveButton:(id)sender;
+
 @end

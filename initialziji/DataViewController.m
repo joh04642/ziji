@@ -48,7 +48,7 @@ int timer = 0;
     
     /*
     
-    //call calibrate function
+    Calibrate();
     
     NSTimer *samplingtimer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(samplingtimerfired) userInfo:nil repeats:YES]; //time not known
     
@@ -61,6 +61,10 @@ int timer = 0;
     
     
     */
+    
+    
+       
+    
 }
 
 -(void)samplingtimerfired
@@ -103,7 +107,47 @@ int timer = 0;
     [self.timerlabel2 setText:[NSString stringWithFormat:@"%d sec",timer/2]]; //if I div by 2 it works properly
 }
 
+-(void)PlayGoodSound
+{
+    int PlaySoundOption = SoundOption();
+    int UseVibrateOption = VibrateOption();
+    
+    if(PlaySoundOption == 1)
+    {
+   
+    CFBundleRef mainBundle = CFBundleGetMainBundle();
+    CFURLRef GoodSoundFileURLRef;
+    
+    UInt32 soundFileGood;
+    
+    GoodSoundFileURLRef = CFBundleCopyResourceURL(mainBundle, CFSTR("tap"), CFSTR("aif"), NULL);  //placeholder sound
+    
+    AudioServicesCreateSystemSoundID( GoodSoundFileURLRef,&soundFileGood);
+    AudioServicesPlaySystemSound(soundFileGood);
+    }
+    
+    if(UseVibrateOption == 1)
+    {
+        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);  //vibrate is not able to be simulated
+    }
+}
 
+-(void)Calibrate  //needs work
+{
+    int CurrentDeg = degreesfunction();
+    int PastDeg = CurrentDeg;
+    int i = 0;
+    
+    while (CurrentDeg > PastDeg + 10 || CurrentDeg < PastDeg - 10) {
+        CurrentDeg = degreesfunction();
+        i++;
+        if(i == 2)
+        {
+            PastDeg = CurrentDeg;
+            i = 0;
+        }
+    }
+}
 
 - (void)viewDidUnload
 {
