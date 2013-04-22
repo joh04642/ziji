@@ -288,7 +288,7 @@
         <scene sceneID="eLL-Fw-Gk8">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xqx-xC-KPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="IUm-Rh-ccN" sceneMemberID="viewController">
+                <viewController id="IUm-Rh-ccN" customClass="DataViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rXw-lA-5xJ">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -335,18 +335,30 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="60" id="uxP-Vj-czz">
                                 <rect key="frame" x="120" y="111" width="118" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="timerSlider:" destination="IUm-Rh-ccN" eventType="valueChanged" id="U3V-Sv-Pj7"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="550" id="9gF-lC-qLb">
                                 <rect key="frame" x="120" y="153" width="118" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="repSlider:" destination="IUm-Rh-ccN" eventType="valueChanged" id="tUe-5Y-P2T"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="90" id="9PV-61-Uyb">
                                 <rect key="frame" x="120" y="197" width="118" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="degLeftSlider:" destination="IUm-Rh-ccN" eventType="valueChanged" id="jnZ-7y-LT9"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="90" id="y0d-mf-Wzu">
                                 <rect key="frame" x="120" y="240" width="118" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="degRightSlider:" destination="IUm-Rh-ccN" eventType="valueChanged" id="Ngi-wN-xfe"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00 Min" lineBreakMode="tailTruncation" minimumFontSize="10" id="1iS-y5-3Tj">
                                 <rect key="frame" x="258" y="111" width="52" height="21"/>
@@ -381,6 +393,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="SessionNameField:" destination="IUm-Rh-ccN" eventType="editingDidEnd" id="dnD-bj-ozs"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gUd-2I-6Zl">
                                 <rect key="frame" x="124" y="348" width="72" height="37"/>
@@ -394,6 +409,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="SaveButton:" destination="IUm-Rh-ccN" eventType="touchUpInside" id="VpG-hS-cra"/>
                                     <segue destination="pzw-AW-LON" kind="push" id="Mzg-fg-oC6"/>
                                 </connections>
                             </button>
@@ -401,6 +417,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="SSG-rr-Zks"/>
+                    <connections>
+                        <outlet property="degLeftSliderLabel" destination="azK-dC-vL3" id="FDE-oE-Xr1"/>
+                        <outlet property="degRightSliderLabel" destination="eYf-KU-rDb" id="0wO-WQ-vcj"/>
+                        <outlet property="repSliderLabel" destination="B1S-d0-jid" id="Yju-9J-bvW"/>
+                        <outlet property="timerSliderLabel" destination="1iS-y5-3Tj" id="9re-mF-wJn"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="836" y="1448"/>

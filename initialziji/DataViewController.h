@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#include <AudioToolbox/AudioToolbox.h>
+#import <AudioToolbox/AudioToolbox.h>
+#import <CoreAudio/CoreAudioTypes.h>
 
 @interface DataViewController : UIViewController
 {
@@ -25,5 +26,9 @@
 - (IBAction)degRightSlider:(id)sender;
 - (IBAction)SessionNameField:(id)sender;
 - (IBAction)SaveButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *timerSliderLabel;
+@property (weak, nonatomic) IBOutlet UILabel *repSliderLabel;
+@property (weak, nonatomic) IBOutlet UILabel *degLeftSliderLabel;
+@property (weak, nonatomic) IBOutlet UILabel *degRightSliderLabel;
 
 @end

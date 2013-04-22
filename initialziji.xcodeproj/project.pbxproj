@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01A33E10171CAF77007080DB /* new session-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A33E0F171CAF77007080DB /* new session-1.png */; };
-		01A33E12171CAF7B007080DB /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A33E11171CAF7B007080DB /* background.png */; };
-		01A33E14171CAF7F007080DB /* background-thereapy.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A33E13171CAF7F007080DB /* background-thereapy.png */; };
-		01A33E16171CAF83007080DB /* patient-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A33E15171CAF83007080DB /* patient-1.png */; };
-		01A33E18171CAF87007080DB /* session setup-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A33E17171CAF87007080DB /* session setup-1.png */; };
+		BF0C6A2717258C19004DDB71 /* background-thereapy.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0C6A2217258C18004DDB71 /* background-thereapy.png */; };
+		BF0C6A2817258C19004DDB71 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0C6A2317258C18004DDB71 /* background.png */; };
+		BF0C6A2917258C19004DDB71 /* new session-1.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0C6A2417258C18004DDB71 /* new session-1.png */; };
+		BF0C6A2A17258C19004DDB71 /* patient-1.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0C6A2517258C19004DDB71 /* patient-1.png */; };
+		BF0C6A2B17258C19004DDB71 /* session setup-1.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0C6A2617258C19004DDB71 /* session setup-1.png */; };
+		BF8406D917258D2600BC8A11 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8406D817258D2600BC8A11 /* CoreAudio.framework */; };
+		BF8406DB17258DCA00BC8A11 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8406DA17258DC900BC8A11 /* AudioToolbox.framework */; };
+		BF8406E11725931C00BC8A11 /* Pop.aiff in Resources */ = {isa = PBXBuildFile; fileRef = BF8406E01725931C00BC8A11 /* Pop.aiff */; };
 		FACB22EC16E3FCCD005CE096 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB22EB16E3FCCD005CE096 /* UIKit.framework */; };
 		FACB22EE16E3FCCD005CE096 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB22ED16E3FCCD005CE096 /* Foundation.framework */; };
 		FACB22F016E3FCCD005CE096 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB22EF16E3FCCD005CE096 /* CoreGraphics.framework */; };
@@ -41,11 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01A33E0F171CAF77007080DB /* new session-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "new session-1.png"; path = "../../../new session-1.png"; sourceTree = "<group>"; };
-		01A33E11171CAF7B007080DB /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../../../background.png; sourceTree = "<group>"; };
-		01A33E13171CAF7F007080DB /* background-thereapy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-thereapy.png"; path = "../../../background-thereapy.png"; sourceTree = "<group>"; };
-		01A33E15171CAF83007080DB /* patient-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "patient-1.png"; path = "../../../patient-1.png"; sourceTree = "<group>"; };
-		01A33E17171CAF87007080DB /* session setup-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "session setup-1.png"; path = "../../../session setup-1.png"; sourceTree = "<group>"; };
+		BF0C6A2217258C18004DDB71 /* background-thereapy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-thereapy.png"; sourceTree = "<group>"; };
+		BF0C6A2317258C18004DDB71 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		BF0C6A2417258C18004DDB71 /* new session-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new session-1.png"; sourceTree = "<group>"; };
+		BF0C6A2517258C19004DDB71 /* patient-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patient-1.png"; sourceTree = "<group>"; };
+		BF0C6A2617258C19004DDB71 /* session setup-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "session setup-1.png"; sourceTree = "<group>"; };
+		BF8406D817258D2600BC8A11 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		BF8406DA17258DC900BC8A11 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BF8406E01725931C00BC8A11 /* Pop.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Pop.aiff; sourceTree = SOURCE_ROOT; };
 		FACB22E716E3FCCD005CE096 /* initialziji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = initialziji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACB22EB16E3FCCD005CE096 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FACB22ED16E3FCCD005CE096 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -77,6 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF8406DB17258DCA00BC8A11 /* AudioToolbox.framework in Frameworks */,
+				BF8406D917258D2600BC8A11 /* CoreAudio.framework in Frameworks */,
 				FACB22EC16E3FCCD005CE096 /* UIKit.framework in Frameworks */,
 				FACB22EE16E3FCCD005CE096 /* Foundation.framework in Frameworks */,
 				FACB22F016E3FCCD005CE096 /* CoreGraphics.framework in Frameworks */,
@@ -118,6 +126,8 @@
 		FACB22EA16E3FCCD005CE096 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF8406DA17258DC900BC8A11 /* AudioToolbox.framework */,
+				BF8406D817258D2600BC8A11 /* CoreAudio.framework */,
 				FACB22EB16E3FCCD005CE096 /* UIKit.framework */,
 				FACB22ED16E3FCCD005CE096 /* Foundation.framework */,
 				FACB22EF16E3FCCD005CE096 /* CoreGraphics.framework */,
@@ -129,11 +139,12 @@
 		FACB22F116E3FCCD005CE096 /* initialziji */ = {
 			isa = PBXGroup;
 			children = (
-				01A33E17171CAF87007080DB /* session setup-1.png */,
-				01A33E15171CAF83007080DB /* patient-1.png */,
-				01A33E0F171CAF77007080DB /* new session-1.png */,
-				01A33E13171CAF7F007080DB /* background-thereapy.png */,
-				01A33E11171CAF7B007080DB /* background.png */,
+				BF0C6A2217258C18004DDB71 /* background-thereapy.png */,
+				BF0C6A2317258C18004DDB71 /* background.png */,
+				BF0C6A2417258C18004DDB71 /* new session-1.png */,
+				BF8406E01725931C00BC8A11 /* Pop.aiff */,
+				BF0C6A2517258C19004DDB71 /* patient-1.png */,
+				BF0C6A2617258C19004DDB71 /* session setup-1.png */,
 				FACB22FA16E3FCCD005CE096 /* AppDelegate.h */,
 				FACB22FD16E3FCCD005CE096 /* RootViewController.h */,
 				FACB22FE16E3FCCD005CE096 /* RootViewController.m */,
@@ -252,11 +263,12 @@
 				FACB22F616E3FCCD005CE096 /* InfoPlist.strings in Resources */,
 				FACB230816E3FCCD005CE096 /* MainStoryboard_iPhone.storyboard in Resources */,
 				FACB230B16E3FCCD005CE096 /* MainStoryboard_iPad.storyboard in Resources */,
-				01A33E10171CAF77007080DB /* new session-1.png in Resources */,
-				01A33E12171CAF7B007080DB /* background.png in Resources */,
-				01A33E14171CAF7F007080DB /* background-thereapy.png in Resources */,
-				01A33E16171CAF83007080DB /* patient-1.png in Resources */,
-				01A33E18171CAF87007080DB /* session setup-1.png in Resources */,
+				BF0C6A2717258C19004DDB71 /* background-thereapy.png in Resources */,
+				BF0C6A2817258C19004DDB71 /* background.png in Resources */,
+				BF0C6A2917258C19004DDB71 /* new session-1.png in Resources */,
+				BF0C6A2A17258C19004DDB71 /* patient-1.png in Resources */,
+				BF0C6A2B17258C19004DDB71 /* session setup-1.png in Resources */,
+				BF8406E11725931C00BC8A11 /* Pop.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +415,10 @@
 		FACB232416E3FCCD005CE096 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "initialziji/initialziji-Prefix.pch";
 				INFOPLIST_FILE = "initialziji/initialziji-Info.plist";
@@ -414,6 +430,10 @@
 		FACB232516E3FCCD005CE096 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "initialziji/initialziji-Prefix.pch";
 				INFOPLIST_FILE = "initialziji/initialziji-Info.plist";

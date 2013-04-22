@@ -10,7 +10,12 @@
 
 NSString *datestring; //
 
+
 @implementation DataViewController
+@synthesize timerSliderLabel = _timerSliderLabel;
+@synthesize repSliderLabel = _repSliderLabel;
+@synthesize degLeftSliderLabel = _degLeftSliderLabel;
+@synthesize degRightSliderLabel = _degRightSliderLabel;
 
 int timer = 0;
 
@@ -28,6 +33,33 @@ int timer = 0;
 
 #pragma mark - View lifecycle
 
+-(void)PlayGoodSound
+{
+    int PlaySoundOption = 1;// = SoundOption();
+    int UseVibrateOption;// = VibrateOption();
+    
+    if(PlaySoundOption == 1)
+    {
+        
+        CFBundleRef mainBundle = CFBundleGetMainBundle();
+        CFURLRef GoodSoundFileURLRef;
+        
+        UInt32 soundFileGood;
+        
+        GoodSoundFileURLRef = CFBundleCopyResourceURL(mainBundle, CFSTR("Pop"), CFSTR("aiff"), NULL);  //placeholder sound// does work
+        
+        AudioServicesCreateSystemSoundID( GoodSoundFileURLRef,&soundFileGood);
+        AudioServicesPlaySystemSound(soundFileGood);
+    }
+    
+    if(UseVibrateOption == 1)
+    {
+        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);  //vibrate is not able to be simulated
+    }
+}
+
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -44,7 +76,8 @@ int timer = 0;
     
     NSTimer *timer1 = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerfired) userInfo:nil repeats:YES]; //needs to be here for timer to work, why does it think it is not used?
     //self.timerlabel.text = datestring; //works
-
+    
+   
     
     /*
     
@@ -105,41 +138,20 @@ int timer = 0;
 {
     timer = timer + 1; //this counts by 2s?
     [self.timerlabel2 setText:[NSString stringWithFormat:@"%d sec",timer/2]]; //if I div by 2 it works properly
+     [self PlayGoodSound]; //just a test
+    
+    
 }
 
--(void)PlayGoodSound
-{
-    int PlaySoundOption = SoundOption();
-    int UseVibrateOption = VibrateOption();
-    
-    if(PlaySoundOption == 1)
-    {
-   
-    CFBundleRef mainBundle = CFBundleGetMainBundle();
-    CFURLRef GoodSoundFileURLRef;
-    
-    UInt32 soundFileGood;
-    
-    GoodSoundFileURLRef = CFBundleCopyResourceURL(mainBundle, CFSTR("tap"), CFSTR("aif"), NULL);  //placeholder sound
-    
-    AudioServicesCreateSystemSoundID( GoodSoundFileURLRef,&soundFileGood);
-    AudioServicesPlaySystemSound(soundFileGood);
-    }
-    
-    if(UseVibrateOption == 1)
-    {
-        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);  //vibrate is not able to be simulated
-    }
-}
 
 -(void)Calibrate  //needs work
 {
-    int CurrentDeg = degreesfunction();
+    int CurrentDeg;// = degreesfunction();
     int PastDeg = CurrentDeg;
     int i = 0;
     
     while (CurrentDeg > PastDeg + 10 || CurrentDeg < PastDeg - 10) {
-        CurrentDeg = degreesfunction();
+        //CurrentDeg = degreesfunction();
         i++;
         if(i == 2)
         {
@@ -154,6 +166,10 @@ int timer = 0;
     [self setTimerlabel:nil];
     [self setTimerlabel2:nil];
     [self setEstimatedtimelabel:nil];
+    [self setTimerSliderLabel:nil];
+    [self setRepSliderLabel:nil];
+    [self setDegLeftSliderLabel:nil];
+    [self setDegRightSliderLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
