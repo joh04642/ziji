@@ -274,6 +274,28 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="ifg-bL-r6b">
+                                <rect key="frame" x="230" y="302" width="79" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Voice" lineBreakMode="tailTruncation" minimumFontSize="10" id="pqB-w1-zQF">
+                                <rect key="frame" x="179" y="302" width="43" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tones" lineBreakMode="tailTruncation" minimumFontSize="10" id="KED-Z1-xsy">
+                                <rect key="frame" x="179" y="256" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="Vk6-QT-NPx">
+                                <rect key="frame" x="230" y="256" width="79" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -488,6 +510,27 @@
         <image name="patient-1.png" width="320" height="480"/>
         <image name="session setup-1.png" width="320" height="480"/>
     </resources>
+    <classes>
+        <class className="DataViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DataViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="SaveButton:"/>
+                <relationship kind="action" name="SessionNameField:"/>
+                <relationship kind="action" name="degLeftSlider:"/>
+                <relationship kind="action" name="degRightSlider:"/>
+                <relationship kind="action" name="repSlider:"/>
+                <relationship kind="action" name="timerSlider:"/>
+                <relationship kind="outlet" name="dataLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="degLeftSliderLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="degRightSliderLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="estimatedtimelabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="repSliderLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timerSliderLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timerlabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="timerlabel2" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

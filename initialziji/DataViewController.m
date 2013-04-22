@@ -35,7 +35,7 @@ int timer = 0;
 
 -(void)PlayGoodSound
 {
-    int PlaySoundOption = 1;// = SoundOption();
+    int PlaySoundOption = 0;// = SoundOption();
     int UseVibrateOption;// = VibrateOption();
     
     if(PlaySoundOption == 1)
