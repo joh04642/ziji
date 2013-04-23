@@ -190,7 +190,7 @@
         <scene sceneID="NW6-bp-ZZY">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S3f-5x-WkX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="pzw-AW-LON" sceneMemberID="viewController">
+                <viewController id="pzw-AW-LON" customClass="DataViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3yv-6n-bBt">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -296,12 +296,26 @@
                                 <rect key="frame" x="230" y="256" width="79" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="wlE-c8-Pco">
+                                <rect key="frame" x="230" y="211" width="79" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Vibration" lineBreakMode="tailTruncation" minimumFontSize="10" id="P9f-Uo-e6a">
+                                <rect key="frame" x="159" y="211" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Ziji" id="CH2-wG-B9o"/>
                     <connections>
                         <outlet property="estimatedtimelabel" destination="D0e-1n-6tI" id="Lhv-9t-bDS"/>
+                        <outlet property="toneSwitch" destination="Vk6-QT-NPx" id="C6H-ZW-MiJ"/>
+                        <outlet property="vibrateSwitch" destination="wlE-c8-Pco" id="Mgz-nn-iXx"/>
+                        <outlet property="voiceSwitch" destination="ifg-bL-r6b" id="hMV-2k-tbf"/>
                     </connections>
                 </viewController>
             </objects>
@@ -354,32 +368,25 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="60" id="uxP-Vj-czz">
-                                <rect key="frame" x="120" y="111" width="118" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="timerSlider:" destination="IUm-Rh-ccN" eventType="valueChanged" id="U3V-Sv-Pj7"/>
-                                </connections>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="550" id="9gF-lC-qLb">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="50" id="9gF-lC-qLb">
                                 <rect key="frame" x="120" y="153" width="118" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="repSlider:" destination="IUm-Rh-ccN" eventType="valueChanged" id="tUe-5Y-P2T"/>
+                                    <action selector="repSlider:" destination="IUm-Rh-ccN" eventType="valueChanged" id="WDi-NE-d9u"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="90" id="9PV-61-Uyb">
                                 <rect key="frame" x="120" y="197" width="118" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="degLeftSlider:" destination="IUm-Rh-ccN" eventType="valueChanged" id="jnZ-7y-LT9"/>
+                                    <action selector="degLeftSlider:" destination="IUm-Rh-ccN" eventType="valueChanged" id="aeA-s0-wus"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="90" id="y0d-mf-Wzu">
                                 <rect key="frame" x="120" y="240" width="118" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="degRightSlider:" destination="IUm-Rh-ccN" eventType="valueChanged" id="Ngi-wN-xfe"/>
+                                    <action selector="degRightSlider:" destination="IUm-Rh-ccN" eventType="valueChanged" id="TfE-Ua-rLZ"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00 Min" lineBreakMode="tailTruncation" minimumFontSize="10" id="1iS-y5-3Tj">
@@ -410,14 +417,11 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Session Name" borderStyle="roundedRect" minimumFontSize="17" id="Gfh-gJ-owB">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Session Name" minimumFontSize="17" id="Gfh-gJ-owB">
                                 <rect key="frame" x="173" y="285" width="113" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="SessionNameField:" destination="IUm-Rh-ccN" eventType="editingDidEnd" id="dnD-bj-ozs"/>
-                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gUd-2I-6Zl">
                                 <rect key="frame" x="124" y="348" width="72" height="37"/>
@@ -431,15 +435,23 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="SaveButton:" destination="IUm-Rh-ccN" eventType="touchUpInside" id="VpG-hS-cra"/>
+                                    <action selector="saveButton:" destination="IUm-Rh-ccN" eventType="touchUpInside" id="SgE-Al-D8n"/>
                                     <segue destination="pzw-AW-LON" kind="push" id="Mzg-fg-oC6"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="60" id="zWD-2z-gJF">
+                                <rect key="frame" x="120" y="110" width="118" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="timerSlider:" destination="IUm-Rh-ccN" eventType="valueChanged" id="jCE-Le-OI8"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="SSG-rr-Zks"/>
                     <connections>
+                        <outlet property="SessionNameField" destination="Gfh-gJ-owB" id="pkt-0u-0bP"/>
                         <outlet property="degLeftSliderLabel" destination="azK-dC-vL3" id="FDE-oE-Xr1"/>
                         <outlet property="degRightSliderLabel" destination="eYf-KU-rDb" id="0wO-WQ-vcj"/>
                         <outlet property="repSliderLabel" destination="B1S-d0-jid" id="Yju-9J-bvW"/>
@@ -514,12 +526,12 @@
         <class className="DataViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DataViewController.h"/>
             <relationships>
-                <relationship kind="action" name="SaveButton:"/>
-                <relationship kind="action" name="SessionNameField:"/>
                 <relationship kind="action" name="degLeftSlider:"/>
                 <relationship kind="action" name="degRightSlider:"/>
                 <relationship kind="action" name="repSlider:"/>
+                <relationship kind="action" name="saveButton:"/>
                 <relationship kind="action" name="timerSlider:"/>
+                <relationship kind="outlet" name="SessionNameField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="dataLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="degLeftSliderLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="degRightSliderLabel" candidateClass="UILabel"/>
@@ -528,6 +540,9 @@
                 <relationship kind="outlet" name="timerSliderLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="timerlabel" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="timerlabel2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="toneSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="vibrateSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="voiceSwitch" candidateClass="UISwitch"/>
             </relationships>
         </class>
     </classes>
@@ -536,7 +551,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="lOk-s3-5Vj"/>
-    </inferredMetricsTieBreakers>
 </document>

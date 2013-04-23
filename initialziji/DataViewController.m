@@ -12,10 +12,15 @@ NSString *datestring; //
 
 
 @implementation DataViewController
-@synthesize timerSliderLabel = _timerSliderLabel;
-@synthesize repSliderLabel = _repSliderLabel;
-@synthesize degLeftSliderLabel = _degLeftSliderLabel;
-@synthesize degRightSliderLabel = _degRightSliderLabel;
+@synthesize SessionNameField = _SessionNameField;
+@synthesize timerSliderLabel = timerSliderLabel;
+@synthesize repSliderLabel = repSliderLabel;
+@synthesize degLeftSliderLabel = degLeftSliderLabel;
+@synthesize degRightSliderLabel = degRightSliderLabel;
+@synthesize vibrateSwitch = _vibrateSwitch;
+@synthesize toneSwitch = _toneSwitch;
+@synthesize voiceSwitch = _voiceSwitch;
+
 
 int timer = 0;
 
@@ -35,8 +40,9 @@ int timer = 0;
 
 -(void)PlayGoodSound
 {
-    int PlaySoundOption = 0;// = SoundOption();
-    int UseVibrateOption;// = VibrateOption();
+    int PlaySoundOption = _toneSwitch.on;  //this works, but is probably in the wrong place
+    int UseVibrateOption = _vibrateSwitch.on;
+    int UseVoiceOption = _voiceSwitch.on;
     
     if(PlaySoundOption == 1)
     {
@@ -56,6 +62,13 @@ int timer = 0;
     {
         AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);  //vibrate is not able to be simulated
     }
+    
+    if(UseVoiceOption == 1)
+    {
+
+    }
+
+    
 }
 
 
@@ -64,6 +77,7 @@ int timer = 0;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib. 
+   
     
     NSDate *currentDate = [NSDate date];  //currentDate holds the current date/time
     NSDateComponents *comps = [[NSDateComponents alloc] init]; 
@@ -170,6 +184,10 @@ int timer = 0;
     [self setRepSliderLabel:nil];
     [self setDegLeftSliderLabel:nil];
     [self setDegRightSliderLabel:nil];
+    [self setSessionNameField:nil];
+    [self setVibrateSwitch:nil];
+    [self setToneSwitch:nil];
+    [self setVoiceSwitch:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -206,4 +224,47 @@ int timer = 0;
     }
 }
 
+/*
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    if([text isEqualToString:@"\n"]){
+        [textView resignFirstResponder];
+        return NO;
+    }
+    return YES;
+}
+*/
+
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    [self.view endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
+} //this should make the keyboard disappear, currently crashes
+ 
+- (IBAction)timerSlider:(id)sender {
+    UISlider *timerSlider = (UISlider *)sender;
+    timerSliderLabel.text = [NSString stringWithFormat:@"%.f Min", timerSlider.value];
+}
+
+- (IBAction)repSlider:(id)sender {
+    UISlider *repSlider = (UISlider *)sender;
+    repSliderLabel.text = [NSString stringWithFormat:@"%.f Times", repSlider.value];
+}
+
+- (IBAction)degLeftSlider:(id)sender {
+    UISlider *degLeftSlider = (UISlider *)sender;
+    degLeftSliderLabel.text = [NSString stringWithFormat:@"%.f Deg", degLeftSlider.value];
+}
+
+- (IBAction)degRightSlider:(id)sender {
+    UISlider *degRightSlider = (UISlider *)sender;
+    degRightSliderLabel.text = [NSString stringWithFormat:@"%.f Deg", degRightSlider.value];
+}
+
+
+- (IBAction)saveButton:(id)sender {
+    NSString *sessionname = self.SessionNameField.text;
+    
+    //send values and name to database
+}
 @end

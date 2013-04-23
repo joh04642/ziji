@@ -15,6 +15,8 @@
 
 }
 
+
+
 @property (strong, nonatomic) IBOutlet UILabel *dataLabel;
 @property (strong, nonatomic) id dataObject;
 @property (weak, nonatomic) IBOutlet UITextField *timerlabel;
@@ -24,11 +26,16 @@
 - (IBAction)repSlider:(id)sender;
 - (IBAction)degLeftSlider:(id)sender;
 - (IBAction)degRightSlider:(id)sender;
-- (IBAction)SessionNameField:(id)sender;
-- (IBAction)SaveButton:(id)sender;
+- (IBAction)saveButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *SessionNameField;
 @property (weak, nonatomic) IBOutlet UILabel *timerSliderLabel;
 @property (weak, nonatomic) IBOutlet UILabel *repSliderLabel;
 @property (weak, nonatomic) IBOutlet UILabel *degLeftSliderLabel;
 @property (weak, nonatomic) IBOutlet UILabel *degRightSliderLabel;
+
+@property (weak, nonatomic) IBOutlet UISwitch *vibrateSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *toneSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *voiceSwitch;
+
 
 @end
