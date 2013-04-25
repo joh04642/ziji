@@ -72,6 +72,22 @@ int sessionStart = 0;
     
 }
 
+-(void)Calibrate  //needs work
+{
+    int CurrentDeg;// = degreesfunction();
+    int PastDeg = CurrentDeg;
+    int i = 0;
+    
+    while (CurrentDeg > PastDeg + 10 || CurrentDeg < PastDeg - 10) {
+        //CurrentDeg = degreesfunction();
+        i++;
+        if(i == 2)
+        {
+            PastDeg = CurrentDeg;
+            i = 0;
+        }
+    }
+}
 
 
 - (void)viewDidLoad
@@ -99,7 +115,7 @@ int sessionStart = 0;
     {
     
     
-    //[self Calibrate];
+    [self Calibrate];
     
     NSTimer *samplingtimer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(samplingtimerfired) userInfo:nil repeats:YES]; //time not known
     
@@ -172,22 +188,7 @@ int sessionStart = 0;
 }
 
 
--(void)Calibrate  //needs work
-{
-    int CurrentDeg;// = degreesfunction();
-    int PastDeg = CurrentDeg;
-    int i = 0;
-    
-    while (CurrentDeg > PastDeg + 10 || CurrentDeg < PastDeg - 10) {
-        //CurrentDeg = degreesfunction();
-        i++;
-        if(i == 2)
-        {
-            PastDeg = CurrentDeg;
-            i = 0;
-        }
-    }
-}
+
 
 - (void)viewDidUnload
 {
