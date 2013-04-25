@@ -7,10 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SQLAppDelegate.h"
 
-@interface RootViewController : UIViewController <UIPageViewControllerDelegate>
+@interface RootViewController : UIViewController <UIPageViewControllerDelegate> {
+    SQLAppDelegate *appDelegate;
+}
+
 @property (weak, nonatomic) IBOutlet UITextField *timerlabel;
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 
 @end
+
+
+@class Session;
+
+@class SessionType;

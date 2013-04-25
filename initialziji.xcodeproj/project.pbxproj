@@ -15,6 +15,11 @@
 		BF8406D917258D2600BC8A11 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8406D817258D2600BC8A11 /* CoreAudio.framework */; };
 		BF8406DB17258DCA00BC8A11 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8406DA17258DC900BC8A11 /* AudioToolbox.framework */; };
 		BF8406E11725931C00BC8A11 /* Pop.aiff in Resources */ = {isa = PBXBuildFile; fileRef = BF8406E01725931C00BC8A11 /* Pop.aiff */; };
+		FA23FC291725E26800DF9649 /* SQLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA23FC281725E26800DF9649 /* SQLAppDelegate.m */; };
+		FA23FC2C1725E29200DF9649 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = FA23FC2B1725E29200DF9649 /* Session.m */; };
+		FA23FC2F1725E2A000DF9649 /* SessionType.m in Sources */ = {isa = PBXBuildFile; fileRef = FA23FC2E1725E2A000DF9649 /* SessionType.m */; };
+		FA23FC331725F12800DF9649 /* SQL-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA23FC311725F12800DF9649 /* SQL-Info.plist */; };
+		FA8983A9172727840015C83E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8983A8172727840015C83E /* libsqlite3.dylib */; };
 		FACB22EC16E3FCCD005CE096 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB22EB16E3FCCD005CE096 /* UIKit.framework */; };
 		FACB22EE16E3FCCD005CE096 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB22ED16E3FCCD005CE096 /* Foundation.framework */; };
 		FACB22F016E3FCCD005CE096 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB22EF16E3FCCD005CE096 /* CoreGraphics.framework */; };
@@ -52,6 +57,15 @@
 		BF8406D817258D2600BC8A11 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		BF8406DA17258DC900BC8A11 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		BF8406E01725931C00BC8A11 /* Pop.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Pop.aiff; sourceTree = SOURCE_ROOT; };
+		FA23FC271725E26800DF9649 /* SQLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLAppDelegate.h; sourceTree = "<group>"; };
+		FA23FC281725E26800DF9649 /* SQLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLAppDelegate.m; sourceTree = "<group>"; };
+		FA23FC2B1725E29200DF9649 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
+		FA23FC2D1725E2A000DF9649 /* SessionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionType.h; sourceTree = "<group>"; };
+		FA23FC2E1725E2A000DF9649 /* SessionType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionType.m; sourceTree = "<group>"; };
+		FA23FC301725ECE800DF9649 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
+		FA23FC311725F12800DF9649 /* SQL-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SQL-Info.plist"; sourceTree = "<group>"; };
+		FA23FC321725F12800DF9649 /* SQL-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SQL-Prefix.pch"; sourceTree = "<group>"; };
+		FA8983A8172727840015C83E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		FACB22E716E3FCCD005CE096 /* initialziji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = initialziji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACB22EB16E3FCCD005CE096 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FACB22ED16E3FCCD005CE096 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8983A9172727840015C83E /* libsqlite3.dylib in Frameworks */,
 				BF8406DB17258DCA00BC8A11 /* AudioToolbox.framework in Frameworks */,
 				BF8406D917258D2600BC8A11 /* CoreAudio.framework in Frameworks */,
 				FACB22EC16E3FCCD005CE096 /* UIKit.framework in Frameworks */,
@@ -104,9 +119,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA23FC261725E24600DF9649 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FA23FC271725E26800DF9649 /* SQLAppDelegate.h */,
+				FA23FC281725E26800DF9649 /* SQLAppDelegate.m */,
+				FA23FC301725ECE800DF9649 /* Session.h */,
+				FA23FC2D1725E2A000DF9649 /* SessionType.h */,
+				FA23FC2B1725E29200DF9649 /* Session.m */,
+				FA23FC2E1725E2A000DF9649 /* SessionType.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		FACB22DC16E3FCCC005CE096 = {
 			isa = PBXGroup;
 			children = (
+				FA8983A8172727840015C83E /* libsqlite3.dylib */,
+				FA23FC261725E24600DF9649 /* Classes */,
 				FACB22F116E3FCCD005CE096 /* initialziji */,
 				FACB231816E3FCCD005CE096 /* initialzijiTests */,
 				FACB22EA16E3FCCD005CE096 /* Frameworks */,
@@ -163,6 +193,8 @@
 		FACB22F216E3FCCD005CE096 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA23FC311725F12800DF9649 /* SQL-Info.plist */,
+				FA23FC321725F12800DF9649 /* SQL-Prefix.pch */,
 				FACB22F316E3FCCD005CE096 /* initialziji-Info.plist */,
 				FACB22F416E3FCCD005CE096 /* InfoPlist.strings */,
 				FACB22F716E3FCCD005CE096 /* main.m */,
@@ -269,6 +301,7 @@
 				BF0C6A2A17258C19004DDB71 /* patient-1.png in Resources */,
 				BF0C6A2B17258C19004DDB71 /* session setup-1.png in Resources */,
 				BF8406E11725931C00BC8A11 /* Pop.aiff in Resources */,
+				FA23FC331725F12800DF9649 /* SQL-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +341,9 @@
 				FACB22FF16E3FCCD005CE096 /* RootViewController.m in Sources */,
 				FACB230216E3FCCD005CE096 /* DataViewController.m in Sources */,
 				FACB230516E3FCCD005CE096 /* ModelController.m in Sources */,
+				FA23FC291725E26800DF9649 /* SQLAppDelegate.m in Sources */,
+				FA23FC2C1725E29200DF9649 /* Session.m in Sources */,
+				FA23FC2F1725E2A000DF9649 /* SessionType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <CoreAudio/CoreAudioTypes.h>
+#import "Session.h"
+#import "SessionType.h"
+#import "SQLAppDelegate.h"
 
 @interface DataViewController : UIViewController
 {

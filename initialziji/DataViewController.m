@@ -248,7 +248,7 @@ int timer = 0;
 
 - (IBAction)repSlider:(id)sender {
     UISlider *repSlider = (UISlider *)sender;
-    repSliderLabel.text = [NSString stringWithFormat:@"%.f Times", repSlider.value];
+    repSliderLabel.text = [NSString stringWithFormat:@"%.f Reps", repSlider.value];
 }
 
 - (IBAction)degLeftSlider:(id)sender {
@@ -263,8 +263,30 @@ int timer = 0;
 
 
 - (IBAction)saveButton:(id)sender {
-    NSString *sessionname = self.SessionNameField.text;
+    SQLAppDelegate *appDelegate = (SQLAppDelegate *)[[UIApplication sharedApplication] delegate];
+        
+        //Create a Coffee Object.
+    SessionType *SessionTypeObj = [[SessionType alloc] initWithPrimaryKey:0];
+    SessionTypeObj.session_name = self.SessionNameField.text;
     
-    //send values and name to database
+    SessionTypeObj.session_length_min = (int)self.timerSliderLabel.text;
+    
+    SessionTypeObj.degrees_L = (int)self.degLeftSliderLabel.text;
+    
+    SessionTypeObj.degrees_R = (int)self.degRightSliderLabel.text;
+    
+    SessionTypeObj.num_of_reps = (int)self.repSliderLabel.text;
+    
+    SessionTypeObj.date_created = [NSDate date];
+    
+    SessionTypeObj.isDirty = NO;
+    
+    SessionTypeObj.isDetailViewHydrated = YES;
+        
+    //Add the object
+    [appDelegate addSessionType:SessionTypeObj];
+        
+    //Dismiss the controller.
+    [self.navigationController dismissModalViewControllerAnimated:YES];
 }
 @end

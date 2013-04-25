@@ -12,11 +12,44 @@
 
 #import "DataViewController.h"
 
+#import "Session.h"
+#import "SQLAppDelegate.h"
+#import "SessionType.h"
+
 @interface RootViewController ()
 @property (readonly, strong, nonatomic) ModelController *modelController;
 @end
 
 @implementation RootViewController
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [appDelegate.SessionArray count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+	//Get the object from the array
+	Session *SessionObj = [appDelegate.SessionArray objectAtIndex:indexPath.row];
+    
+	//Set the coffename.
+	cell.text = [NSString stringWithFormat:@"%d", SessionObj.session_ID];
+    
+    // Set up the cell
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Navigation logic -- create and push a new view controller
+}
 
 @synthesize timerlabel = _timerlabel;
 @synthesize pageViewController = _pageViewController;
@@ -61,8 +94,30 @@
     
     _timerlabel.text = @"Hello"; //no
     
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	
+	appDelegate = (SQLAppDelegate *)[[UIApplication sharedApplication] delegate];
+	
+	self.title = @"Session List";
     
+}
+
+// Override to support editing the list
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+    }   
+    if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }   
+}
+
+// Override to support conditional editing of the list
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
 }
 
 - (void)viewDidUnload
@@ -154,5 +209,6 @@
 
     return UIPageViewControllerSpineLocationMid;
 }
+
 
 @end
