@@ -143,7 +143,6 @@
 		FACB22DC16E3FCCC005CE096 = {
 			isa = PBXGroup;
 			children = (
-				FA7FB561172F31680043193A /* CoreMotion.framework */,
 				FA8983A8172727840015C83E /* libsqlite3.dylib */,
 				FA23FC261725E24600DF9649 /* Classes */,
 				FACB22F116E3FCCD005CE096 /* initialziji */,
@@ -165,6 +164,7 @@
 		FACB22EA16E3FCCD005CE096 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA7FB561172F31680043193A /* CoreMotion.framework */,
 				BF8406DA17258DC900BC8A11 /* AudioToolbox.framework */,
 				BF8406D817258D2600BC8A11 /* CoreAudio.framework */,
 				FACB22EB16E3FCCD005CE096 /* UIKit.framework */,

@@ -15,7 +15,8 @@
 
 @interface DataViewController : UIViewController
 {
-
+    NSTimer *timer1;
+    NSTimer *samplingtimer;
 }
 
 
@@ -35,6 +36,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *repSliderLabel;
 @property (weak, nonatomic) IBOutlet UILabel *degLeftSliderLabel;
 @property (weak, nonatomic) IBOutlet UILabel *degRightSliderLabel;
+
+- (IBAction)vibrateSwitch:(id)sender;
+- (IBAction)toneSwitch:(id)sender;
+- (IBAction)voiceSwitch:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UISwitch *vibrateSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *toneSwitch;

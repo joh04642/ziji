@@ -24,6 +24,9 @@ NSString *datestring; //
 
 int timer = 0;
 int sessionStart = 0;
+int PlaySoundOption;
+int UseVibrateOption;
+int UseVoiceOption;
 
 @synthesize dataLabel = _dataLabel;
 @synthesize dataObject = _dataObject;
@@ -72,6 +75,93 @@ int sessionStart = 0;
     
 }
 
+-(void)PlayLeftSound
+{
+    
+    
+    if(PlaySoundOption == 1)
+    {
+        
+        CFBundleRef mainBundle = CFBundleGetMainBundle();
+        CFURLRef GoodSoundFileURLRef;
+        
+        UInt32 soundFileGood;
+        
+        GoodSoundFileURLRef = CFBundleCopyResourceURL(mainBundle, CFSTR("Pop"), CFSTR("aiff"), NULL);  //placeholder sound// does work
+        
+        AudioServicesCreateSystemSoundID( GoodSoundFileURLRef,&soundFileGood);
+        AudioServicesPlaySystemSound(soundFileGood);
+    }
+    
+    if(UseVibrateOption == 1)
+    {
+        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);  //vibrate is not able to be simulated,this has been tested on a device
+    }
+    
+    if(UseVoiceOption == 1)
+    {
+        
+    }
+}
+
+-(void)PlayRightSound
+{
+    
+    
+    if(PlaySoundOption == 1)
+    {
+        
+        CFBundleRef mainBundle = CFBundleGetMainBundle();
+        CFURLRef GoodSoundFileURLRef;
+        
+        UInt32 soundFileGood;
+        
+        GoodSoundFileURLRef = CFBundleCopyResourceURL(mainBundle, CFSTR("Pop"), CFSTR("aiff"), NULL);  //placeholder sound// does work
+        
+        AudioServicesCreateSystemSoundID( GoodSoundFileURLRef,&soundFileGood);
+        AudioServicesPlaySystemSound(soundFileGood);
+    }
+    
+    if(UseVibrateOption == 1)
+    {
+        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);  //vibrate is not able to be simulated,this has been tested on a device
+    }
+    
+    if(UseVoiceOption == 1)
+    {
+        
+    }
+}
+
+-(void)PlayBadSound
+{
+    
+    
+    if(PlaySoundOption == 1)
+    {
+        
+        CFBundleRef mainBundle = CFBundleGetMainBundle();
+        CFURLRef GoodSoundFileURLRef;
+        
+        UInt32 soundFileGood;
+        
+        GoodSoundFileURLRef = CFBundleCopyResourceURL(mainBundle, CFSTR("Pop"), CFSTR("aiff"), NULL);  //placeholder sound// does work
+        
+        AudioServicesCreateSystemSoundID( GoodSoundFileURLRef,&soundFileGood);
+        AudioServicesPlaySystemSound(soundFileGood);
+    }
+    
+    if(UseVibrateOption == 1)
+    {
+        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);  //vibrate is not able to be simulated,this has been tested on a device
+    }
+    
+    if(UseVoiceOption == 1)
+    {
+        
+    }
+}
+
 -(void)Calibrate  //needs work
 {
     int CurrentDeg;// = degreesfunction();
@@ -107,27 +197,13 @@ int sessionStart = 0;
     
     
     
-    NSTimer *timer1 = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerfired) userInfo:nil repeats:YES]; //needs to be here for timer to work, why does it think it is not used?
+    timer1 = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerfired) userInfo:nil repeats:YES]; //needs to be here for timer to work, why does it think it is not used?
     //self.timerlabel.text = datestring; //works
     
    
     if(sessionStart)
     {
     
-    
-    [self Calibrate];
-    
-    NSTimer *samplingtimer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(samplingtimerfired) userInfo:nil repeats:YES]; //time not known
-    
-    int endtime = 45;// = endtimefunction();
-    
-    if(timer == endtime || timer > endtime)
-    {
-        [samplingtimer invalidate];
-        [timer1 invalidate];
-        timer = 0;
-        //store all data
-    }
     }
     
     if(!sessionStart)
@@ -145,34 +221,35 @@ int sessionStart = 0;
 -(void)samplingtimerfired
 {
     
-    int degrees;// = yawfunction();
-    int degleft;// = defleftfunction();
+    int degrees = 0;// = yawfunction();
+    int degleft = 90;// = defleftfunction();
     int degright;//= degrightfunction();
     
-    
-    
-    if(degrees == (degleft || degrees > degleft) && degrees > 0)
+    if(sessionStart)
     {
-        //record rep complete
-        [self PlayGoodSound]; //play sound : completed
-    }
-    
-    if(degrees < degleft && degrees > 0)
-    {
-        [self PlayGoodSound]; //play sound : rotate left
-    }
-    
-    if(degrees == (degright || degrees > degright) && degrees < 0)
-    {
-        //record rep complete
-        [self PlayGoodSound];  //play sound : completed
-    }
-    
-    if(degrees > degright && degrees < 0)
-    {
-        [self PlayGoodSound];//play sound : rotate right
-    }
-    
+        
+        if(((degrees == degleft) || degrees > degleft) && (degrees >= 0))
+        {
+            //record rep complete
+            [self PlayGoodSound]; //play sound : completed
+        }
+        
+        if((degrees < degleft) && (degrees >= 0))
+        {
+            [self PlayLeftSound]; //play sound : rotate left
+        }
+        
+        if(((degrees == degright) || degrees > degright) && (degrees <= 0))
+        {
+            //record rep complete
+            [self PlayGoodSound];  //play sound : completed
+        }
+        
+        if((degrees > degright) && (degrees <= 0))
+        {
+            [self PlayRightSound];//play sound : rotate right
+        }
+    }  
 }
 
 
@@ -180,9 +257,28 @@ int sessionStart = 0;
 {
     if(sessionStart)
     {
-    timer = timer + 1; //this counts by 2s?
-    [self.timerlabel2 setText:[NSString stringWithFormat:@"%d sec",timer/2]]; //if I div by 2 it works properly
-     //[self PlayGoodSound]; //just a test
+        timer = timer + 1; //this counts by 2s?
+        [self.timerlabel2 setText:[NSString stringWithFormat:@"%d sec",timer/2]]; //if I div by 2 it works properly
+        //[self PlayGoodSound]; //just a test
+        
+        NSLog(@"%i\n",timer);
+        
+        
+        int endtime = 45;// = endtimefunction();
+        if((timer == endtime) || (timer > endtime))
+        {
+            [samplingtimer invalidate];
+            [timer1 invalidate];
+            timer = 0;
+            sessionStart = 0;
+            //store all data
+            
+            
+            [self.timerlabel2 setText:[NSString stringWithFormat:@"Good Job!!"]];
+            
+        }
+        
+        
     }
     
 }
@@ -295,7 +391,26 @@ int sessionStart = 0;
     //Dismiss the controller.
     [self.navigationController dismissModalViewControllerAnimated:YES];
 }
+
+- (IBAction)vibrateSwitch:(id)sender {
+    UseVibrateOption = _vibrateSwitch.on;
+}
+
+- (IBAction)toneSwitch:(id)sender {
+    PlaySoundOption = _toneSwitch.on;
+}
+
+- (IBAction)voiceSwitch:(id)sender {
+    UseVoiceOption = _voiceSwitch.on;
+}
+
 - (IBAction)startSessionButton:(id)sender {
     sessionStart = 1;
+    
+    [self Calibrate];
+    
+    samplingtimer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(samplingtimerfired) userInfo:nil repeats:YES]; //time not known //why does this not start on the first load?
+    
+    
 }
 @end
