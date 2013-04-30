@@ -40,8 +40,11 @@
     
 }
 
--(void)readIt
++(double)readIt
 {
+    CMMotionManager *motionmanager;
+    
+    
     //  CMAttitude *referenceAttitude;
     CMAttitude *attitude;
     
@@ -54,9 +57,11 @@
     
     NSLog(@"roll = %f... pitch = %f ... yaw = %f", degrees(attitude.roll), degrees(attitude.pitch), degrees(attitude.yaw));
     //write code to display yaw to YawValue
-    YawValue.text = @"Hello";
+    //YawValue.text = @"Hello";
     //[Yawdetect setText:[NSString stringWithFormat:@"Yaw: %f",degrees(attitude.yaw)]];
-    YawValue.text = [NSString stringWithFormat:@"%.1f", degrees(attitude.yaw)];
+    //YawValue.text = [NSString stringWithFormat:@"%.1f", degrees(attitude.yaw)];
+    
+    return degrees(attitude.yaw);
     
 }
 

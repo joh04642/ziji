@@ -34,6 +34,7 @@ int UseVoiceOption;
 @synthesize timerlabel2 = _timerlabel2;
 @synthesize estimatedtimelabel = _estimatedtimelabel;
 
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -221,9 +222,11 @@ int UseVoiceOption;
 -(void)samplingtimerfired
 {
     
-    int degrees = 0;// = yawfunction();
+    int degrees = [CMMotionmanagerViewController readIt];
     int degleft = 90;// = defleftfunction();
     int degright;//= degrightfunction();
+    
+    NSLog(@"%d\n",degrees);
     
     if(sessionStart)
     {

@@ -12,6 +12,7 @@
 #import "Session.h"
 #import "SessionType.h"
 #import "SQLAppDelegate.h"
+#import "ViewController.h"
 
 @interface DataViewController : UIViewController
 {
