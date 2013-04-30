@@ -226,7 +226,9 @@ int UseVoiceOption;
     int degleft = 90;// = defleftfunction();
     int degright;//= degrightfunction();
     
-    NSLog(@"%d\n",degrees);
+    //CMMotionmanagerViewController.YawDegrees;
+    
+    NSLog(@"%d Degrees\n",degrees);
     
     if(sessionStart)
     {
@@ -264,7 +266,7 @@ int UseVoiceOption;
         [self.timerlabel2 setText:[NSString stringWithFormat:@"%d sec",timer/2]]; //if I div by 2 it works properly
         //[self PlayGoodSound]; //just a test
         
-        NSLog(@"%i\n",timer);
+        //NSLog(@"%i\n",timer);
         
         
         int endtime = 45;// = endtimefunction();

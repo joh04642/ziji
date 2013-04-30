@@ -21,7 +21,7 @@
     
 }
 
-
+@property (nonatomic) NSInteger YawDegrees;
 
 +(double)readIt;
 
