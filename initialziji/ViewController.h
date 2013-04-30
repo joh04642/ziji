@@ -1,13 +1,32 @@
 //
 //  ViewController.h
-//  initialziji
+//  Yaw
 //
-//  Created by macbook on 4/29/13.
+//  Created by liux1640 on 4/7/13.
 //  Copyright (c) 2013 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <CoreMotion/CoreMotion.h>
 
-@interface ViewController : NSObject
+@interface CMMotionmanagerViewController : UIViewController <UIAccelerometerDelegate>
+{
+    IBOutlet UILabel *YawValue;
+    CMMotionmanagerViewController *motionManager;
+    IBOutlet UILabel *Yawdetect;
+    IBOutlet UIProgressView *Yawmovement;
+    
+    UIAccelerometer *accelerometer;
+    CMMotionManager *motionmanager;
+    
+}
+
+
+
+-(void)readIt;
+
+
+
+
 
 @end
