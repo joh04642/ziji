@@ -23,6 +23,7 @@ NSString *datestring; //
 
 
 int timer = 0;
+int sessionStart = 0;
 
 @synthesize dataLabel = _dataLabel;
 @synthesize dataObject = _dataObject;
@@ -71,6 +72,22 @@ int timer = 0;
     
 }
 
+-(void)Calibrate  //needs work
+{
+    int CurrentDeg;// = degreesfunction();
+    int PastDeg = CurrentDeg;
+    int i = 0;
+    
+    while (CurrentDeg > PastDeg + 10 || CurrentDeg < PastDeg - 10) {
+        //CurrentDeg = degreesfunction();
+        i++;
+        if(i == 2)
+        {
+            PastDeg = CurrentDeg;
+            i = 0;
+        }
+    }
+}
 
 
 - (void)viewDidLoad
@@ -88,26 +105,37 @@ int timer = 0;
     //[dateformat release];  //memory , ARC does this function
     
     
+    
+    
     NSTimer *timer1 = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerfired) userInfo:nil repeats:YES]; //needs to be here for timer to work, why does it think it is not used?
     //self.timerlabel.text = datestring; //works
     
    
+    if(sessionStart)
+    {
     
-    /*
     
-    Calibrate();
+    [self Calibrate];
     
     NSTimer *samplingtimer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(samplingtimerfired) userInfo:nil repeats:YES]; //time not known
     
-    int endtime = endtimefunction();
+    int endtime = 45;// = endtimefunction();
     
     if(timer == endtime || timer > endtime)
     {
+        [samplingtimer invalidate];
+        [timer1 invalidate];
+        timer = 0;
         //store all data
     }
+    }
     
-    
-    */
+    if(!sessionStart)
+    {
+     
+        
+    }
+      
     
     
        
@@ -116,64 +144,51 @@ int timer = 0;
 
 -(void)samplingtimerfired
 {
-    /*
-    int degrees = yawfunction();
-    int degleft = defleftfunction();
-    int degright = degrightfunction();
+    
+    int degrees;// = yawfunction();
+    int degleft;// = defleftfunction();
+    int degright;//= degrightfunction();
     
     
     
     if(degrees == (degleft || degrees > degleft) && degrees > 0)
     {
         //record rep complete
-        //play sound : completed
+        [self PlayGoodSound]; //play sound : completed
     }
     
     if(degrees < degleft && degrees > 0)
     {
-        //play sound : rotate left
+        [self PlayGoodSound]; //play sound : rotate left
     }
     
     if(degrees == (degright || degrees > degright) && degrees < 0)
     {
         //record rep complete
-        //play sound : completed
+        [self PlayGoodSound];  //play sound : completed
     }
     
     if(degrees > degright && degrees < 0)
     {
-        //play sound : rotate right
+        [self PlayGoodSound];//play sound : rotate right
     }
-    */
+    
 }
 
 
 -(void)timerfired
 {
+    if(sessionStart)
+    {
     timer = timer + 1; //this counts by 2s?
     [self.timerlabel2 setText:[NSString stringWithFormat:@"%d sec",timer/2]]; //if I div by 2 it works properly
-     [self PlayGoodSound]; //just a test
-    
-    
-}
-
-
--(void)Calibrate  //needs work
-{
-    int CurrentDeg;// = degreesfunction();
-    int PastDeg = CurrentDeg;
-    int i = 0;
-    
-    while (CurrentDeg > PastDeg + 10 || CurrentDeg < PastDeg - 10) {
-        //CurrentDeg = degreesfunction();
-        i++;
-        if(i == 2)
-        {
-            PastDeg = CurrentDeg;
-            i = 0;
-        }
+     //[self PlayGoodSound]; //just a test
     }
+    
 }
+
+
+
 
 - (void)viewDidUnload
 {
@@ -224,22 +239,13 @@ int timer = 0;
     }
 }
 
-/*
--(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    if([text isEqualToString:@"\n"]){
-        [textView resignFirstResponder];
-        return NO;
-    }
-    return YES;
-}
-*/
 
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     NSLog(@"touchesBegan:withEvent:");
     [self.view endEditing:YES];
     [super touchesBegan:touches withEvent:event];
-} //this should make the keyboard disappear, currently crashes
+} //this should make the keyboard disappear
  
 - (IBAction)timerSlider:(id)sender {
     UISlider *timerSlider = (UISlider *)sender;
@@ -288,5 +294,8 @@ int timer = 0;
         
     //Dismiss the controller.
     [self.navigationController dismissModalViewControllerAnimated:YES];
+}
+- (IBAction)startSessionButton:(id)sender {
+    sessionStart = 1;
 }
 @end

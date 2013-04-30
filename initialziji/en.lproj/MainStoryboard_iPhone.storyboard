@@ -250,6 +250,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="startSessionButton:" destination="izg-b6-g26" eventType="touchUpInside" id="XPh-SB-R6U"/>
                                     <segue destination="okk-Mi-mFL" kind="push" id="vLU-I4-Mph"/>
                                 </connections>
                             </button>
@@ -522,33 +523,12 @@
         <image name="patient-1.png" width="320" height="480"/>
         <image name="session setup-1.png" width="320" height="480"/>
     </resources>
-    <classes>
-        <class className="DataViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DataViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="degLeftSlider:"/>
-                <relationship kind="action" name="degRightSlider:"/>
-                <relationship kind="action" name="repSlider:"/>
-                <relationship kind="action" name="saveButton:"/>
-                <relationship kind="action" name="timerSlider:"/>
-                <relationship kind="outlet" name="SessionNameField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="dataLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="degLeftSliderLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="degRightSliderLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="estimatedtimelabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="repSliderLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timerSliderLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timerlabel" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="timerlabel2" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="toneSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="vibrateSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="voiceSwitch" candidateClass="UISwitch"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="lOk-s3-5Vj"/>
+    </inferredMetricsTieBreakers>
 </document>

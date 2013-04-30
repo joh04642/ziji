@@ -40,5 +40,6 @@
 @property (weak, nonatomic) IBOutlet UISwitch *toneSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *voiceSwitch;
 
+- (IBAction)startSessionButton:(id)sender;
 
 @end
