@@ -15,7 +15,7 @@ static sqlite3_stmt *addStmt = nil;
 
 @implementation SessionType
 
-@synthesize session_length_min, num_of_reps, degrees_L, degrees_R, date_created, session_name, isDirty, isDetailViewHydrated;
+@synthesize session_length_min, num_of_reps, degrees_L, degrees_R, isDirty, isDetailViewHydrated, date_created, session_name;
 
 + (void) getInitialDataToDisplay:(NSString *)dbPath {
 	

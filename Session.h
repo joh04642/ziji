@@ -30,8 +30,8 @@
 @property (nonatomic, readwrite) NSInteger session_ID;
 
 @property (nonatomic, readwrite) BOOL completed;
-@property (nonatomic, readwrite) NSString *date_attempted;
-@property (nonatomic, readwrite) NSString *session_name;
+@property (assign, nonatomic, readwrite) NSString *date_attempted; //again, assign is not the best
+@property (assign, nonatomic, readwrite) NSString *session_name;
 
 @property (nonatomic, readwrite) BOOL isDirty;
 @property (nonatomic, readwrite) BOOL isDetailViewHydrated;

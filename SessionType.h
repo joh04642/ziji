@@ -1,5 +1,5 @@
 //
-//  Coffee.h
+//  SessionType.h
 //  SQL
 //
 //  Created by iPhone SDK Articles on 10/26/08.
@@ -27,8 +27,8 @@
 @property (nonatomic, readwrite) NSInteger num_of_reps;
 @property (nonatomic, readwrite) NSInteger degrees_L;
 @property (nonatomic, readwrite) NSInteger degrees_R;
-@property (nonatomic, readwrite) NSString *date_created;
-@property (nonatomic, readwrite) NSString *session_name;
+@property (assign, nonatomic, readwrite) NSString *date_created; //assign solves some warnings, but strong or weak is better
+@property (assign, nonatomic, readwrite) NSString *session_name;
 
 @property (nonatomic, readwrite) BOOL isDirty;
 @property (nonatomic, readwrite) BOOL isDetailViewHydrated;

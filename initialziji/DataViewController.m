@@ -301,18 +301,22 @@ int UseVoiceOption;
 {
     if(sessionStart)
     {
+        int endtime = 50;// = endtimefunction();
+        
         timer = timer + 1; //this counts by 2s?
-        [self.timerlabel2 setText:[NSString stringWithFormat:@"%d sec",timer/2]]; //if I div by 2 it works properly
+        [self.timerlabel2 setText:[NSString stringWithFormat:@"%d sec",(endtime/2) - (timer/2)]]; //if I div by 2 it works properly
         //[self PlayGoodSound]; //just a test
         
         //NSLog(@"%i\n",timer);
         
         
-        int endtime = 45;// = endtimefunction();
+        
         if((timer == endtime) || (timer > endtime))
         {
             [samplingtimer invalidate];
             [timer1 invalidate];
+            timer1 = nil;
+            samplingtimer = nil;
             timer = 0;
             sessionStart = 0;
             //store all data
@@ -455,6 +459,10 @@ int UseVoiceOption;
     [_vibrateSwitch setOn:NO];  //this doesnt seem to change the options properly.
     [_toneSwitch setOn:NO];
     [_voiceSwitch setOn:NO];
+    [samplingtimer invalidate];
+    [timer1 invalidate];
+    timer1 = nil;
+    samplingtimer = nil;
     sessionStart = 0; 
     timer = 0;
 }

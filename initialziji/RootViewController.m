@@ -41,7 +41,7 @@
 	Session *SessionObj = [appDelegate.SessionArray objectAtIndex:indexPath.row];
     
 	//Set the coffename.
-	cell.text = [NSString stringWithFormat:@"%d", SessionObj.session_ID];
+	cell.text = [NSString stringWithFormat:@"%d", SessionObj.session_ID];  //this could look like cell.textlabel.text to solve warning//
     
     // Set up the cell
     return cell;

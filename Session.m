@@ -10,9 +10,9 @@
 
 static sqlite3 *database = nil;
 
-@implementation Session
+@implementation Session  //there is no method addsession in this file//
 
-@synthesize session_ID, completed, max_degrees_left, max_degrees_right, reps_completed, isDirty, isDetailViewHydrated, session_name, date_attempted;
+@synthesize session_ID, completed, max_degrees_left, max_degrees_right, reps_completed, isDirty, isDetailViewHydrated, date_attempted,session_name;
 
 + (void) getInitialDataToDisplay:(NSString *)dbPath {
 	
@@ -39,6 +39,13 @@ static sqlite3 *database = nil;
 	else
 		sqlite3_close(database); //Even though the open call failed, close the database connection to release all the memory.
 }
+
+
+- (void) addSession
+{
+    
+}
+
 
 + (void) finalizeStatements {
 	
