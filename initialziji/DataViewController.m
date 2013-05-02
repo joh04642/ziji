@@ -57,7 +57,7 @@ int UseVoiceOption;
         
         UInt32 soundFileGood;
         
-        GoodSoundFileURLRef = CFBundleCopyResourceURL(mainBundle, CFSTR("Pop"), CFSTR("aiff"), NULL);  //placeholder sound// does work
+        GoodSoundFileURLRef = CFBundleCopyResourceURL(mainBundle, CFSTR("Ping"), CFSTR("aiff"), NULL);  //placeholder sound// does work
         
         AudioServicesCreateSystemSoundID( GoodSoundFileURLRef,&soundFileGood);
         AudioServicesPlaySystemSound(soundFileGood);
@@ -173,7 +173,7 @@ int UseVoiceOption;
         
         UInt32 soundFileGood;
         
-        GoodSoundFileURLRef = CFBundleCopyResourceURL(mainBundle, CFSTR("Pop"), CFSTR("aiff"), NULL);  //placeholder sound// does work
+        GoodSoundFileURLRef = CFBundleCopyResourceURL(mainBundle, CFSTR("Purr"), CFSTR("aiff"), NULL);  //placeholder sound// does work
         
         AudioServicesCreateSystemSoundID( GoodSoundFileURLRef,&soundFileGood);
         AudioServicesPlaySystemSound(soundFileGood);

@@ -15,6 +15,8 @@
 		BF0C6A2917258C19004DDB71 /* new session-1.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0C6A2417258C18004DDB71 /* new session-1.png */; };
 		BF0C6A2A17258C19004DDB71 /* patient-1.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0C6A2517258C19004DDB71 /* patient-1.png */; };
 		BF0C6A2B17258C19004DDB71 /* session setup-1.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0C6A2617258C19004DDB71 /* session setup-1.png */; };
+		BF512AD71732EB07008C8506 /* Ping.aiff in Resources */ = {isa = PBXBuildFile; fileRef = BF512AD61732EB07008C8506 /* Ping.aiff */; };
+		BF512ADA1732EB35008C8506 /* Purr.aiff in Resources */ = {isa = PBXBuildFile; fileRef = BF512AD91732EB35008C8506 /* Purr.aiff */; };
 		BF8406D917258D2600BC8A11 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8406D817258D2600BC8A11 /* CoreAudio.framework */; };
 		BF8406DB17258DCA00BC8A11 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8406DA17258DC900BC8A11 /* AudioToolbox.framework */; };
 		BF8406E11725931C00BC8A11 /* Pop.aiff in Resources */ = {isa = PBXBuildFile; fileRef = BF8406E01725931C00BC8A11 /* Pop.aiff */; };
@@ -63,6 +65,8 @@
 		BF0C6A2417258C18004DDB71 /* new session-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new session-1.png"; sourceTree = "<group>"; };
 		BF0C6A2517258C19004DDB71 /* patient-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "patient-1.png"; sourceTree = "<group>"; };
 		BF0C6A2617258C19004DDB71 /* session setup-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "session setup-1.png"; sourceTree = "<group>"; };
+		BF512AD61732EB07008C8506 /* Ping.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Ping.aiff; sourceTree = "<group>"; };
+		BF512AD91732EB35008C8506 /* Purr.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Purr.aiff; sourceTree = "<group>"; };
 		BF8406D817258D2600BC8A11 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		BF8406DA17258DC900BC8A11 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		BF8406E01725931C00BC8A11 /* Pop.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Pop.aiff; sourceTree = SOURCE_ROOT; };
@@ -187,7 +191,9 @@
 				BF0C6A2217258C18004DDB71 /* background-thereapy.png */,
 				BF0C6A2317258C18004DDB71 /* background.png */,
 				BF0C6A2417258C18004DDB71 /* new session-1.png */,
+				BF512AD61732EB07008C8506 /* Ping.aiff */,
 				BF8406E01725931C00BC8A11 /* Pop.aiff */,
+				BF512AD91732EB35008C8506 /* Purr.aiff */,
 				BF0122351732E0F000378F4A /* forward.aiff */,
 				BF0122361732E0F000378F4A /* left.aiff */,
 				BF0122371732E0F000378F4A /* right.aiff */,
@@ -327,6 +333,8 @@
 				BF0122391732E0F000378F4A /* left.aiff in Resources */,
 				BF01223A1732E0F000378F4A /* right.aiff in Resources */,
 				BFC8B22B1732E8610055BA13 /* MainStoryboard_iPhone.storyboard in Resources */,
+				BF512AD71732EB07008C8506 /* Ping.aiff in Resources */,
+				BF512ADA1732EB35008C8506 /* Purr.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
