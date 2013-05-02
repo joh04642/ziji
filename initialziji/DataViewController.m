@@ -237,9 +237,7 @@ int UseVoiceOption;
     
     
     
-    timer1 = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerfired) userInfo:nil repeats:YES]; //needs to be here for timer to work, why does it think it is not used?
-    //self.timerlabel.text = datestring; //works
-    
+        
    
     if(sessionStart)
     {
@@ -248,7 +246,8 @@ int UseVoiceOption;
     
     if(!sessionStart)
     {
-     
+        
+        timer1 = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerfired) userInfo:nil repeats:YES]; 
         
     }
       
@@ -262,8 +261,8 @@ int UseVoiceOption;
 {
     
     float degrees = [CMMotionmanagerViewController readIt]; //this code works, but the type may be incorrect
-    int degleft = 90;// = defleftfunction();
-    int degright;//= degrightfunction();
+    float degleft = 90;// = defleftfunction();
+    float degright;//= degrightfunction();
     
     //CMMotionmanagerViewController.YawDegrees;
     
@@ -307,7 +306,7 @@ int UseVoiceOption;
         [self.timerlabel2 setText:[NSString stringWithFormat:@"%d sec",(endtime/2) - (timer/2)]]; //if I div by 2 it works properly
         //[self PlayGoodSound]; //just a test
         
-        //NSLog(@"%i\n",timer);
+        NSLog(@"%i\n",timer);
         
         
         
@@ -469,7 +468,7 @@ int UseVoiceOption;
 
 - (IBAction)startSessionButton:(id)sender {
     sessionStart = 1;
-    
+        
     [self Calibrate];
     
     samplingtimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(samplingtimerfired) userInfo:nil repeats:YES]; //time not known //why does this not start on the first load?

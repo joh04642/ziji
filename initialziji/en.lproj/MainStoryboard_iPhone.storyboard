@@ -502,7 +502,6 @@
                                 </state>
                                 <connections>
                                     <action selector="stopButton:" destination="okk-Mi-mFL" eventType="touchUpInside" id="hS5-4y-abM"/>
-                                    <segue destination="izg-b6-g26" kind="push" id="4do-Ty-zgp"/>
                                 </connections>
                             </button>
                         </subviews>
