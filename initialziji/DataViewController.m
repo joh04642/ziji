@@ -224,11 +224,14 @@ int UseVoiceOption;
    
     
     NSDate *currentDate = [NSDate date];  //currentDate holds the current date/time
-    NSDateComponents *comps = [[NSDateComponents alloc] init]; 
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *comps;
+    comps = [[NSDateComponents alloc] init]; 
+    NSCalendar *calendar;
+    calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateFormatter *dateformat = [[NSDateFormatter alloc] init]; //format date
     [dateformat setDateFormat:@"yyyy-MM-dd--HH-mm-ss"];
-    NSString *datestring = [dateformat stringFromDate:currentDate]; //Hopefully a string display date
+    NSString *datestring;
+    datestring = [dateformat stringFromDate:currentDate]; //Hopefully a string display date
     //[dateformat release];  //memory , ARC does this function
     
     

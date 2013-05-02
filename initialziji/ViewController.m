@@ -29,8 +29,8 @@
     accelerometer.delegate = self; // motionmanager
     [motionmanager startDeviceMotionUpdates];
     
-    
-    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:(1.0/60.0)
+    NSTimer *timer;
+    timer = [NSTimer scheduledTimerWithTimeInterval:(1.0/60.0)
                                                       target:self
                                                     selector:@selector( readIt )
                                                     userInfo:nil
@@ -70,7 +70,7 @@
 
 - (void)dealloc{
     
-    
+   
     //accelerometer.delegate = nil;    //motionmanager
     
     
