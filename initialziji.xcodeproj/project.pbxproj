@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0122381732E0F000378F4A /* forward.aiff in Resources */ = {isa = PBXBuildFile; fileRef = BF0122351732E0F000378F4A /* forward.aiff */; };
+		BF0122391732E0F000378F4A /* left.aiff in Resources */ = {isa = PBXBuildFile; fileRef = BF0122361732E0F000378F4A /* left.aiff */; };
+		BF01223A1732E0F000378F4A /* right.aiff in Resources */ = {isa = PBXBuildFile; fileRef = BF0122371732E0F000378F4A /* right.aiff */; };
 		BF0C6A2717258C19004DDB71 /* background-thereapy.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0C6A2217258C18004DDB71 /* background-thereapy.png */; };
 		BF0C6A2817258C19004DDB71 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0C6A2317258C18004DDB71 /* background.png */; };
 		BF0C6A2917258C19004DDB71 /* new session-1.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0C6A2417258C18004DDB71 /* new session-1.png */; };
@@ -15,6 +18,7 @@
 		BF8406D917258D2600BC8A11 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8406D817258D2600BC8A11 /* CoreAudio.framework */; };
 		BF8406DB17258DCA00BC8A11 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8406DA17258DC900BC8A11 /* AudioToolbox.framework */; };
 		BF8406E11725931C00BC8A11 /* Pop.aiff in Resources */ = {isa = PBXBuildFile; fileRef = BF8406E01725931C00BC8A11 /* Pop.aiff */; };
+		BFC8B22B1732E8610055BA13 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC8B2291732E8610055BA13 /* MainStoryboard_iPhone.storyboard */; };
 		FA23FC291725E26800DF9649 /* SQLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA23FC281725E26800DF9649 /* SQLAppDelegate.m */; };
 		FA23FC2C1725E29200DF9649 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = FA23FC2B1725E29200DF9649 /* Session.m */; };
 		FA23FC2F1725E2A000DF9649 /* SessionType.m in Sources */ = {isa = PBXBuildFile; fileRef = FA23FC2E1725E2A000DF9649 /* SessionType.m */; };
@@ -31,7 +35,6 @@
 		FACB22FF16E3FCCD005CE096 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACB22FE16E3FCCD005CE096 /* RootViewController.m */; };
 		FACB230216E3FCCD005CE096 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACB230116E3FCCD005CE096 /* DataViewController.m */; };
 		FACB230516E3FCCD005CE096 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACB230416E3FCCD005CE096 /* ModelController.m */; };
-		FACB230816E3FCCD005CE096 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACB230616E3FCCD005CE096 /* MainStoryboard_iPhone.storyboard */; };
 		FACB230B16E3FCCD005CE096 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACB230916E3FCCD005CE096 /* MainStoryboard_iPad.storyboard */; };
 		FACB231316E3FCCD005CE096 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB231216E3FCCD005CE096 /* SenTestingKit.framework */; };
 		FACB231416E3FCCD005CE096 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB22EB16E3FCCD005CE096 /* UIKit.framework */; };
@@ -52,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF0122351732E0F000378F4A /* forward.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = forward.aiff; sourceTree = "<group>"; };
+		BF0122361732E0F000378F4A /* left.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = left.aiff; sourceTree = "<group>"; };
+		BF0122371732E0F000378F4A /* right.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = right.aiff; sourceTree = "<group>"; };
 		BF0C6A2217258C18004DDB71 /* background-thereapy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-thereapy.png"; sourceTree = "<group>"; };
 		BF0C6A2317258C18004DDB71 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		BF0C6A2417258C18004DDB71 /* new session-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new session-1.png"; sourceTree = "<group>"; };
@@ -60,6 +66,7 @@
 		BF8406D817258D2600BC8A11 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		BF8406DA17258DC900BC8A11 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		BF8406E01725931C00BC8A11 /* Pop.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Pop.aiff; sourceTree = SOURCE_ROOT; };
+		BFC8B22A1732E8610055BA13 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		FA23FC271725E26800DF9649 /* SQLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLAppDelegate.h; sourceTree = "<group>"; };
 		FA23FC281725E26800DF9649 /* SQLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLAppDelegate.m; sourceTree = "<group>"; };
 		FA23FC2B1725E29200DF9649 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
@@ -88,7 +95,6 @@
 		FACB230116E3FCCD005CE096 /* DataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
 		FACB230316E3FCCD005CE096 /* ModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
 		FACB230416E3FCCD005CE096 /* ModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
-		FACB230716E3FCCD005CE096 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		FACB230A16E3FCCD005CE096 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		FACB231116E3FCCD005CE096 /* initialzijiTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = initialzijiTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACB231216E3FCCD005CE096 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -182,6 +188,9 @@
 				BF0C6A2317258C18004DDB71 /* background.png */,
 				BF0C6A2417258C18004DDB71 /* new session-1.png */,
 				BF8406E01725931C00BC8A11 /* Pop.aiff */,
+				BF0122351732E0F000378F4A /* forward.aiff */,
+				BF0122361732E0F000378F4A /* left.aiff */,
+				BF0122371732E0F000378F4A /* right.aiff */,
 				BF0C6A2517258C19004DDB71 /* patient-1.png */,
 				BF0C6A2617258C19004DDB71 /* session setup-1.png */,
 				FACB22FA16E3FCCD005CE096 /* AppDelegate.h */,
@@ -192,7 +201,7 @@
 				FACB22FB16E3FCCD005CE096 /* AppDelegate.m */,
 				FACB230316E3FCCD005CE096 /* ModelController.h */,
 				FACB230416E3FCCD005CE096 /* ModelController.m */,
-				FACB230616E3FCCD005CE096 /* MainStoryboard_iPhone.storyboard */,
+				BFC8B2291732E8610055BA13 /* MainStoryboard_iPhone.storyboard */,
 				FACB230916E3FCCD005CE096 /* MainStoryboard_iPad.storyboard */,
 				FA7FB55E172F178E0043193A /* ViewController.h */,
 				FA7FB55F172F178E0043193A /* ViewController.m */,
@@ -305,7 +314,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FACB22F616E3FCCD005CE096 /* InfoPlist.strings in Resources */,
-				FACB230816E3FCCD005CE096 /* MainStoryboard_iPhone.storyboard in Resources */,
 				FACB230B16E3FCCD005CE096 /* MainStoryboard_iPad.storyboard in Resources */,
 				BF0C6A2717258C19004DDB71 /* background-thereapy.png in Resources */,
 				BF0C6A2817258C19004DDB71 /* background.png in Resources */,
@@ -315,6 +323,10 @@
 				BF8406E11725931C00BC8A11 /* Pop.aiff in Resources */,
 				FA23FC331725F12800DF9649 /* SQL-Info.plist in Resources */,
 				FAE08AA8172DDDC000E0DDAC /* icon.png in Resources */,
+				BF0122381732E0F000378F4A /* forward.aiff in Resources */,
+				BF0122391732E0F000378F4A /* left.aiff in Resources */,
+				BF01223A1732E0F000378F4A /* right.aiff in Resources */,
+				BFC8B22B1732E8610055BA13 /* MainStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,20 +392,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		BFC8B2291732E8610055BA13 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFC8B22A1732E8610055BA13 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
 		FACB22F416E3FCCD005CE096 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FACB22F516E3FCCD005CE096 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		FACB230616E3FCCD005CE096 /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FACB230716E3FCCD005CE096 /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		FACB230916E3FCCD005CE096 /* MainStoryboard_iPad.storyboard */ = {

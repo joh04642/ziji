@@ -42,6 +42,8 @@
 - (IBAction)toneSwitch:(id)sender;
 - (IBAction)voiceSwitch:(id)sender;
 
+- (IBAction)stopButton:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UISwitch *vibrateSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *toneSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *voiceSwitch;

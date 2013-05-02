@@ -70,6 +70,15 @@ int UseVoiceOption;
     
     if(UseVoiceOption == 1)
     {
+        CFBundleRef mainBundle = CFBundleGetMainBundle();
+        CFURLRef ForwardSoundFileURLRef;
+        
+        UInt32 soundFileForward;
+        
+        ForwardSoundFileURLRef = CFBundleCopyResourceURL(mainBundle, CFSTR("forward"), CFSTR("aiff"), NULL);  //placeholder sound// does work
+        
+        AudioServicesCreateSystemSoundID( ForwardSoundFileURLRef,&soundFileForward);
+        AudioServicesPlaySystemSound(soundFileForward);
 
     }
 
@@ -101,7 +110,16 @@ int UseVoiceOption;
     
     if(UseVoiceOption == 1)
     {
+        CFBundleRef mainBundle = CFBundleGetMainBundle();
+        CFURLRef LeftSoundFileURLRef;
         
+        UInt32 soundFileLeft;
+        
+        LeftSoundFileURLRef = CFBundleCopyResourceURL(mainBundle, CFSTR("left"), CFSTR("aiff"), NULL);  //placeholder sound// does work
+        
+        AudioServicesCreateSystemSoundID( LeftSoundFileURLRef,&soundFileLeft);
+        AudioServicesPlaySystemSound(soundFileLeft);
+  
     }
 }
 
@@ -130,7 +148,16 @@ int UseVoiceOption;
     
     if(UseVoiceOption == 1)
     {
+        CFBundleRef mainBundle = CFBundleGetMainBundle();
+        CFURLRef RightSoundFileURLRef;
         
+        UInt32 soundFileRight;
+        
+        RightSoundFileURLRef = CFBundleCopyResourceURL(mainBundle, CFSTR("right"), CFSTR("aiff"), NULL);  //placeholder sound// does work
+        
+        AudioServicesCreateSystemSoundID( RightSoundFileURLRef,&soundFileRight);
+        AudioServicesPlaySystemSound(soundFileRight);
+  
     }
 }
 
@@ -159,7 +186,16 @@ int UseVoiceOption;
     
     if(UseVoiceOption == 1)
     {
+        CFBundleRef mainBundle = CFBundleGetMainBundle();
+        CFURLRef ForwardSoundFileURLRef;
         
+        UInt32 soundFileForward;
+        
+        ForwardSoundFileURLRef = CFBundleCopyResourceURL(mainBundle, CFSTR("forward"), CFSTR("aiff"), NULL);  //placeholder sound// does work
+        
+        AudioServicesCreateSystemSoundID( ForwardSoundFileURLRef,&soundFileForward);
+        AudioServicesPlaySystemSound(soundFileForward);
+
     }
 }
 
@@ -222,13 +258,13 @@ int UseVoiceOption;
 -(void)samplingtimerfired
 {
     
-    int degrees = [CMMotionmanagerViewController readIt];
+    float degrees = [CMMotionmanagerViewController readIt]; //this code works, but the type may be incorrect
     int degleft = 90;// = defleftfunction();
     int degright;//= degrightfunction();
     
     //CMMotionmanagerViewController.YawDegrees;
     
-    NSLog(@"%d Degrees\n",degrees);
+    NSLog(@"%f Degrees\n",degrees);
     
     if(sessionStart)
     {
@@ -409,12 +445,23 @@ int UseVoiceOption;
     UseVoiceOption = _voiceSwitch.on;
 }
 
+- (IBAction)stopButton:(id)sender { //this works, but is a little buggy, should stop timers,maybe
+    UseVibrateOption = 0;
+    PlaySoundOption = 0;
+    UseVoiceOption = 0;
+    [_vibrateSwitch setOn:NO];  //this doesnt seem to change the options properly.
+    [_toneSwitch setOn:NO];
+    [_voiceSwitch setOn:NO];
+    sessionStart = 0; 
+    timer = 0;
+}
+
 - (IBAction)startSessionButton:(id)sender {
     sessionStart = 1;
     
     [self Calibrate];
     
-    samplingtimer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(samplingtimerfired) userInfo:nil repeats:YES]; //time not known //why does this not start on the first load?
+    samplingtimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(samplingtimerfired) userInfo:nil repeats:YES]; //time not known //why does this not start on the first load?
     
     
 }

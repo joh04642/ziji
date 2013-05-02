@@ -61,7 +61,7 @@
     //[Yawdetect setText:[NSString stringWithFormat:@"Yaw: %f",degrees(attitude.yaw)]];
     //YawValue.text = [NSString stringWithFormat:@"%.1f", degrees(attitude.yaw)];
     
-    NSInteger YawDegrees = degrees(attitude.yaw);
+    //NSInteger YawDegrees = degrees(attitude.yaw);
     
     return degrees(attitude.yaw);
     
