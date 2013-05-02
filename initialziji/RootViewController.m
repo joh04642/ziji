@@ -28,7 +28,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [appDelegate.SessionArray count];
+    return [appDelegate.SessionTypeArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -38,14 +38,14 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
 	//Get the object from the array
-	Session *SessionObj = [appDelegate.SessionArray objectAtIndex:indexPath.row];
+	SessionType *SessionTypeObj = [appDelegate.SessionTypeArray objectAtIndex:indexPath.row];
     
 	//Set the coffename.
-	cell.text = [NSString stringWithFormat:@"%d", SessionObj.session_ID];  //this could look like cell.textlabel.text to solve warning//
+	cell.textLabel.text = SessionTypeObj.session_name;  //this could look like cell.textlabel.text to solve warning//
     
     // Set up the cell
     return cell;
-}
+}   
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic -- create and push a new view controller

@@ -49,13 +49,6 @@ static sqlite3_stmt *addStmt = nil;
     if(addStmt) sqlite3_finalize(addStmt);
 }
 
-NSInteger session_length_min;
-NSInteger num_of_reps;
-NSInteger degrees_L;
-NSInteger degrees_R;
-__unsafe_unretained NSString *date_created;
-__unsafe_unretained NSString *session_name;
-
 - (void) addSessionType {
     if(addStmt == nil) {
         const char *sql = "insert into SessionType(session_name, date_created, session_length_min, num_of_reps, degrees_L, degrees_R) Values(?, ?, ?, ?, ?, ?)";
@@ -83,10 +76,9 @@ __unsafe_unretained NSString *session_name;
     sqlite3_reset(addStmt);
 }
 - (id) initWithPrimaryKey:(NSInteger) pk {
-	/*
-	[super init];
-	session_name = pk;
-	*/
+	
+    session_name = [NSString stringWithFormat:@"%d",pk];
+    
 	isDetailViewHydrated = NO;
 	
 	return self;

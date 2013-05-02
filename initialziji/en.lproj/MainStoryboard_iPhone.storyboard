@@ -222,9 +222,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ieH-2B-5xA"/>
+                    <connections>
+                        <outlet property="sessionTypeClicker" destination="luL-Ii-BTA" id="Uad-UU-GRd"/>
+                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="836" y="867"/>
+            <point key="canvasLocation" x="836" y="851"/>
         </scene>
         <scene sceneID="yuY-0n-mer">
             <objects>
@@ -564,6 +567,7 @@
                 <relationship kind="outlet" name="degRightSliderLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="estimatedtimelabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="repSliderLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sessionTypeClicker" candidateClass="UIPickerView"/>
                 <relationship kind="outlet" name="timerSliderLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="timerlabel" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="timerlabel2" candidateClass="UILabel"/>
@@ -579,6 +583,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="5v4-yd-4TT"/>
         <segue reference="lOk-s3-5Vj"/>
     </inferredMetricsTieBreakers>
 </document>

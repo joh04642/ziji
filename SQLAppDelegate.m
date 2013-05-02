@@ -25,10 +25,10 @@
 	
 	//Initialize the session array.
 	NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-	self.SessionArray = tempArray;
+	self.SessionTypeArray = tempArray;
 	
 	//Once the db is copied, get the initial data to display on the screen.
-	[Session getInitialDataToDisplay:[self getDBPath]];
+	[SessionType getInitialDataToDisplay:[self getDBPath]];
 	
 	// Configure and show the window
 	[window addSubview:[navigationController view]];
@@ -39,7 +39,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
 	// Save data if appropriate
 	
-	[Session finalizeStatements];
+	[SessionType finalizeStatements];
 }
 
 

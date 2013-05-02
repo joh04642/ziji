@@ -20,6 +20,7 @@
     NSTimer *samplingtimer;
 }
 
+@property (weak, nonatomic) IBOutlet UIPickerView *sessionTypeClicker;
 
 
 @property (strong, nonatomic) IBOutlet UILabel *dataLabel;
