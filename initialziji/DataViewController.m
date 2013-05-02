@@ -261,8 +261,8 @@ int UseVoiceOption;
 {
     
     float degrees = [CMMotionmanagerViewController readIt]; //this code works, but the type may be incorrect
-    int degleft = 90;// = defleftfunction();
-    int degright;//= degrightfunction();
+    float degleft = 90;// = defleftfunction();
+    float degright;//= degrightfunction();
     
     //CMMotionmanagerViewController.YawDegrees;
     
