@@ -8,7 +8,7 @@
         <scene sceneID="r9b-RN-Egf">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IUt-bV-CaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="j4t-gn-NSB" sceneMemberID="viewController">
+                <viewController id="j4t-gn-NSB" customClass="CMMotionmanagerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GUR-6w-bXA">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -63,7 +63,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="j4t-gn-NSB" kind="relationship" relationship="rootViewController" id="IdO-Oc-MRI"/>
+                        <segue destination="j4t-gn-NSB" kind="relationship" relationship="rootViewController" id="CX6-D7-CSj"/>
                     </connections>
                 </navigationController>
             </objects>
@@ -547,6 +547,14 @@
         <image name="session setup-1.png" width="320" height="480"/>
     </resources>
     <classes>
+        <class className="CMMotionmanagerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CMMotionmanagerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="YawValue" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="Yawdetect" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="Yawmovement" candidateClass="UIProgressView"/>
+            </relationships>
+        </class>
         <class className="DataViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DataViewController.h"/>
             <relationships>
@@ -582,7 +590,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="5v4-yd-4TT"/>
         <segue reference="lOk-s3-5Vj"/>
     </inferredMetricsTieBreakers>
 </document>
