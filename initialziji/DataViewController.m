@@ -20,7 +20,7 @@ NSString *datestring; //
 @synthesize vibrateSwitch = _vibrateSwitch;
 @synthesize toneSwitch = _toneSwitch;
 @synthesize voiceSwitch = _voiceSwitch;
-@synthesize YawLabel = _YawLabel;
+
 
 int timer = 0;
 int sessionStart = 0;
@@ -30,6 +30,7 @@ int UseVoiceOption;
 float degoffset;
 int samplecount= 0;
 
+@synthesize YawLabel;
 @synthesize dataLabel = _dataLabel;
 @synthesize dataObject = _dataObject;
 @synthesize timerlabel = _timerlabel;
@@ -220,33 +221,6 @@ int samplecount= 0;
     }
     
     return PastDeg;
-<<<<<<< HEAD
-=======
-}
-
--(float)readIt
-{
-    //  CMAttitude *referenceAttitude;
-    CMAttitude *attitude;
-    
-    CMDeviceMotion *motion = motionmanager.deviceMotion;
-    //if (!motion) {
-    //    return;
-    //}
-    
-    attitude = motion.attitude;
-    
-    NSLog(@"roll = %f... pitch = %f ... yaw = %f", degrees(attitude.roll), degrees(attitude.pitch), degrees(attitude.yaw));
-    //write code to display yaw to YawValue
-    //YawValue.text = @"Hello";
-    //[Yawdetect setText:[NSString stringWithFormat:@"Yaw: %f",degrees(attitude.yaw)]];
-    //YawValue.text = [NSString stringWithFormat:@"%.1f", degrees(attitude.yaw)];
-    
-    //NSInteger YawDegrees = degrees(attitude.yaw);
-    
-    return degrees(attitude.yaw);
-    
->>>>>>> 552adb3e8db27a6da395067fa5da473c9a842580
 }
 
 -(float)readIt
@@ -272,8 +246,6 @@ int samplecount= 0;
     return degrees(attitude.yaw);
     
 }
-
-
 
 
 
@@ -335,21 +307,6 @@ int samplecount= 0;
 -(void)samplingtimerfired
 {
     samplecount++;
-<<<<<<< HEAD
-    
-    
-    
-    float degrees = [self readIt] + degoffset; //this code works, but the type may be incorrect
-    float degleft = 45;// = defleftfunction();
-    float degright = -45;//= degrightfunction();
-    
-    
-    _YawLabel.text = [NSString stringWithFormat:@"%f deg",degrees];
-    
-    NSLog(@"%f Degrees\n",degrees);
-    
-    if(sessionStart && samplecount ==810)
-=======
     
     
     
@@ -359,8 +316,9 @@ int samplecount= 0;
     
     NSLog(@"%f Degrees\n",degrees);
     
-    if(sessionStart && samplecount ==90)
->>>>>>> 552adb3e8db27a6da395067fa5da473c9a842580
+     [self.YawLabel setText:[NSString stringWithFormat:@"%d",0]]; 
+    
+    if(sessionStart && samplecount ==810)
     {
         samplecount = 0;
         
@@ -440,7 +398,6 @@ int samplecount= 0;
     [self setToneSwitch:nil];
     [self setVoiceSwitch:nil];
     [self setYawLabel:nil];
-    _YawLabel = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

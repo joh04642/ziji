@@ -19,14 +19,11 @@
     NSTimer *timer1;
     NSTimer *samplingtimer;
     
-<<<<<<< HEAD
-=======
     IBOutlet UILabel *YawValue;
     //CMMotionManagerViewController *motionManager;
     IBOutlet UILabel *Yawdetect;
     IBOutlet UIProgressView *Yawmovement;
     
->>>>>>> 552adb3e8db27a6da395067fa5da473c9a842580
     UIAccelerometer *accelerometer;
     CMMotionManager *motionmanager;
     

@@ -321,7 +321,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.89411771297454834" blue="0.65490198135375977" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Ziji" id="CH2-wG-B9o"/>
                     <connections>
@@ -504,11 +504,20 @@
                                     <action selector="stopButton:" destination="okk-Mi-mFL" eventType="touchUpInside" id="hS5-4y-abM"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="ZZc-GX-Cs5">
+                                <rect key="frame" x="139" y="29" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.89411771297454834" blue="0.65490198135375977" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Ziji" id="rPL-b5-CEo"/>
                     <connections>
+                        <outlet property="YawLabel" destination="ZZc-GX-Cs5" id="9W2-Db-fvx"/>
+                        <outlet property="YawValue" destination="ZZc-GX-Cs5" id="zWq-V4-0Bm"/>
                         <outlet property="timerlabel2" destination="2hA-ek-ZUW" id="9Gg-JN-0ft"/>
                     </connections>
                 </viewController>
@@ -531,7 +540,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.89411771297454834" blue="0.65490198135375977" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Ziji" id="ygt-kb-BZN"/>
                 </viewController>
@@ -561,6 +570,7 @@
                 <relationship kind="action" name="vibrateSwitch:"/>
                 <relationship kind="action" name="voiceSwitch:"/>
                 <relationship kind="outlet" name="SessionNameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="YawLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="YawValue" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="Yawdetect" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="Yawmovement" candidateClass="UIProgressView"/>
