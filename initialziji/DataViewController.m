@@ -27,6 +27,8 @@ int sessionStart = 0;
 int PlaySoundOption;
 int UseVibrateOption;
 int UseVoiceOption;
+float degoffset;
+int samplecount= 0;
 
 @synthesize dataLabel = _dataLabel;
 @synthesize dataObject = _dataObject;
@@ -201,14 +203,14 @@ int UseVoiceOption;
     }
 }
 
--(void)Calibrate  //needs work
+-(float)Calibrate  //needs work
 {
-    int CurrentDeg;// = degreesfunction();
+    int CurrentDeg = [self readIt];
     int PastDeg = CurrentDeg;
     int i = 0;
     
     while (CurrentDeg > PastDeg + 10 || CurrentDeg < PastDeg - 10) {
-        //CurrentDeg = degreesfunction();
+        CurrentDeg = [self readIt];
         i++;
         if(i == 2)
         {
@@ -216,6 +218,8 @@ int UseVoiceOption;
             i = 0;
         }
     }
+    
+    return PastDeg;
 }
 
 -(float)readIt
@@ -301,17 +305,19 @@ int UseVoiceOption;
 
 -(void)samplingtimerfired
 {
+    samplecount++;
     
-    float degrees = [self readIt]; //this code works, but the type may be incorrect
+    
+    
+    float degrees = [self readIt] + degoffset; //this code works, but the type may be incorrect
     float degleft = 90;// = defleftfunction();
     float degright = -90;//= degrightfunction();
     
-    //CMMotionmanagerViewController.YawDegrees;
-    
     NSLog(@"%f Degrees\n",degrees);
     
-    if(sessionStart)
+    if(sessionStart && samplecount ==90)
     {
+        samplecount = 0;
         
         if(((degrees == degleft) || degrees > degleft) && (degrees >= 0))
         {
@@ -511,9 +517,9 @@ int UseVoiceOption;
 - (IBAction)startSessionButton:(id)sender {
     sessionStart = 1;
         
-    [self Calibrate];
+    degoffset = 0 - [self Calibrate];
     
-    samplingtimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(samplingtimerfired) userInfo:nil repeats:YES]; //time not known //why does this not start on the first load?
+    samplingtimer = [NSTimer scheduledTimerWithTimeInterval:(1/30) target:self selector:@selector(samplingtimerfired) userInfo:nil repeats:YES]; //time not known //why does this not start on the first load?
     
     
 }
