@@ -11,7 +11,7 @@
 NSString *datestring; //
 
 
-@implementation DataViewController
+@implementation CMMotionManagerViewController
 @synthesize SessionNameField = _SessionNameField;
 @synthesize timerSliderLabel = timerSliderLabel;
 @synthesize repSliderLabel = repSliderLabel;
@@ -33,6 +33,8 @@ int UseVoiceOption;
 @synthesize timerlabel = _timerlabel;
 @synthesize timerlabel2 = _timerlabel2;
 @synthesize estimatedtimelabel = _estimatedtimelabel;
+
+#define degrees(x) (180.0 * x / M_PI)
 
 
 - (void)didReceiveMemoryWarning
@@ -216,12 +218,52 @@ int UseVoiceOption;
     }
 }
 
+-(float)readIt
+{
+    //  CMAttitude *referenceAttitude;
+    CMAttitude *attitude;
+    
+    CMDeviceMotion *motion = motionmanager.deviceMotion;
+    //if (!motion) {
+    //    return;
+    //}
+    
+    attitude = motion.attitude;
+    
+    NSLog(@"roll = %f... pitch = %f ... yaw = %f", degrees(attitude.roll), degrees(attitude.pitch), degrees(attitude.yaw));
+    //write code to display yaw to YawValue
+    //YawValue.text = @"Hello";
+    //[Yawdetect setText:[NSString stringWithFormat:@"Yaw: %f",degrees(attitude.yaw)]];
+    //YawValue.text = [NSString stringWithFormat:@"%.1f", degrees(attitude.yaw)];
+    
+    //NSInteger YawDegrees = degrees(attitude.yaw);
+    
+    return degrees(attitude.yaw);
+    
+}
+
+
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib. 
    
+    motionmanager = [[CMMotionManager alloc] init];
+    motionmanager.deviceMotionUpdateInterval = 1.0/60.0; //60 Hz
+    accelerometer.delegate = self; // motionmanager
+    [motionmanager startDeviceMotionUpdates];
+    /*
+     NSTimer *timer;
+     timer = [NSTimer scheduledTimerWithTimeInterval:(1.0/60.0)
+     target:self
+     selector:@selector(readIt)
+     userInfo:nil
+     repeats:YES];
+     */  
+    NSLog(@"Did motion manager start?");
+    
     
     NSDate *currentDate = [NSDate date];  //currentDate holds the current date/time
     NSDateComponents *comps;
@@ -260,9 +302,9 @@ int UseVoiceOption;
 -(void)samplingtimerfired
 {
     
-    float degrees = [CMMotionmanagerViewController readIt]; //this code works, but the type may be incorrect
+    float degrees = [self readIt]; //this code works, but the type may be incorrect
     float degleft = 90;// = defleftfunction();
-    float degright;//= degrightfunction();
+    float degright = -90;//= degrightfunction();
     
     //CMMotionmanagerViewController.YawDegrees;
     

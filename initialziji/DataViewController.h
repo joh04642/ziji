@@ -14,11 +14,23 @@
 #import "SQLAppDelegate.h"
 #import "ViewController.h"
 
-@interface DataViewController : UIViewController
+@interface CMMotionManagerViewController : UIViewController <UIAccelerometerDelegate>
 {
     NSTimer *timer1;
     NSTimer *samplingtimer;
+    
+    IBOutlet UILabel *YawValue;
+    //CMMotionManagerViewController *motionManager;
+    IBOutlet UILabel *Yawdetect;
+    IBOutlet UIProgressView *Yawmovement;
+    
+    UIAccelerometer *accelerometer;
+    CMMotionManager *motionmanager;
+    
+    
 }
+
+-(float)readIt;
 
 @property (weak, nonatomic) IBOutlet UIPickerView *sessionTypeClicker;
 

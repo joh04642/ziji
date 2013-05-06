@@ -8,7 +8,7 @@
         <scene sceneID="r9b-RN-Egf">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IUt-bV-CaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="j4t-gn-NSB" customClass="CMMotionmanagerViewController" sceneMemberID="viewController">
+                <viewController id="j4t-gn-NSB" customClass="CMMotionManagerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GUR-6w-bXA">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -190,7 +190,7 @@
         <scene sceneID="NW6-bp-ZZY">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S3f-5x-WkX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="pzw-AW-LON" customClass="DataViewController" sceneMemberID="viewController">
+                <viewController id="pzw-AW-LON" customClass="CMMotionManagerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3yv-6n-bBt">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -232,7 +232,7 @@
         <scene sceneID="yuY-0n-mer">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rf-NG-HlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="izg-b6-g26" customClass="DataViewController" sceneMemberID="viewController">
+                <viewController id="izg-b6-g26" customClass="CMMotionManagerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZVT-Bl-x6G">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -337,7 +337,7 @@
         <scene sceneID="eLL-Fw-Gk8">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xqx-xC-KPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="IUm-Rh-ccN" customClass="DataViewController" sceneMemberID="viewController">
+                <viewController id="IUm-Rh-ccN" customClass="CMMotionManagerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rXw-lA-5xJ">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -477,7 +477,7 @@
         <scene sceneID="f8a-1X-P4s">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSo-Dz-ri7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="okk-Mi-mFL" customClass="DataViewController" sceneMemberID="viewController">
+                <viewController id="okk-Mi-mFL" customClass="CMMotionManagerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ajK-Yj-2WM">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -547,16 +547,8 @@
         <image name="session setup-1.png" width="320" height="480"/>
     </resources>
     <classes>
-        <class className="CMMotionmanagerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CMMotionmanagerViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="YawValue" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="Yawdetect" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="Yawmovement" candidateClass="UIProgressView"/>
-            </relationships>
-        </class>
-        <class className="DataViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DataViewController.h"/>
+        <class className="CMMotionManagerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CMMotionManagerViewController.h"/>
             <relationships>
                 <relationship kind="action" name="degLeftSlider:"/>
                 <relationship kind="action" name="degRightSlider:"/>
@@ -569,6 +561,9 @@
                 <relationship kind="action" name="vibrateSwitch:"/>
                 <relationship kind="action" name="voiceSwitch:"/>
                 <relationship kind="outlet" name="SessionNameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="YawValue" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="Yawdetect" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="Yawmovement" candidateClass="UIProgressView"/>
                 <relationship kind="outlet" name="dataLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="degLeftSliderLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="degRightSliderLabel" candidateClass="UILabel"/>
