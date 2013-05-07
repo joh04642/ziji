@@ -24,7 +24,7 @@ NSString *datestring; //
 //@synthesize sessionTypeTable = _sessionTypeTable;
 
 @synthesize sessionTypeTable;
-@synthesize sessionTypeTable;
+//@synthesize sessionTypeTable;
 
 int timer = 0;
 int sessionStart = 0;
@@ -482,7 +482,7 @@ int hold = 0;
 
 - (IBAction)saveButton:(id)sender {
     //SQLAppDelegate *appDelegate = (SQLAppDelegate *)[[UIApplication sharedApplication]delegate];
-    appDelegate = (SQLAppDelegate *)[[UIApplication sharedApplication]delegate];
+    //appDelegate = (SQLAppDelegate *)[[UIApplication sharedApplication]delegate];
 
 
     SessionType *SessionTypeObj = [[SessionType alloc] initWithPrimaryKey:0];
