@@ -29,8 +29,10 @@ int UseVibrateOption;
 int UseVoiceOption;
 float degoffset;
 int samplecount= 0;
+int hold = 0;
 
-@synthesize YawLabel;
+@synthesize YawLabel = _YawLabel;
+
 @synthesize dataLabel = _dataLabel;
 @synthesize dataObject = _dataObject;
 @synthesize timerlabel = _timerlabel;
@@ -310,13 +312,13 @@ int samplecount= 0;
     
     
     
-    float degrees = [self readIt] + degoffset; //this code works, but the type may be incorrect
+    float degrees = [self readIt] + degoffset; //this code works
     float degleft = 90;// = defleftfunction();
     float degright = -90;//= degrightfunction();
     
     NSLog(@"%f Degrees\n",degrees);
     
-     [self.YawLabel setText:[NSString stringWithFormat:@"%d",0]]; 
+     [self.YawLabel setText:[NSString stringWithFormat:@"%f",degrees]]; ///////we see a problem where the user turns and succeeds, looks forward,but is told to the same direction, like looking about 0, turns to 45, goes back to 0, but is little positive, and told to go in the same direction
     
     if(sessionStart && samplecount ==810)
     {
@@ -325,7 +327,10 @@ int samplecount= 0;
         if(((degrees == degleft) || degrees > degleft) && (degrees >= 0))
         {
             //record rep complete
+            if(hold ==540)
+            {
             [self PlayGoodSound]; //play sound : completed
+            }
         }
         
         if((degrees < degleft) && (degrees >= 0))
@@ -336,7 +341,10 @@ int samplecount= 0;
         if(((degrees == degright) || degrees < degright) && (degrees <= 0))
         {
             //record rep complete
+            if(hold == 540)
+            {
             [self PlayGoodSound];  //play sound : completed
+            }
         }
         
         if((degrees > degright) && (degrees <= 0))

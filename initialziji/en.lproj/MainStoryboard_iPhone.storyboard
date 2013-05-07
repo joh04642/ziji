@@ -50,7 +50,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="i31-cW-KMM"/>
+                    <navigationItem key="navigationItem" title="ZiJi" id="i31-cW-KMM"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="319" y="131"/>
@@ -72,7 +72,7 @@
         <scene sceneID="1SP-9O-YO0">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ow4-uX-HLL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="er3-E9-BoR" sceneMemberID="viewController">
+                <viewController id="er3-E9-BoR" customClass="CMMotionManagerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qOS-p5-1Jn">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -93,7 +93,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="pzw-AW-LON" kind="push" id="lOk-s3-5Vj"/>
+                                    <segue destination="pzw-AW-LON" kind="push" id="fny-8I-nlm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="X2e-DP-RkK">
@@ -221,7 +221,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ieH-2B-5xA"/>
+                    <navigationItem key="navigationItem" title="Ziji" id="ieH-2B-5xA"/>
                     <connections>
                         <outlet property="sessionTypeClicker" destination="luL-Ii-BTA" id="Uad-UU-GRd"/>
                     </connections>
@@ -462,7 +462,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SSG-rr-Zks"/>
+                    <navigationItem key="navigationItem" title="Ziji" id="SSG-rr-Zks"/>
                     <connections>
                         <outlet property="SessionNameField" destination="Gfh-gJ-owB" id="pkt-0u-0bP"/>
                         <outlet property="degLeftSliderLabel" destination="azK-dC-vL3" id="FDE-oE-Xr1"/>
@@ -504,7 +504,7 @@
                                     <action selector="stopButton:" destination="okk-Mi-mFL" eventType="touchUpInside" id="hS5-4y-abM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="ZZc-GX-Cs5">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0 deg" lineBreakMode="tailTruncation" minimumFontSize="10" id="ZZc-GX-Cs5">
                                 <rect key="frame" x="139" y="29" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -516,8 +516,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Ziji" id="rPL-b5-CEo"/>
                     <connections>
-                        <outlet property="YawLabel" destination="ZZc-GX-Cs5" id="9W2-Db-fvx"/>
-                        <outlet property="YawValue" destination="ZZc-GX-Cs5" id="zWq-V4-0Bm"/>
+                        <outlet property="YawLabel" destination="ZZc-GX-Cs5" id="Qrh-f1-EaO"/>
                         <outlet property="timerlabel2" destination="2hA-ek-ZUW" id="9Gg-JN-0ft"/>
                     </connections>
                 </viewController>
@@ -594,7 +593,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="lOk-s3-5Vj"/>
-    </inferredMetricsTieBreakers>
 </document>
