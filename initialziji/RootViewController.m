@@ -71,10 +71,15 @@
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController.delegate = self;
 
-    DataViewController *startingViewController; //this was split, are these lines needed?
+    //DataViewController *startingViewController; //this was split, are these lines needed?
+    //startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
+    CMMotionManagerViewController *startingViewController; //this was split, are these lines needed?
     startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
+
     
-   // [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:NULL];
+    
+    
+    //[self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:NULL];
 
     self.pageViewController.dataSource = self.modelController;
 
@@ -173,12 +178,12 @@
 
 #pragma mark - UIPageViewController delegate methods
 
-/*
+
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
 {
     
 }
- */
+ 
 
 - (UIPageViewControllerSpineLocation)pageViewController:(UIPageViewController *)pageViewController spineLocationForInterfaceOrientation:(UIInterfaceOrientation)orientation
 {
@@ -194,7 +199,8 @@
     }
 
     // In landscape orientation: Set set the spine location to "mid" and the page view controller's view controllers array to contain two view controllers. If the current page is even, set it to contain the current and next view controllers; if it is odd, set the array to contain the previous and current view controllers.
-    DataViewController *currentViewController = [self.pageViewController.viewControllers objectAtIndex:0];
+    //DataViewController *currentViewController = [self.pageViewController.viewControllers objectAtIndex:0];
+    CMMotionManagerViewController *currentViewController = [self.pageViewController.viewControllers objectAtIndex:0];
     NSArray *viewControllers = nil;
 
     NSUInteger indexOfCurrentViewController = [self.modelController indexOfViewController:currentViewController];

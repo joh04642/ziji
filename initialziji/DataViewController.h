@@ -14,15 +14,29 @@
 #import "SQLAppDelegate.h"
 #import "ViewController.h"
 
-@interface DataViewController : UIViewController <UIPageViewControllerDelegate> {
+@interface CMMotionManagerViewController : UIViewController <UIAccelerometerDelegate>
+{
     SQLAppDelegate *appDelegate;
-    NSTimer *timer1;
+	NSTimer *timer1;
     NSTimer *samplingtimer;
+    
+    //IBOutlet UILabel *YawValue;
+    //CMMotionManagerViewController *motionManager;
+    //IBOutlet UILabel *Yawdetect;
+    //IBOutlet UIProgressView *Yawmovement;
+    
+    UIAccelerometer *accelerometer;
+    CMMotionManager *motionmanager;
+    UIPickerView *sessionTypeClicker;
+
+    IBOutlet UILabel *YawLabel;
 }
 
-//@property (nonatomic, retain) IBOutlet UIPickerView *sessionTypeClicker;
+-(float)readIt;
 
 @property (weak, nonatomic) IBOutlet UITableView *sessionTypeTable;
+
+@property (weak, nonatomic) IBOutlet UILabel *YawLabel;
 
 @property (strong, nonatomic) IBOutlet UILabel *dataLabel;
 @property (strong, nonatomic) id dataObject;

@@ -1,5 +1,36 @@
 // !$*UTF8*$!
 {
+	BFC8B22A1732E8610055BA13 /* en */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1573, 7735}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2823}";
+		};
+	};
+	FA1FE46D1739A142009C4E0A /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = FAE08AA7172DDDC000E0DDAC /* icon.png */;
+	};
+	FA1FE4731739A15F009C4E0A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BFC8B22A1732E8610055BA13 /* en */;
+		name = "MainStoryboard_iPhone.storyboard: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2823;
+		vrLoc = 0;
+	};
+	FA1FE4741739A15F009C4E0A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BFC8B22A1732E8610055BA13 /* en */;
+		name = "MainStoryboard_iPhone.storyboard: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2823;
+		vrLoc = 0;
+	};
 	FA322F8B171B2C0D00D092AE /* initialziji */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
@@ -58,7 +89,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					341,
+					492,
 					20,
 					48,
 					43,
@@ -75,13 +106,14 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 388881761;
-			PBXWorkspaceStateSaveDate = 388881761;
+			PBXPerProjectTemplateStateSaveDate = 389652791;
+			PBXWorkspaceStateSaveDate = 389652791;
 		};
 		perUserProjectItems = {
+			FA1FE46D1739A142009C4E0A /* PBXBookmark */ = FA1FE46D1739A142009C4E0A /* PBXBookmark */;
+			FA1FE4731739A15F009C4E0A /* PBXTextBookmark */ = FA1FE4731739A15F009C4E0A /* PBXTextBookmark */;
+			FA1FE4741739A15F009C4E0A /* PBXTextBookmark */ = FA1FE4741739A15F009C4E0A /* PBXTextBookmark */;
 			FAE08AB3172DDDC600E0DDAC /* PBXTextBookmark */ = FAE08AB3172DDDC600E0DDAC /* PBXTextBookmark */;
-			FAE08AB4172DDDC600E0DDAC /* PBXBookmark */ = FAE08AB4172DDDC600E0DDAC /* PBXBookmark */;
-			FAE08AB5172DDDC600E0DDAC /* PBXBookmark */ = FAE08AB5172DDDC600E0DDAC /* PBXBookmark */;
 		};
 		sourceControlManager = FA322FA5171B2C1600D092AE /* Source Control */;
 		userBuildSettings = {
@@ -98,32 +130,16 @@
 			sepNavWindowFrame = "{{558, 59}, {750, 558}}";
 		};
 	};
-	FACB230716E3FCCD005CE096 /* en */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1573, 6929}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1441}";
-		};
-	};
 	FACB231016E3FCCD005CE096 /* initialzijiTests */ = {
 		activeExec = 0;
 	};
 	FAE08AB3172DDDC600E0DDAC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = FACB230716E3FCCD005CE096 /* en */;
 		name = "MainStoryboard_iPhone.storyboard: 1";
 		rLen = 0;
 		rLoc = 0;
 		rType = 0;
 		vrLen = 1441;
 		vrLoc = 0;
-	};
-	FAE08AB4172DDDC600E0DDAC /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = FAE08AA7172DDDC000E0DDAC /* icon.png */;
-	};
-	FAE08AB5172DDDC600E0DDAC /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = FAE08AA7172DDDC000E0DDAC /* icon.png */;
 	};
 }

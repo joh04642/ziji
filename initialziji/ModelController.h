@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@class DataViewController;
+//@class DataViewController;
+@class CMMotionManagerViewController;
 
 @interface ModelController : NSObject <UIPageViewControllerDataSource>
-- (DataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard;
-- (NSUInteger)indexOfViewController:(DataViewController *)viewController;
+//- (DataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard;
+//- (NSUInteger)indexOfViewController:(DataViewController *)viewController;
+- (CMMotionManagerViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard;
+- (NSUInteger)indexOfViewController:(CMMotionManagerViewController *)viewController;
 @end

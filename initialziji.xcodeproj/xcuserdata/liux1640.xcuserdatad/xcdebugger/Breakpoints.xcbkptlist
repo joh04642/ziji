@@ -14,7 +14,7 @@
          endingColumnNumber = "2147483647"
          startingLineNumber = "42"
          endingLineNumber = "42"
-         landmarkName = "-viewDidLoad"
+         landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

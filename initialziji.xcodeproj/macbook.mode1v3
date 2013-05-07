@@ -265,7 +265,6 @@
 							<array>
 								<string>FACB22DC16E3FCCC005CE096</string>
 								<string>FACB22F116E3FCCD005CE096</string>
-								<string>FACB230616E3FCCD005CE096</string>
 								<string>FACB22F216E3FCCD005CE096</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
@@ -273,13 +272,12 @@
 							<array>
 								<array>
 									<integer>23</integer>
-									<integer>21</integer>
 									<integer>3</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 82}, {186, 445}}</string>
+							<string>{{0, 82}, {186, 643}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -291,14 +289,14 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {203, 463}}</string>
+						<string>{{0, 0}, {203, 661}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>197 372 788 504 0 0 1280 1002 </string>
+						<string>197 174 939 702 0 0 1280 1002 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -314,7 +312,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>icon</string>
+								<string>MainStoryboard_iPhone.storyboard</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -322,15 +320,16 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>icon</string>
+										<string>MainStoryboard_iPhone.storyboard</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>FAE08AB5172DDDC600E0DDAC</string>
+										<string>FA1FE4741739A15F009C4E0A</string>
 										<key>history</key>
 										<array>
 											<string>FAE08AB3172DDDC600E0DDAC</string>
-											<string>FAE08AB4172DDDC600E0DDAC</string>
+											<string>FA1FE46D1739A142009C4E0A</string>
+											<string>FA1FE4731739A15F009C4E0A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -342,14 +341,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {580, 269}}</string>
+								<string>{{0, 0}, {731, 458}}</string>
 								<key>RubberWindowFrame</key>
-								<string>197 372 788 504 0 0 1280 1002 </string>
+								<string>197 174 939 702 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>269pt</string>
+							<string>458pt</string>
 						</dict>
 						<dict>
 							<key>BecomeActive</key>
@@ -364,18 +363,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 274}, {580, 189}}</string>
+								<string>{{0, 463}, {731, 198}}</string>
 								<key>RubberWindowFrame</key>
-								<string>197 372 788 504 0 0 1280 1002 </string>
+								<string>197 174 939 702 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>189pt</string>
+							<string>198pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>580pt</string>
+					<string>731pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -390,9 +389,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>FAE08AB6172DDDC600E0DDAC</string>
+				<string>FA1FE4701739A142009C4E0A</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>FAE08AB7172DDDC600E0DDAC</string>
+				<string>FA1FE4711739A142009C4E0A</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -534,7 +533,7 @@
 		<string>/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>197 372 788 504 0 0 1280 1002 </string>
+	<string>197 174 939 702 0 0 1280 1002 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -611,7 +610,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>FA322FA3171B2C1600D092AE</string>
-				<string>FAE08AB8172DDDC600E0DDAC</string>
+				<string>FA1FE4721739A142009C4E0A</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

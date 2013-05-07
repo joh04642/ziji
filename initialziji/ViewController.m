@@ -22,25 +22,7 @@
 
 
 
-- (void)viewDidLoad
-{
-    motionmanager = [[CMMotionManager alloc] init];
-    motionmanager.deviceMotionUpdateInterval = 1.0/60.0; //60 Hz
-    accelerometer.delegate = self; // motionmanager
-    [motionmanager startDeviceMotionUpdates];
-    
-    NSTimer *timer;
-    timer = [NSTimer scheduledTimerWithTimeInterval:(1.0/60.0)
-                                                      target:self
-                                                    selector:@selector( readIt )
-                                                    userInfo:nil
-                                                     repeats:YES];
-    
-    
-    
-}
-
-+(double)readIt
++(float)readIt
 {
     CMMotionManager *motionmanager;
     
@@ -66,6 +48,28 @@
     return degrees(attitude.yaw);
     
 }
+
+
+
+
+- (void)viewDidLoad
+{
+    motionmanager = [[CMMotionManager alloc] init];
+    motionmanager.deviceMotionUpdateInterval = 1.0/60.0; //60 Hz
+    accelerometer.delegate = self; // motionmanager
+    [motionmanager startDeviceMotionUpdates];
+    
+    //NSTimer *timer;
+   // timer = [NSTimer scheduledTimerWithTimeInterval:(1.0/60.0)
+  //                                                    target:self
+  //                                         selector:@selector(readIt)
+    //                                                userInfo:nil
+      //                                               repeats:YES];
+    
+    NSLog(@"Did motion manager start?");
+    
+}
+
 
 
 - (void)dealloc{

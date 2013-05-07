@@ -40,7 +40,9 @@
     return self;
 }
 
-- (DataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard
+//- (DataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard
+- (CMMotionManagerViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard
+
 {   
     // Return the data view controller for the given index.
     if (([self.pageData count] == 0) || (index >= [self.pageData count])) {
@@ -48,12 +50,15 @@
     }
     
     // Create a new view controller and pass suitable data.
-    DataViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
+    //DataViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
+    CMMotionManagerViewController *dataViewController = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
+    //dataViewController.dataObject = [self.pageData objectAtIndex:index];
     dataViewController.dataObject = [self.pageData objectAtIndex:index];
     return dataViewController;
 }
 
-- (NSUInteger)indexOfViewController:(DataViewController *)viewController
+//- (NSUInteger)indexOfViewController:(DataViewController *)viewController
+- (NSUInteger)indexOfViewController:(CMMotionManagerViewController *)viewController
 {   
     /*
      Return the index of the given data view controller.
@@ -66,7 +71,8 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
 {
-    NSUInteger index = [self indexOfViewController:(DataViewController *)viewController];
+    //NSUInteger index = [self indexOfViewController:(DataViewController *)viewController];
+    NSUInteger index = [self indexOfViewController:(CMMotionManagerViewController *)viewController];
     if ((index == 0) || (index == NSNotFound)) {
         return nil;
     }
@@ -77,7 +83,8 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
-    NSUInteger index = [self indexOfViewController:(DataViewController *)viewController];
+    //NSUInteger index = [self indexOfViewController:(DataViewController *)viewController];
+    NSUInteger index = [self indexOfViewController:(CMMotionManagerViewController *)viewController];
     if (index == NSNotFound) {
         return nil;
     }

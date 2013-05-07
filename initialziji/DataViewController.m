@@ -11,7 +11,7 @@
 NSString *datestring; //
 
 
-@implementation DataViewController
+@implementation CMMotionManagerViewController
 @synthesize SessionNameField = _SessionNameField;
 @synthesize timerSliderLabel = timerSliderLabel;
 @synthesize repSliderLabel = repSliderLabel;
@@ -24,18 +24,25 @@ NSString *datestring; //
 //@synthesize sessionTypeTable = _sessionTypeTable;
 
 @synthesize sessionTypeTable;
+@synthesize sessionTypeTable;
 
 int timer = 0;
 int sessionStart = 0;
 int PlaySoundOption;
 int UseVibrateOption;
 int UseVoiceOption;
+float degoffset;
+int samplecount= 0;
+int hold = 0;
+
+@synthesize YawLabel = _YawLabel;
 
 @synthesize dataLabel = _dataLabel;
-@synthesize dataObject = _dataObject;
-@synthesize timerlabel = _timerlabel;
+@synthesize dataObject = _dataObject; 
 @synthesize timerlabel2 = _timerlabel2;
 @synthesize estimatedtimelabel = _estimatedtimelabel;
+
+#define degrees(x) (180.0 * x / M_PI)
 
 
 - (void)didReceiveMemoryWarning
@@ -202,14 +209,14 @@ int UseVoiceOption;
     }
 }
 
--(void)Calibrate  //needs work
+-(float)Calibrate  //needs work
 {
-    int CurrentDeg;// = degreesfunction();
+    int CurrentDeg = [self readIt];
     int PastDeg = CurrentDeg;
     int i = 0;
     
     while (CurrentDeg > PastDeg + 10 || CurrentDeg < PastDeg - 10) {
-        //CurrentDeg = degreesfunction();
+        CurrentDeg = [self readIt];
         i++;
         if(i == 2)
         {
@@ -217,7 +224,35 @@ int UseVoiceOption;
             i = 0;
         }
     }
+    
+    return PastDeg;
 }
+
+-(float)readIt
+{
+    //  CMAttitude *referenceAttitude;
+    CMAttitude *attitude;
+    
+    CMDeviceMotion *motion = motionmanager.deviceMotion;
+    //if (!motion) {
+    //    return;
+    //}
+    
+    attitude = motion.attitude;
+    
+    NSLog(@"roll = %f... pitch = %f ... yaw = %f", degrees(attitude.roll), degrees(attitude.pitch), degrees(attitude.yaw));
+    //write code to display yaw to YawValue
+    //YawValue.text = @"Hello";
+    //[Yawdetect setText:[NSString stringWithFormat:@"Yaw: %f",degrees(attitude.yaw)]];
+    //YawValue.text = [NSString stringWithFormat:@"%.1f", degrees(attitude.yaw)];
+    
+    //NSInteger YawDegrees = degrees(attitude.yaw);
+    
+    return degrees(attitude.yaw);
+    
+}
+
+
 
 
 - (void)viewDidLoad
@@ -225,6 +260,20 @@ int UseVoiceOption;
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib. 
    
+    motionmanager = [[CMMotionManager alloc] init];
+    motionmanager.deviceMotionUpdateInterval = 1.0/60.0; //60 Hz
+    accelerometer.delegate = self; // motionmanager
+    [motionmanager startDeviceMotionUpdates];
+    /*
+     NSTimer *timer;
+     timer = [NSTimer scheduledTimerWithTimeInterval:(1.0/60.0)
+     target:self
+     selector:@selector(readIt)
+     userInfo:nil
+     repeats:YES];
+     */  
+    NSLog(@"Did motion manager start?");
+    
     
     NSDate *currentDate = [NSDate date];  //currentDate holds the current date/time
     NSDateComponents *comps;
@@ -262,22 +311,33 @@ int UseVoiceOption;
 
 -(void)samplingtimerfired
 {
+    samplecount++;
     
-    float degrees = [CMMotionmanagerViewController readIt]; //this code works, but the type may be incorrect
+    
+    
+    float degrees = [self readIt] + degoffset; //this code works
     float degleft = 90;// = defleftfunction();
-    float degright;//= degrightfunction();
-    
-    //CMMotionmanagerViewController.YawDegrees;
+    float degright = -90;//= degrightfunction();
     
     NSLog(@"%f Degrees\n",degrees);
     
-    if(sessionStart)
+
+    //[self.YawLabel setText:[NSString stringWithFormat:@"%f",degrees]]; ///////we see a problem where the user turns and succeeds, looks forward,but is told to the same direction, like looking about 0, turns to 45, goes back to 0, but is little positive, and told to go in the same direction
+    
+    YawLabel.text  = [NSString stringWithFormat:@"%f",degrees];
+    
+    
+    if(sessionStart && samplecount ==810)
     {
+        samplecount = 0;
         
         if(((degrees == degleft) || degrees > degleft) && (degrees >= 0))
         {
             //record rep complete
+            if(hold ==540)
+            {
             [self PlayGoodSound]; //play sound : completed
+            }
         }
         
         if((degrees < degleft) && (degrees >= 0))
@@ -285,10 +345,13 @@ int UseVoiceOption;
             [self PlayLeftSound]; //play sound : rotate left
         }
         
-        if(((degrees == degright) || degrees > degright) && (degrees <= 0))
+        if(((degrees == degright) || degrees < degright) && (degrees <= 0))
         {
             //record rep complete
+            if(hold == 540)
+            {
             [self PlayGoodSound];  //play sound : completed
+            }
         }
         
         if((degrees > degright) && (degrees <= 0))
@@ -349,6 +412,8 @@ int UseVoiceOption;
     [self setVibrateSwitch:nil];
     [self setToneSwitch:nil];
     [self setVoiceSwitch:nil];
+    [self setYawLabel:nil];
+    [self setSessionTypeTable:nil];
     [self setSessionTypeTable:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -508,9 +573,9 @@ int UseVoiceOption;
 - (IBAction)startSessionButton:(id)sender {
     sessionStart = 1;
         
-    [self Calibrate];
+    degoffset = 0 - [self Calibrate];
     
-    samplingtimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(samplingtimerfired) userInfo:nil repeats:YES]; //time not known //why does this not start on the first load?
+    samplingtimer = [NSTimer scheduledTimerWithTimeInterval:(1/30) target:self selector:@selector(samplingtimerfired) userInfo:nil repeats:YES]; //time not known //why does this not start on the first load?
     
     
 }
