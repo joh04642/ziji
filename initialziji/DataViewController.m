@@ -34,8 +34,7 @@ int hold = 0;
 @synthesize YawLabel = _YawLabel;
 
 @synthesize dataLabel = _dataLabel;
-@synthesize dataObject = _dataObject;
-@synthesize timerlabel = _timerlabel;
+@synthesize dataObject = _dataObject; 
 @synthesize timerlabel2 = _timerlabel2;
 @synthesize estimatedtimelabel = _estimatedtimelabel;
 
@@ -318,7 +317,11 @@ int hold = 0;
     
     NSLog(@"%f Degrees\n",degrees);
     
-     [self.YawLabel setText:[NSString stringWithFormat:@"%f",degrees]]; ///////we see a problem where the user turns and succeeds, looks forward,but is told to the same direction, like looking about 0, turns to 45, goes back to 0, but is little positive, and told to go in the same direction
+
+    //[self.YawLabel setText:[NSString stringWithFormat:@"%f",degrees]]; ///////we see a problem where the user turns and succeeds, looks forward,but is told to the same direction, like looking about 0, turns to 45, goes back to 0, but is little positive, and told to go in the same direction
+    
+    YawLabel.text  = [NSString stringWithFormat:@"%f",degrees];
+    
     
     if(sessionStart && samplecount ==810)
     {
