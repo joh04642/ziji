@@ -19,7 +19,6 @@
 
 @end
 
-
 @class Session;
 
 @class SessionType;

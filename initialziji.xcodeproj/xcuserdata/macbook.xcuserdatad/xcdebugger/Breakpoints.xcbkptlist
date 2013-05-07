@@ -2,4 +2,76 @@
 <Bucket
    type = "1"
    version = "1.0">
+   <FileBreakpoints>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "SessionType.m"
+         timestampString = "389647769.332462"
+         startingColumnNumber = "2147483647"
+         endingColumnNumber = "2147483647"
+         startingLineNumber = "52"
+         endingLineNumber = "52"
+         landmarkName = "-addSessionType"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "SQLAppDelegate.m"
+         timestampString = "389647785.203749"
+         startingColumnNumber = "2147483647"
+         endingColumnNumber = "2147483647"
+         startingLineNumber = "67"
+         endingLineNumber = "67"
+         landmarkName = "-addSessionType:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "initialziji/DataViewController.m"
+         timestampString = "389651139.708576"
+         startingColumnNumber = "2147483647"
+         endingColumnNumber = "2147483647"
+         startingLineNumber = "445"
+         endingLineNumber = "445"
+         landmarkName = "-saveButton:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "initialziji/RootViewController.m"
+         timestampString = "389651430.302755"
+         startingColumnNumber = "2147483647"
+         endingColumnNumber = "2147483647"
+         startingLineNumber = "66"
+         endingLineNumber = "66"
+         landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "initialziji/RootViewController.m"
+         timestampString = "389651450.06375"
+         startingColumnNumber = "2147483647"
+         endingColumnNumber = "2147483647"
+         startingLineNumber = "34"
+         endingLineNumber = "34"
+         landmarkName = "-tableView:cellForRowAtIndexPath:"
+         landmarkType = "5">
+      </FileBreakpoint>
+   </FileBreakpoints>
 </Bucket>

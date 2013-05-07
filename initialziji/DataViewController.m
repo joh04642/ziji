@@ -20,7 +20,10 @@ NSString *datestring; //
 @synthesize vibrateSwitch = _vibrateSwitch;
 @synthesize toneSwitch = _toneSwitch;
 @synthesize voiceSwitch = _voiceSwitch;
+//@synthesize sessionTypeClicker;
+//@synthesize sessionTypeTable = _sessionTypeTable;
 
+@synthesize sessionTypeTable;
 
 int timer = 0;
 int sessionStart = 0;
@@ -42,7 +45,7 @@ int UseVoiceOption;
 }
 
 #pragma mark - View lifecycle
-
+   
 -(void)PlayGoodSound
 {
     int PlaySoundOption = _toneSwitch.on;  //this works, but is probably in the wrong place
@@ -346,6 +349,7 @@ int UseVoiceOption;
     [self setVibrateSwitch:nil];
     [self setToneSwitch:nil];
     [self setVoiceSwitch:nil];
+    [self setSessionTypeTable:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -412,31 +416,66 @@ int UseVoiceOption;
 
 
 - (IBAction)saveButton:(id)sender {
-    SQLAppDelegate *appDelegate = (SQLAppDelegate *)[[UIApplication sharedApplication] delegate];
-        
-        //Create a Coffee Object.
+    //SQLAppDelegate *appDelegate = (SQLAppDelegate *)[[UIApplication sharedApplication]delegate];
+    appDelegate = (SQLAppDelegate *)[[UIApplication sharedApplication]delegate];
+
+
     SessionType *SessionTypeObj = [[SessionType alloc] initWithPrimaryKey:0];
+    
     SessionTypeObj.session_name = self.SessionNameField.text;
     
-    SessionTypeObj.session_length_min = (int)self.timerSliderLabel.text;
+    SessionTypeObj.session_length_min = self.timerSliderLabel.text;
     
-    SessionTypeObj.degrees_L = (int)self.degLeftSliderLabel.text;
+    SessionTypeObj.degrees_L = self.degLeftSliderLabel.text;
     
-    SessionTypeObj.degrees_R = (int)self.degRightSliderLabel.text;
+    SessionTypeObj.degrees_R = self.degRightSliderLabel.text;
     
-    SessionTypeObj.num_of_reps = (int)self.repSliderLabel.text;
+    SessionTypeObj.num_of_reps = self.repSliderLabel.text;
     
-    SessionTypeObj.date_created = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd-MM-yyyy"];
+    NSString *strDate = [dateFormatter stringFromDate:[NSDate date]];
+    
+    SessionTypeObj.date_created = strDate;
     
     SessionTypeObj.isDirty = NO;
     
     SessionTypeObj.isDetailViewHydrated = YES;
-        
     //Add the object
     [appDelegate addSessionType:SessionTypeObj];
-        
+    
+    
     //Dismiss the controller.
+    
     [self.navigationController dismissModalViewControllerAnimated:YES];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [appDelegate.SessionTypeArray count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+	//Get the object from the array
+	SessionType *SessionTypeObj = [appDelegate.SessionTypeArray objectAtIndex:indexPath.row];
+    
+	//Set the coffename.
+	cell.textLabel.text = SessionTypeObj.session_name;  //this could look like cell.textlabel.text to solve warning//
+    
+    // Set up the cell
+    return cell;
+}   
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Navigation logic -- create and push a new view controller
 }
 
 - (IBAction)vibrateSwitch:(id)sender {

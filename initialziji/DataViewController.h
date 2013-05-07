@@ -5,7 +5,7 @@
 //  Created by macbook on 3/3/13.
 //  Copyright (c) 2013 __MyCompanyName__. All rights reserved.
 //
-
+#import "AppDelegate.h"
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <CoreAudio/CoreAudioTypes.h>
@@ -14,14 +14,15 @@
 #import "SQLAppDelegate.h"
 #import "ViewController.h"
 
-@interface DataViewController : UIViewController
-{
+@interface DataViewController : UIViewController <UIPageViewControllerDelegate> {
+    SQLAppDelegate *appDelegate;
     NSTimer *timer1;
     NSTimer *samplingtimer;
 }
 
-@property (weak, nonatomic) IBOutlet UIPickerView *sessionTypeClicker;
+//@property (nonatomic, retain) IBOutlet UIPickerView *sessionTypeClicker;
 
+@property (weak, nonatomic) IBOutlet UITableView *sessionTypeTable;
 
 @property (strong, nonatomic) IBOutlet UILabel *dataLabel;
 @property (strong, nonatomic) id dataObject;

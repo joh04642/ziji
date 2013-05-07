@@ -58,13 +58,13 @@ static sqlite3_stmt *addStmt = nil;
     
     sqlite3_bind_text(addStmt, 1, [session_name UTF8String], -1, SQLITE_TRANSIENT);
     sqlite3_bind_text(addStmt, 2, [date_created UTF8String], -1, SQLITE_TRANSIENT);
-    sqlite3_bind_int(addStmt, 3, session_length_min);
+    sqlite3_bind_text(addStmt, 3, [session_length_min UTF8String], -1, SQLITE_TRANSIENT);
     
-    sqlite3_bind_int(addStmt, 4, num_of_reps);
+    sqlite3_bind_text(addStmt, 4, [num_of_reps UTF8String], -1, SQLITE_TRANSIENT);
 
-    sqlite3_bind_int(addStmt, 5, degrees_L);
+    sqlite3_bind_text(addStmt, 5, [degrees_L UTF8String], -1, SQLITE_TRANSIENT);
     
-    sqlite3_bind_int(addStmt, 6, degrees_R);
+    sqlite3_bind_text(addStmt, 6, [degrees_R UTF8String], -1, SQLITE_TRANSIENT);
     
     if(SQLITE_DONE != sqlite3_step(addStmt))
         NSAssert1(0, @"Error while inserting data. '%s'", sqlite3_errmsg(database));

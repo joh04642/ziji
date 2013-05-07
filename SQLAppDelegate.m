@@ -65,7 +65,7 @@
 }
 
 - (void) addSessionType:(SessionType *)sessionTypeObj {
-    //Add it to the database.
+    //Add it to the database
     [sessionTypeObj addSessionType];
     
     //Add it to the coffee array.
