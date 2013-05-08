@@ -34,6 +34,10 @@ int UseVoiceOption;
 float degoffset;
 int samplecount= 0;
 int hold = 0;
+int repcomplete = 0;
+int repflag = 0;
+float degrees;
+int timecount = 0;
 
 @synthesize YawLabel = _YawLabel;
 
@@ -288,7 +292,6 @@ int hold = 0;
     
     
     
-    
         
    
     if(sessionStart)
@@ -299,7 +302,7 @@ int hold = 0;
     if(!sessionStart)
     {
         
-        timer1 = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerfired) userInfo:nil repeats:YES]; 
+        timer1 = [NSTimer scheduledTimerWithTimeInterval:(0.1) target:self selector:@selector(timerfired) userInfo:nil repeats:YES]; 
         
     }
       
@@ -315,7 +318,7 @@ int hold = 0;
     
     
     
-    float degrees = [self readIt] + degoffset; //this code works
+    degrees = [self readIt] + degoffset; //this code works
     float degleft = 90;// = defleftfunction();
     float degright = -90;//= degrightfunction();
     
@@ -327,15 +330,18 @@ int hold = 0;
     YawLabel.text  = [NSString stringWithFormat:@"%f",degrees];
     
     
-    if(sessionStart && samplecount ==810)
+    if(sessionStart && (samplecount ==810 || samplecount > 810))
     {
         samplecount = 0;
         
         if(((degrees == degleft) || degrees > degleft) && (degrees >= 0))
         {
             //record rep complete
-            if(hold ==540)
+            hold++;
+            if(hold ==5)
             {
+                hold = 0;
+                repflag = 1;
             [self PlayGoodSound]; //play sound : completed
             }
         }
@@ -348,8 +354,11 @@ int hold = 0;
         if(((degrees == degright) || degrees < degright) && (degrees <= 0))
         {
             //record rep complete
-            if(hold == 540)
+            hold++;
+            if(hold == 5)
             {
+                hold = 0;
+                repflag = 1;
             [self PlayGoodSound];  //play sound : completed
             }
         }
@@ -358,6 +367,12 @@ int hold = 0;
         {
             [self PlayRightSound];//play sound : rotate right
         }
+        
+        if((-5 < degrees || degrees < 5) && repflag == 1)
+        {
+            repcomplete++;
+        }
+        
     }  
 }
 
@@ -366,6 +381,10 @@ int hold = 0;
 {
     if(sessionStart)
     {
+        timecount++;
+        if(timecount == 10) //this was added to allow degrees to update more often, but makes timer a little buggy
+        {
+            timecount = 0;
         int endtime = 50;// = endtimefunction();
         
         timer = timer + 1; //this counts by 2s?
@@ -374,8 +393,8 @@ int hold = 0;
         
         NSLog(@"%i\n",timer);
         
-        
-        
+        [self.YawLabel setText:[NSString stringWithFormat:@"%.2f ",degrees]]; //this works, but only updates once per second
+                
         if((timer == endtime) || (timer > endtime))
         {
             [samplingtimer invalidate];
@@ -390,7 +409,7 @@ int hold = 0;
             [self.timerlabel2 setText:[NSString stringWithFormat:@"Good Job!!"]];
             
         }
-        
+        }
         
     }
     
