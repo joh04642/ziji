@@ -37,7 +37,7 @@ static sqlite3_stmt *updateStmt = nil;
 				
 				sessionTypeListObj.isDirty = NO;
 				
-				[appDelegate.SessionTypeListArray addObject:sessionTypeListObj];
+				//[appDelegate.SessionTypeListArray addObject:sessionTypeListObj];
 				//[sessionTypeListObj release];
 			}
 		}

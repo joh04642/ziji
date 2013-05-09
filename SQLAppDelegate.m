@@ -18,9 +18,9 @@
 @synthesize navigationController;
 @synthesize SessionArray;
 @synthesize SessionTypeArray;
-@synthesize SessionTypeListArray;
+//@synthesize SessionTypeListArray;
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {
+/*- (void)applicationDidFinishLaunching:(UIApplication *)application {
 	
 	//Copy database to the user's phone if needed.
 	[self copyDatabaseIfNeeded];
@@ -36,19 +36,19 @@
 	// Configure and show the window
 	[window addSubview:[navigationController view]];
 	[window makeKeyAndVisible];
-}
+}*/
 
 
-- (void)applicationWillTerminate:(UIApplication *)application {
+//- (void)applicationWillTerminate:(UIApplication *)application {
 	// Save data if appropriate
-	[self.SessionTypeListArray makeObjectsPerformSelector:@selector(saveAllData)];
+//	[self.SessionTypeListArray makeObjectsPerformSelector:@selector(saveAllData)];
     
-	[SessionTypeList finalizeStatements];
-}
+//	[SessionTypeList finalizeStatements];
+//}
 
-- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
-    [self.SessionTypeListArray makeObjectsPerformSelector:@selector(saveAllData)];
-}
+//- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
+//    [self.SessionTypeListArray makeObjectsPerformSelector:@selector(saveAllData)];
+//}
 
 - (void)dealloc {
     //[SessionTypeListArray release];
@@ -75,19 +75,19 @@
 	}	
 }
 
-- (void) addSessionTypeList:(SessionTypeList *)sessionTypeListObj {
+//- (void) addSessionTypeList:(SessionTypeList *)sessionTypeListObj {
     
-    [sessionTypeListObj addSessionTypeList];
+//    [sessionTypeListObj addSessionTypeList];
     
-    [SessionTypeListArray addObject:sessionTypeListObj];
-}
+//    [SessionTypeListArray addObject:sessionTypeListObj];
+//}
 
-- (void) removeSessionTypeList:(SessionTypeList *)sessionTypeListObj {
+//- (void) removeSessionTypeList:(SessionTypeList *)sessionTypeListObj {
     
-    [sessionTypeListObj deleteSessionTypeList];
+//    [sessionTypeListObj deleteSessionTypeList];
     
-    [SessionTypeListArray removeObject:sessionTypeListObj];
-}
+//    [SessionTypeListArray removeObject:sessionTypeListObj];
+//}
 - (void) addSessionType:(SessionType *)sessionTypeObj {
     //Add it to the database
     [sessionTypeObj addSessionType];

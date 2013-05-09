@@ -19,7 +19,7 @@
 	
 	//To hold a list of Session objects
 	NSMutableArray *SessionArray;
-    NSMutableArray *SessionTypeListArray;
+    //NSMutableArray *SessionTypeListArray;
     NSMutableArray *SessionTypeArray;
 }
 
@@ -28,13 +28,13 @@
 
 @property (nonatomic, retain) NSMutableArray *SessionArray;
 @property (nonatomic, retain) NSMutableArray *SessionTypeArray;
-@property (nonatomic, retain) NSMutableArray *SessionTypeListArray;
+//@property (nonatomic, retain) NSMutableArray *SessionTypeListArray;
 
 - (void) copyDatabaseIfNeeded;
 - (NSString *) getDBPath;
 
-- (void) addSessionTypeList:(SessionTypeList *)sessionTypeListObj;
-- (void) removeSessionTypeList:(SessionTypeList *)sessionTypeListObj;
+//- (void) addSessionTypeList:(SessionTypeList *)sessionTypeListObj;
+//- (void) removeSessionTypeList:(SessionTypeList *)sessionTypeListObj;
 
 - (void) addSession:(Session *)sessionObj;
 - (void) addSessionType: (SessionType *)sessionTypeObj;

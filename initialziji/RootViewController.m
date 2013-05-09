@@ -39,7 +39,6 @@
     
 	//Get the object from the array
 	SessionType *SessionTypeObj = [appDelegate.SessionTypeArray objectAtIndex:indexPath.row];
-    
 	//Set the coffename.
 	cell.textLabel.text = SessionTypeObj.session_name;  //this could look like cell.textlabel.text to solve warning//
     

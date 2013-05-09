@@ -21,7 +21,8 @@
     SQLAppDelegate *appDelegate;
 	NSTimer *timer1;
     NSTimer *samplingtimer;
-    
+    NSMutableArray *SessionTypeListArray;
+
     //IBOutlet UILabel *YawValue;
     //CMMotionManagerViewController *motionManager;
     //IBOutlet UILabel *Yawdetect;
@@ -51,6 +52,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *Result_degL;
 @property (weak, nonatomic) IBOutlet UILabel *Result_degR;
 @property (weak, nonatomic) IBOutlet UILabel *Result_title;
+@property (nonatomic, retain) NSMutableArray *SessionTypeListArray;
 
 - (IBAction)timerSlider:(id)sender;
 - (IBAction)repSlider:(id)sender;

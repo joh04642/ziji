@@ -13,21 +13,21 @@ NSString *datestring; //
 
 @implementation CMMotionManagerViewController
 
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)sessionTypeTable {
     return 1;
 }
 
 - (NSInteger)sessionTypeTable:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [appDelegate.SessionTypeListArray count];
+    return [self.SessionTypeListArray count];
 }
 
 - (UITableViewCell *)sessionTypeTable:(UITableView *)sessionTypeTable cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [sessionTypeTable dequeueReusableCellWithIdentifier:CellIdentifier];
 	//Get the object from the array
-	SessionTypeList *sessionTypeListObj = [appDelegate.SessionTypeListArray objectAtIndex:indexPath.row];
+	SessionTypeList *sessionTypeListObj = [self.SessionTypeListArray objectAtIndex:indexPath.row];
     
 	//Set the coffename.
 	cell.textLabel.text = sessionTypeListObj.sessionString;  //this could look like cell.textlabel.text to solve warning//
@@ -37,7 +37,7 @@ NSString *datestring; //
 }   
 
 - (void)sessionTypeTable:(UITableView *)sessionTypeTable didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	SessionTypeList *sessionTypeListObj = [appDelegate.SessionTypeListArray objectAtIndex:indexPath.row];
+	SessionTypeList *sessionTypeListObj = [self.SessionTypeListArray objectAtIndex:indexPath.row];
 	
 	//Get the detail view data if it does not exists.
 	//We only load the data we initially want and keep on loading as we need.
@@ -60,6 +60,7 @@ NSString *datestring; //
 @synthesize Result_degL = Result_degL;
 @synthesize Result_degR = Result_degR;
 @synthesize Result_title = Result_title;
+@synthesize SessionTypeListArray;
 
 @synthesize vibrateSwitch = _vibrateSwitch;
 @synthesize toneSwitch = _toneSwitch;
@@ -85,6 +86,7 @@ float degrees;
 int timecount = 0;
 float max_degrees_left = 0;
 float max_degrees_right = 0;
+int arraycreateflag = 0;
 
 @synthesize YawLabel = _YawLabel;
 
@@ -310,7 +312,11 @@ float max_degrees_right = 0;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib. 
-   
+    if(arraycreateflag == 0)
+    {
+        SessionTypeListArray = [[NSMutableArray alloc] init];
+        arraycreateflag = 1;
+    }
     motionmanager = [[CMMotionManager alloc] init];
     motionmanager.deviceMotionUpdateInterval = 1.0/60.0; //60 Hz
     accelerometer.delegate = self; // motionmanager
@@ -366,8 +372,8 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 	if(editingStyle == UITableViewCellEditingStyleDelete) {
 		
 		//Get the object to delete from the array.
-		SessionTypeList *sessionTypeListObj = [appDelegate.SessionTypeListArray objectAtIndex:indexPath.row];
-		[appDelegate removeSessionTypeList:sessionTypeListObj];
+		//SessionTypeList *sessionTypeListObj = [appDelegate.SessionTypeListArray objectAtIndex:indexPath.row];
+		//[appDelegate removeSessionTypeList:sessionTypeListObj];
 		
 		//Delete the object from the table.
 		[self.sessionTypeTable deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
@@ -602,7 +608,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (IBAction)saveButton:(id)sender {
     appDelegate = (SQLAppDelegate *)[[UIApplication sharedApplication]delegate];
-    //appDelegate = (SQLAppDelegate *)[[UIApplication sharedApplication]delegate];
+    //SQLAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
 
     SessionTypeList *sessionTypeListObj = [[SessionTypeList alloc] initWithPrimaryKey:0];
     
@@ -616,7 +622,9 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     sessionTypeListObj.isDirty = NO;
     sessionTypeListObj.isDetailViewHydrated = YES;
     
-    [appDelegate addSessionTypeList:sessionTypeListObj];
+    [SessionTypeListArray addObject:sessionTypeListObj];
+    
+    //[appDelegate addSessionTypeList:sessionTypeListObj];
     
     /*
     SessionType *SessionTypeObj = [[SessionType alloc] initWithPrimaryKey:0];
