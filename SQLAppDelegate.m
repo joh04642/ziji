@@ -10,6 +10,7 @@
 #import "RootViewController.h"
 #import "Session.h"
 #import "SessionType.h"
+#import "SessionTypeList.h"
 
 @implementation SQLAppDelegate
 
@@ -17,6 +18,7 @@
 @synthesize navigationController;
 @synthesize SessionArray;
 @synthesize SessionTypeArray;
+@synthesize SessionTypeListArray;
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
 	
@@ -25,10 +27,11 @@
 	
 	//Initialize the session array.
 	NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-	self.SessionTypeArray = tempArray;
+	self.SessionTypeListArray = tempArray;
+    //[tempArray release];
 	
 	//Once the db is copied, get the initial data to display on the screen.
-	[SessionType getInitialDataToDisplay:[self getDBPath]];
+	[SessionTypeList getInitialDataToDisplay:[self getDBPath]];
 	
 	// Configure and show the window
 	[window addSubview:[navigationController view]];
@@ -38,12 +41,20 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
 	// Save data if appropriate
-	
-	[SessionType finalizeStatements];
+	[self.SessionTypeListArray makeObjectsPerformSelector:@selector(saveAllData)];
+    
+	[SessionTypeList finalizeStatements];
 }
 
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
+    [self.SessionTypeListArray makeObjectsPerformSelector:@selector(saveAllData)];
+}
 
 - (void)dealloc {
+    //[SessionTypeListArray release];
+    //[navigationController release];
+    //[window release];
+    //[super dealloc];
 }
 
 - (void) copyDatabaseIfNeeded {
@@ -64,6 +75,19 @@
 	}	
 }
 
+- (void) addSessionTypeList:(SessionTypeList *)sessionTypeListObj {
+    
+    [sessionTypeListObj addSessionTypeList];
+    
+    [SessionTypeListArray addObject:sessionTypeListObj];
+}
+
+- (void) removeSessionTypeList:(SessionTypeList *)sessionTypeListObj {
+    
+    [sessionTypeListObj deleteSessionTypeList];
+    
+    [SessionTypeListArray removeObject:sessionTypeListObj];
+}
 - (void) addSessionType:(SessionType *)sessionTypeObj {
     //Add it to the database
     [sessionTypeObj addSessionType];

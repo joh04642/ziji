@@ -136,8 +136,8 @@ t1367188030
 s5808
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/AudioToolbox.framework/Headers/AUGraph.h
-c000000005189669D0000000000006299
-t1367959197
+c00000000518B9D240000000000006299
+t1368104228
 s25241
 i<Availability.h>
 i<CoreAudio/CoreAudioTypes.h>
@@ -146,16 +146,16 @@ i<CoreAudioTypes.h>
 i<AudioUnit.h>
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/AudioToolbox.framework/Headers/AudioConverter.h
-c000000005189669D000000000000AD8A
-t1367959197
+c00000000518B9D24000000000000AD8A
+t1368104228
 s44426
 i<Availability.h>
 i<CoreAudio/CoreAudioTypes.h>
 i<CoreAudioTypes.h>
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/AudioToolbox.framework/Headers/AudioFile.h
-c000000005189669D000000000000F428
-t1367959197
+c00000000518B9D24000000000000F428
+t1368104228
 s62504
 i<Availability.h>
 i<CoreAudio/CoreAudioTypes.h>
@@ -164,8 +164,8 @@ i<CoreAudioTypes.h>
 i<CoreFoundation.h>
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/AudioToolbox.framework/Headers/AudioFileStream.h
-c000000005189669D0000000000004BFA
-t1367959197
+c00000000518B9D240000000000004BFA
+t1368104228
 s19450
 i<Availability.h>
 i<CoreAudio/CoreAudioTypes.h>
@@ -174,16 +174,16 @@ i<CoreAudioTypes.h>
 i<AudioFile.h>
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/AudioToolbox.framework/Headers/AudioFormat.h
-c000000005189669D000000000000718C
-t1367959197
+c00000000518B9D24000000000000718C
+t1368104228
 s29068
 i<Availability.h>
 i<CoreAudio/CoreAudioTypes.h>
 i<CoreAudioTypes.h>
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/AudioToolbox.framework/Headers/AudioQueue.h
-c000000005189669D0000000000012B43
-t1367959197
+c00000000518B9D240000000000012B43
+t1368104228
 s76611
 i<Availability.h>
 i<CoreAudio/CoreAudioTypes.h>
@@ -193,8 +193,8 @@ i<CoreFoundation.h>
 i<dispatch/dispatch.h>
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/AudioToolbox.framework/Headers/AudioServices.h
-c000000005189669D00000000000147D8
-t1367959197
+c00000000518B9D2400000000000147D8
+t1368104228
 s83928
 i<TargetConditionals.h>
 i<Availability.h>
@@ -206,8 +206,8 @@ i<CFString.h>
 i<CFURL.h>
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/AudioToolbox.framework/Headers/AudioToolbox.h
-c000000005189669D0000000000000A21
-t1367959197
+c00000000518B9D240000000000000A21
+t1368104228
 s2593
 i<Availability.h>
 i<TargetConditionals.h>
@@ -242,15 +242,15 @@ i<AudioServices.h>
 i<stdio.h>
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/AudioToolbox.framework/Headers/CAFFile.h
-c000000005189669D0000000000002F77
-t1367959197
+c00000000518B9D240000000000002F77
+t1368104228
 s12151
 i<CoreAudio/CoreAudioTypes.h>
 i<CoreAudioTypes.h>
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/AudioToolbox.framework/Headers/ExtendedAudioFile.h
-c000000005189669D0000000000005E3B
-t1367959197
+c00000000518B9D240000000000005E3B
+t1368104228
 s24123
 i<Availability.h>
 i<CoreFoundation/CoreFoundation.h>
@@ -259,8 +259,8 @@ i<CoreFoundation.h>
 i<AudioFile.h>
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/AudioToolbox.framework/Headers/MusicPlayer.h
-c000000005189669D000000000000FF0A
-t1367959197
+c00000000518B9D24000000000000FF0A
+t1368104228
 s65290
 i<Availability.h>
 i<CoreFoundation/CoreFoundation.h>
@@ -270,57 +270,73 @@ i<CoreMIDI/MIDIServices.h>
 i<AudioToolbox/CoreAudioClock.h>
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/Pop.aiff
-c000000005175AA5700000000000005EE
-t1366665815
+c00000000518B9D2400000000000005EE
+t1368104228
 s1518
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/SQLAppDelegate.h
-c00000000518824670000000000000370
-t1367876711
-s880
+c00000000518BA41A000000000000047D
+t1368106010
+s1149
 i<UIKit/UIKit.h>
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/SQLAppDelegate.m
-c00000000518965B20000000000000A22
-t1367958962
-s2594
+c00000000518BAE7B0000000000000D6A
+t1368108667
+s3434
 i"SQLAppDelegate.h"
 i"RootViewController.h"
 i"Session.h"
 i"SessionType.h"
+i"SessionTypeList.h"
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/Session.h
-c000000005182C2A0000000000000053D
-t1367524000
+c00000000518B9D24000000000000053D
+t1368104228
 s1341
 i<Foundation/Foundation.h>
 i<UIKit/UIKit.h>
 i<sqlite3.h>
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/Session.m
-c000000005182C5BE0000000000000CB6
-t1367524798
+c00000000518B9D240000000000000CB6
+t1368104228
 s3254
 i"SQLAppDelegate.h"
 i"Session.h"
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h
-c0000000051895BF90000000000000572
-t1367956473
+c00000000518B9D240000000000000572
+t1368104228
 s1394
 i<Foundation/Foundation.h>
 i<UIKit/UIKit.h>
 i<sqlite3.h>
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m
-c0000000051884A3A0000000000000BDC
-t1367886394
+c00000000518B9D240000000000000BDC
+t1368104228
 s3036
 i"SessionType.h"
 i"SQLAppDelegate.h"
 
+N/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionTypeList.h
+c00000000518BA81F0000000000000369
+t1368107039
+s873
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+i<sqlite3.h>
+
+N/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionTypeList.m
+c00000000518BAE8600000000000011A9
+t1368108678
+s4521
+i"SessionTypeList.h"
+i"SQLAppDelegate.h"
+
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app
-t1367189003
+t1368104228
 s442
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app.dSYM
@@ -328,7 +344,7 @@ t2
 s0
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app/Info.plist
-t1367189001
+t1368104228
 s1044
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app/Ping.aiff
@@ -336,11 +352,11 @@ t2
 s0
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app/PkgInfo
-t1367189001
+t1368104228
 s8
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app/Pop.aiff
-t1367189002
+t1368104228
 s1518
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app/Purr.aiff
@@ -348,27 +364,31 @@ t2
 s0
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app/SQL-Info.plist
-t1367189003
+t1368104228
 s894
 
+N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app/SQL.sqlite
+t2
+s0
+
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app/background-thereapy.png
-t1367189002
+t1368104228
 s228562
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app/background.png
-t1367189002
+t1368104228
 s218018
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app/en.lproj/InfoPlist.strings
-t1367189003
+t1368104228
 s42
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app/en.lproj/MainStoryboard_iPad.storyboard
-t1367189002
+t1368104228
 s5115
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app/en.lproj/MainStoryboard_iPhone.storyboard
-t1367189002
+t1368104228
 s44755
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app/forward.aiff
@@ -376,7 +396,7 @@ t2
 s0
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app/icon.png
-t1367189003
+t1368104228
 s5808
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app/initialziji
@@ -388,11 +408,11 @@ t2
 s0
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app/new session-1.png
-t1367189002
+t1368104228
 s156242
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app/patient-1.png
-t1367189002
+t1368104228
 s147645
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app/right.aiff
@@ -400,7 +420,7 @@ t2
 s0
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app/session setup-1.png
-t1367189002
+t1368104228
 s147304
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/initialziji.build/Debug-iphonesimulator/initialziji.build/Objects-normal/i386/AppDelegate.o
@@ -431,13 +451,17 @@ N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/initialziji.build/Debug-iphonesim
 t2
 s0
 
+N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/initialziji.build/Debug-iphonesimulator/initialziji.build/Objects-normal/i386/SessionTypeList.o
+t2
+s0
+
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/initialziji.build/Debug-iphonesimulator/initialziji.build/Objects-normal/i386/ViewController.o
 t2
 s0
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/initialziji.build/Debug-iphonesimulator/initialziji.build/Objects-normal/i386/initialziji.LinkFileList
-c00000000517DA609000000000000045A
-t1367189001
+c00000000518B9D24000000000000045A
+t1368104228
 s1114
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/build/initialziji.build/Debug-iphonesimulator/initialziji.build/Objects-normal/i386/main.o
@@ -445,26 +469,26 @@ t2
 s0
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/icon.png
-c00000000517DA23E00000000000016B0
-t1367188030
+c00000000518B9D2400000000000016B0
+t1368104228
 s5808
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/AppDelegate.h
-c000000005175AA57000000000000011A
-t1366665815
+c00000000518B9D24000000000000011A
+t1368104228
 s282
 i<UIKit/UIKit.h>
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/AppDelegate.m
-c000000005175AA57000000000000083B
-t1366665815
+c00000000518B9D24000000000000083B
+t1368104228
 s2107
 i"AppDelegate.h"
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/DataViewController.h
-c00000000518968A400000000000008B3
-t1367959716
-s2227
+c00000000518BC562000000000000099C
+t1368114530
+s2460
 i"AppDelegate.h"
 i<UIKit/UIKit.h>
 i<AudioToolbox/AudioToolbox.h>
@@ -475,45 +499,46 @@ i"SQLAppDelegate.h"
 i"ViewController.h"
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/DataViewController.m
-c0000000051896959000000000000402C
-t1367959897
-s16428
+c00000000518BC6D100000000000052F7
+t1368114897
+s21239
 i"DataViewController.h"
+i"SessionTypeList.h"
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/ModelController.h
-c000000005189669D00000000000002C0
-t1367959197
+c00000000518B9D2400000000000002C0
+t1368104228
 s704
 i<Foundation/Foundation.h>
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/ModelController.m
-c000000005189669D0000000000000F1A
-t1367959197
+c00000000518B9D240000000000000F1A
+t1368104228
 s3866
 i"ModelController.h"
 i"DataViewController.h"
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/Ping.aiff
-c000000005182C2A00000000000008322
-t1367524000
+c00000000518B9D240000000000008322
+t1368104228
 s33570
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/Purr.aiff
-c000000005182C2A00000000000014E6A
-t1367524000
+c00000000518B9D240000000000014E6A
+t1368104228
 s85610
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/RootViewController.h
-c0000000051895EB100000000000001F1
-t1367957169
+c00000000518B9D2400000000000001F1
+t1368104228
 s497
 i<UIKit/UIKit.h>
 i"SQLAppDelegate.h"
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/RootViewController.m
-c000000005189669D0000000000002288
-t1367959197
-s8840
+c00000000518BB0A500000000000022DC
+t1368109221
+s8924
 i"RootViewController.h"
 i"ModelController.h"
 i"DataViewController.h"
@@ -522,91 +547,96 @@ i"SQLAppDelegate.h"
 i"SessionType.h"
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/SQL-Info.plist
-c00000000516C72860000000000000635
-t1366061702
+c00000000518B9D240000000000000635
+t1368104228
 s1589
 
+N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/SQL.sqlite
+c00000000518BA05F0000000000010000
+t1368105055
+s65536
+
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/ViewController.h
-c000000005189669D0000000000000256
-t1367959197
+c00000000518B9D240000000000000256
+t1368104228
 s598
 i<UIKit/UIKit.h>
 i<CoreMotion/CoreMotion.h>
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/ViewController.m
-c000000005189669D00000000000009A0
-t1367959197
+c00000000518B9D2400000000000009A0
+t1368104228
 s2464
 i"ViewController.h"
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/background-thereapy.png
-c000000005175AA570000000000037CD2
-t1366665815
+c00000000518B9D240000000000037CD2
+t1368104228
 s228562
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/background.png
-c000000005175AA5700000000000353A2
-t1366665815
+c00000000518B9D2400000000000353A2
+t1368104228
 s218018
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/en.lproj/InfoPlist.strings
-c0000000051893544000000000000002D
-t1367946564
+c00000000518B9D24000000000000002D
+t1368104228
 s45
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/en.lproj/MainStoryboard_iPad.storyboard
-c000000005189354400000000000013FB
-t1367946564
+c00000000518B9D2400000000000013FB
+t1368104228
 s5115
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/en.lproj/MainStoryboard_iPhone.storyboard
-c0000000051893544000000000000C37B
-t1367946564
-s50043
+c00000000518BC70C000000000000CFD4
+t1368114956
+s53204
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/forward.aiff
-c000000005182C2A0000000000005A036
-t1367524000
+c00000000518B9D24000000000005A036
+t1368104228
 s368694
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/initialziji-Prefix.pch
-c000000005175AA570000000000000145
-t1366665815
+c00000000518B9D240000000000000145
+t1368104228
 s325
 i<Availability.h>
 i<UIKit/UIKit.h>
 i<Foundation/Foundation.h>
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/left.aiff
-c000000005182C2A00000000000054036
-t1367524000
+c00000000518B9D240000000000054036
+t1368104228
 s344118
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/main.m
-c0000000051884E990000000000000155
-t1367887513
+c00000000518B9D240000000000000155
+t1368104228
 s341
 i<UIKit/UIKit.h>
 i"AppDelegate.h"
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/new session-1.png
-c000000005175AA570000000000026252
-t1366665815
+c00000000518B9D240000000000026252
+t1368104228
 s156242
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/patient-1.png
-c000000005175AA5700000000000240BD
-t1366665815
+c00000000518B9D2400000000000240BD
+t1368104228
 s147645
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/right.aiff
-c000000005182C2A00000000000052036
-t1367524000
+c00000000518B9D240000000000052036
+t1368104228
 s335926
 
 N/Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/session setup-1.png
-c000000005175AA570000000000023F68
-t1366665815
+c00000000518B9D240000000000023F68
+t1368104228
 s147304
 
 N/var/folders/8w/8wG3yGCoH8qiQdIE0wQj-E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/initialziji-Prefix-gqlblgqrgxrqbbflrcbnqpiyvnoo/initialziji-Prefix.pch.pth
@@ -614,8 +644,8 @@ t1367189001
 s3356396
 
 Ninitialziji/initialziji-Info.plist
-c000000005182D61800000000000005F2
-t1367528984
+c00000000518B9D2400000000000005F2
+t1368104228
 s1522
 
 CCheck dependencies
@@ -1234,6 +1264,9 @@ o                             ;
 o4 warnings and 9 errors generated.
 lSLF07#2@61"Compile /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m388881802#388881802#0(2604"In file included from /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m:9:/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h:18:5: error: unknown type name '__unsafe_unretained'     __unsafe_unretained NSString *date_created;     ^/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h:18:34: error: expected ';' at end of declaration list     __unsafe_unretained NSString *date_created;                                  ^/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h:19:5: error: unknown type name '__unsafe_unretained'     __unsafe_unretained NSString *session_name;     ^/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h:19:25: error: duplicate member 'NSString'     __unsafe_unretained NSString *session_name;                         ^/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h:18:25: note: previous declaration is here     __unsafe_unretained NSString *date_created;                         ^/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h:19:34: error: expected ';' at end of declaration list     __unsafe_unretained NSString *session_name;                                  ^/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h:30:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed @property (nonatomic, readwrite) NSString *date_created; ^/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h:30:1: warning: default property attribute 'assign' not appropriate for non-gc object/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h:31:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed @property (nonatomic, readwrite) NSString *session_name; ^/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h:31:1: warning: default property attribute 'assign' not appropriate for non-gc object/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m:56:1: error: unknown type name '__unsafe_unretained' __unsafe_unretained NSString *date_created; ^/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m:56:29: error: expected ';' after top level declarator __unsafe_unretained NSString *date_created;                             ^                             ;/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m:57:1: error: unknown type name '__unsafe_unretained' __unsafe_unretained NSString *session_name; ^/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m:57:29: error: expected ';' after top level declarator __unsafe_unretained NSString *session_name;                             ^                             ;4 warnings and 9 errors generated.13(4@39"Unknown type name '__unsafe_unretained'388881802#79#107#2(7@78"In file included from /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m:9:388881802#0#79#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m388613432#9#0#9#0#0"0(13@96"Unknown type name '__unsafe_unretained' in /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388881802#4294967295#0#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388442920#18#5#0#0#0"0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388442920#18#5#0#0#19"unknown type name *0(4@39"Expected ';' at end of declaration list388881802#242#108#2(7@78"In file included from /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m:9:388881802#4294967295#0#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m388613432#9#0#9#0#0"0(13@96"Expected ';' at end of declaration list in /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388881802#4294967295#0#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388442920#18#34#0#0#0"0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388442920#18#34#0#0#10"expected *0(4@39"Unknown type name '__unsafe_unretained'388881802#435#107#2(7@78"In file included from /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m:9:388881802#4294967295#0#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m388613432#9#0#9#0#0"0(13@96"Unknown type name '__unsafe_unretained' in /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388881802#4294967295#0#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388442920#19#5#0#0#0"0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388442920#19#5#0#0#19"unknown type name *0(4@27"Duplicate member 'NSString'388881802#598#96#3(7@78"In file included from /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m:9:388881802#4294967295#0#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m388613432#9#0#9#0#0"0(13@84"Duplicate member 'NSString' in /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388881802#4294967295#0#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388442920#19#25#0#0#0"0(13@28"Previous declaration is here388881802#770#96#2(7@78"In file included from /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m:9:388881802#4294967295#0#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m388613432#9#0#9#0#0"0(13@85"Previous declaration is here in /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388881802#4294967295#0#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388442920#18#25#0#0#0"0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388442920#18#25#0#0#28"previous declaration is here0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388442920#19#25#0#0#18"duplicate member *0(4@39"Expected ';' at end of declaration list388881802#942#108#2(7@78"In file included from /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m:9:388881802#4294967295#0#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m388613432#9#0#9#0#0"0(13@96"Expected ';' at end of declaration list in /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388881802#4294967295#0#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388442920#19#34#0#0#0"0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388442920#19#34#0#0#10"expected *0(22@77"No 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed388881802#1135#147#2(7@78"In file included from /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m:9:388881802#4294967295#0#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m388613432#9#0#9#0#0"0(13@134"No 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed in /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388881802#4294967295#0#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388442920#30#1#0#0#0"0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388442920#30#1#0#0#77"no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed0(22@69"Default property attribute 'assign' not appropriate for non-gc object388881802#1343#139#2(7@78"In file included from /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m:9:388881802#4294967295#0#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m388613432#9#0#9#0#0"0(13@126"Default property attribute 'assign' not appropriate for non-gc object in /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388881802#4294967295#0#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388442920#30#1#0#0#0"0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388442920#30#1#0#0#69"default property attribute 'assign' not appropriate for non-gc object0(22@77"No 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed388881802#1482#147#2(7@78"In file included from /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m:9:388881802#4294967295#0#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m388613432#9#0#9#0#0"0(13@134"No 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed in /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388881802#4294967295#0#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388442920#31#1#0#0#0"0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388442920#31#1#0#0#77"no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed0(22@69"Default property attribute 'assign' not appropriate for non-gc object388881802#1690#139#2(7@78"In file included from /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m:9:388881802#4294967295#0#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m388613432#9#0#9#0#0"0(13@126"Default property attribute 'assign' not appropriate for non-gc object in /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388881802#4294967295#0#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388442920#31#1#0#0#0"0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.h388442920#31#1#0#0#69"default property attribute 'assign' not appropriate for non-gc object0(4@39"Unknown type name '__unsafe_unretained'388881802#1829#107#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m388613432#56#1#0#0#19"unknown type name *0(4@39"Expected ';' after top level declarator388881802#1984#108#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m388613432#56#29#0#0#10"expected *0(4@39"Unknown type name '__unsafe_unretained'388881802#2199#107#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m388613432#57#1#0#0#19"unknown type name *0(4@39"Expected ';' after top level declarator388881802#2354#108#0(6@53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m388613432#57#29#0#0#10"expected *0(0#0#53"/Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m2427159024#2170"    cd /Users/macbook/Desktop/zijiKAYIITA/ziji    setenv LANG en_US.US-ASCII    setenv PATH "/Library/Developer 3.2.6/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Library/Developer 3.2.6/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Library/Developer 3.2.6/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang" -x objective-c -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wunused-variable -DDEBUG=1 -isysroot "/Library/Developer 3.2.6/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk" -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/macbook/Desktop/zijiKAYIITA/ziji/build/initialziji.build/Debug-iphonesimulator/initialziji.build/initialziji-generated-files.hmap -I/Users/macbook/Desktop/zijiKAYIITA/ziji/build/initialziji.build/Debug-iphonesimulator/initialziji.build/initialziji-own-target-headers.hmap -I/Users/macbook/Desktop/zijiKAYIITA/ziji/build/initialziji.build/Debug-iphonesimulator/initialziji.build/initialziji-all-target-headers.hmap -iquote /Users/macbook/Desktop/zijiKAYIITA/ziji/build/initialziji.build/Debug-iphonesimulator/initialziji.build/initialziji-project-headers.hmap -F/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator -F/Users/macbook/Desktop/zijiKAYIITA/ziji -I/Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/include -I/Users/macbook/Desktop/zijiKAYIITA/ziji/build/initialziji.build/Debug-iphonesimulator/initialziji.build/DerivedSources/i386 -I/Users/macbook/Desktop/zijiKAYIITA/ziji/build/initialziji.build/Debug-iphonesimulator/initialziji.build/DerivedSources -include /var/folders/8w/8wG3yGCoH8qiQdIE0wQj-E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/initialziji-Prefix-gqlblgqrgxrqbbflrcbnqpiyvnoo/initialziji-Prefix.pch -c /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionType.m -o /Users/macbook/Desktop/zijiKAYIITA/ziji/build/initialziji.build/Debug-iphonesimulator/initialziji.build/Objects-normal/i386/SessionType.o1#
 
+CCompileC build/initialziji.build/Debug-iphonesimulator/initialziji.build/Objects-normal/i386/SessionTypeList.o /Users/macbook/Desktop/zijiKAYIITA/ziji/SessionTypeList.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
 CCompileC build/initialziji.build/Debug-iphonesimulator/initialziji.build/Objects-normal/i386/ViewController.o /Users/macbook/Desktop/zijiKAYIITA/ziji/initialziji/ViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 r0
 
@@ -1311,6 +1344,9 @@ xPop.aiff
 lSLF07#2@13"Copy Pop.aiff388881802#388881802#0(0"0(0#0#48"/Users/macbook/Desktop/zijiKAYIITA/ziji/Pop.aiff2427159024#517"    cd /Users/macbook/Desktop/zijiKAYIITA/ziji    setenv PATH "/Library/Developer 3.2.6/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Library/Developer 3.2.6/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Library/Developer 3.2.6/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp" -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/macbook/Desktop/zijiKAYIITA/ziji/Pop.aiff /Users/macbook/Desktop/zijiKAYIITA/ziji/build/Debug-iphonesimulator/initialziji.app0#
 
 CCpResource build/Debug-iphonesimulator/initialziji.app/Purr.aiff initialziji/Purr.aiff
+r0
+
+CCpResource build/Debug-iphonesimulator/initialziji.app/SQL.sqlite initialziji/SQL.sqlite
 r0
 
 CCpResource build/Debug-iphonesimulator/initialziji.app/background-thereapy.png initialziji/background-thereapy.png

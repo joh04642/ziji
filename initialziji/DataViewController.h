@@ -14,6 +14,8 @@
 #import "SQLAppDelegate.h"
 #import "ViewController.h"
 
+@class SessionTypeList;
+
 @interface CMMotionManagerViewController : UIViewController <UIAccelerometerDelegate>
 {
     SQLAppDelegate *appDelegate;
@@ -43,6 +45,13 @@
 @property (weak, nonatomic) IBOutlet UITextField *timerlabel;
 @property (weak, nonatomic) IBOutlet UILabel *timerlabel2;
 @property (weak, nonatomic) IBOutlet UILabel *estimatedtimelabel;
+//results' labels
+@property (weak, nonatomic) IBOutlet UILabel *Result_time;
+@property (weak, nonatomic) IBOutlet UILabel *Result_reps;
+@property (weak, nonatomic) IBOutlet UILabel *Result_degL;
+@property (weak, nonatomic) IBOutlet UILabel *Result_degR;
+@property (weak, nonatomic) IBOutlet UILabel *Result_title;
+
 - (IBAction)timerSlider:(id)sender;
 - (IBAction)repSlider:(id)sender;
 - (IBAction)degLeftSlider:(id)sender;
@@ -53,6 +62,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *repSliderLabel;
 @property (weak, nonatomic) IBOutlet UILabel *degLeftSliderLabel;
 @property (weak, nonatomic) IBOutlet UILabel *degRightSliderLabel;
+
+
 
 - (IBAction)vibrateSwitch:(id)sender;
 - (IBAction)toneSwitch:(id)sender;

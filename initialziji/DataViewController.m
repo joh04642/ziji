@@ -7,19 +7,64 @@
 //
 
 #import "DataViewController.h"
+#import "SessionTypeList.h"
 
 NSString *datestring; //
 
-
 @implementation CMMotionManagerViewController
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)sessionTypeTable {
+    return 1;
+}
+
+- (NSInteger)sessionTypeTable:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [appDelegate.SessionTypeListArray count];
+}
+
+- (UITableViewCell *)sessionTypeTable:(UITableView *)sessionTypeTable cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [sessionTypeTable dequeueReusableCellWithIdentifier:CellIdentifier];
+	//Get the object from the array
+	SessionTypeList *sessionTypeListObj = [appDelegate.SessionTypeListArray objectAtIndex:indexPath.row];
+    
+	//Set the coffename.
+	cell.textLabel.text = sessionTypeListObj.sessionString;  //this could look like cell.textlabel.text to solve warning//
+    
+    // Set up the cell
+    return cell;
+}   
+
+- (void)sessionTypeTable:(UITableView *)sessionTypeTable didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	SessionTypeList *sessionTypeListObj = [appDelegate.SessionTypeListArray objectAtIndex:indexPath.row];
+	
+	//Get the detail view data if it does not exists.
+	//We only load the data we initially want and keep on loading as we need.
+	[sessionTypeListObj hydrateDetailViewData];
+	
+	//CMMotionmanagerViewController.sessionTypeListObj = sessionTypeListObj;
+	
+	//[self.navigationController pushViewController:CMMotionManagerViewController animated:YES];
+
+}
+
 @synthesize SessionNameField = _SessionNameField;
 @synthesize timerSliderLabel = timerSliderLabel;
 @synthesize repSliderLabel = repSliderLabel;
 @synthesize degLeftSliderLabel = degLeftSliderLabel;
 @synthesize degRightSliderLabel = degRightSliderLabel;
+
+@synthesize Result_time = Result_time;
+@synthesize Result_reps = Result_reps;
+@synthesize Result_degL = Result_degL;
+@synthesize Result_degR = Result_degR;
+@synthesize Result_title = Result_title;
+
 @synthesize vibrateSwitch = _vibrateSwitch;
 @synthesize toneSwitch = _toneSwitch;
 @synthesize voiceSwitch = _voiceSwitch;
+
 //@synthesize sessionTypeClicker;
 //@synthesize sessionTypeTable = _sessionTypeTable;
 
@@ -38,6 +83,8 @@ int repcomplete = 0;
 int repflag = 0;
 float degrees;
 int timecount = 0;
+float max_degrees_left = 0;
+float max_degrees_right = 0;
 
 @synthesize YawLabel = _YawLabel;
 
@@ -289,8 +336,9 @@ int timecount = 0;
     NSString *datestring;
     datestring = [dateformat stringFromDate:currentDate]; //Hopefully a string display date
     //[dateformat release];  //memory , ARC does this function
-    
-    
+	
+	appDelegate = (SQLAppDelegate *)[[UIApplication sharedApplication] delegate];
+	
     
         
    
@@ -311,6 +359,21 @@ int timecount = 0;
        
     
 }
+
+- (void)tableView:(UITableView *)tv commitEditingStyle:(UITableViewCellEditingStyle)editingStyle 
+forRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	if(editingStyle == UITableViewCellEditingStyleDelete) {
+		
+		//Get the object to delete from the array.
+		SessionTypeList *sessionTypeListObj = [appDelegate.SessionTypeListArray objectAtIndex:indexPath.row];
+		[appDelegate removeSessionTypeList:sessionTypeListObj];
+		
+		//Delete the object from the table.
+		[self.sessionTypeTable deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+	}
+}
+
 
 -(void)samplingtimerfired
 {
@@ -336,6 +399,10 @@ int timecount = 0;
         
         if(((degrees == degleft) || degrees > degleft) && (degrees >= 0))
         {
+            if(degrees > max_degrees_left)
+            {
+                max_degrees_left = degrees;
+            }
             //record rep complete
             hold++;
             if(hold ==5)
@@ -353,6 +420,10 @@ int timecount = 0;
         
         if(((degrees == degright) || degrees < degright) && (degrees <= 0))
         {
+            if(abs(degrees) > max_degrees_right)
+            {
+                max_degrees_right = abs(degrees);
+            }
             //record rep complete
             hold++;
             if(hold == 5)
@@ -410,7 +481,6 @@ int timecount = 0;
             
         }
         }
-        
     }
     
 }
@@ -434,6 +504,11 @@ int timecount = 0;
     [self setYawLabel:nil];
     [self setSessionTypeTable:nil];
     [self setSessionTypeTable:nil];
+    [self setResult_time:nil];
+    [self setResult_reps:nil];
+    [self setResult_degL:nil];
+    [self setResult_degR:nil];
+    [self setResult_title:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -442,9 +517,35 @@ int timecount = 0;
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+	
+	[self.sessionTypeTable reloadData];
     self.dataLabel.text = [self.dataObject description];
 }
 
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+        
+        [super setEditing:editing animated:animated];
+        [self.sessionTypeTable setEditing:editing animated:YES];
+        
+        //Do not let the user add if the app is in edit mode.
+        if(editing)
+            self.navigationItem.leftBarButtonItem.enabled = NO;
+        else
+            self.navigationItem.leftBarButtonItem.enabled = YES;
+}	
+    
+- (void) add_Clicked:(id)sender {
+        /*
+        if(avController == nil)
+            avController = [[CMMotionManagerViewController alloc] initWithNibName:@"AddView" bundle:nil];
+        
+        if(CMMotionManagerViewController == nil)
+            addCMMotionManagerViewController = [[UINavigationController alloc] initWithRootViewController:avController];
+        
+        [self.navigationController presentModalViewController:addNavigationController animated:YES];
+         */
+}
+    
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -500,10 +601,24 @@ int timecount = 0;
 
 
 - (IBAction)saveButton:(id)sender {
-    //SQLAppDelegate *appDelegate = (SQLAppDelegate *)[[UIApplication sharedApplication]delegate];
+    appDelegate = (SQLAppDelegate *)[[UIApplication sharedApplication]delegate];
     //appDelegate = (SQLAppDelegate *)[[UIApplication sharedApplication]delegate];
 
-
+    SessionTypeList *sessionTypeListObj = [[SessionTypeList alloc] initWithPrimaryKey:0];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd-MM-yyyy"];
+    NSString *strDate = [dateFormatter stringFromDate:[NSDate date]];
+    
+    NSString *combined = [NSString stringWithFormat:@"%@%@%@%@%@%@", self.SessionNameField.text, self.timerSliderLabel.text, self.degLeftSliderLabel.text, self.degRightSliderLabel.text, self.repSliderLabel.text, strDate];
+    sessionTypeListObj.sessionString = combined;
+    
+    sessionTypeListObj.isDirty = NO;
+    sessionTypeListObj.isDetailViewHydrated = YES;
+    
+    [appDelegate addSessionTypeList:sessionTypeListObj];
+    
+    /*
     SessionType *SessionTypeObj = [[SessionType alloc] initWithPrimaryKey:0];
     
     SessionTypeObj.session_name = self.SessionNameField.text;
@@ -527,40 +642,22 @@ int timecount = 0;
     SessionTypeObj.isDetailViewHydrated = YES;
     //Add the object
     [appDelegate addSessionType:SessionTypeObj];
-    
+    */
     
     //Dismiss the controller.
     
     [self.navigationController dismissModalViewControllerAnimated:YES];
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+- (void) cancel_Clicked:(id)sender {
+        [self.navigationController dismissModalViewControllerAnimated:YES];
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
+        
+        [theTextField resignFirstResponder];
+        return YES;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [appDelegate.SessionTypeArray count];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-	//Get the object from the array
-	SessionType *SessionTypeObj = [appDelegate.SessionTypeArray objectAtIndex:indexPath.row];
-    
-	//Set the coffename.
-	cell.textLabel.text = SessionTypeObj.session_name;  //this could look like cell.textlabel.text to solve warning//
-    
-    // Set up the cell
-    return cell;
-}   
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic -- create and push a new view controller
-}
 
 - (IBAction)vibrateSwitch:(id)sender {
     UseVibrateOption = _vibrateSwitch.on;
@@ -575,6 +672,13 @@ int timecount = 0;
 }
 
 - (IBAction)stopButton:(id)sender { //this works, but is a little buggy, should stop timers,maybe
+    [self.timerlabel2 setText:[NSString stringWithFormat:@"Good Job!!"]];
+    [self.Result_time setText:[NSString stringWithFormat:@"%d seconds",timer/2]];
+    [self.Result_reps setText:[NSString stringWithFormat:@"%d reps", repcomplete]];
+    [self.Result_degL setText:[NSString stringWithFormat:@"%.2f deg left", max_degrees_left]];
+    [self.Result_degR setText:[NSString stringWithFormat:@"%.2f deg right", max_degrees_right]];
+    [self.Result_title setText:[NSString stringWithFormat:@"RESULTS"]];
+    
     UseVibrateOption = 0;
     PlaySoundOption = 0;
     UseVoiceOption = 0;
@@ -586,7 +690,7 @@ int timecount = 0;
     timer1 = nil;
     samplingtimer = nil;
     sessionStart = 0; 
-    timer = 0;
+    timer = 0; 
 }
 
 - (IBAction)startSessionButton:(id)sender {

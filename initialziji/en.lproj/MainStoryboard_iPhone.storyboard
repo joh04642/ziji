@@ -107,9 +107,6 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="sZx-sZ-UMa" kind="push" id="USp-Mc-LwX"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -118,35 +115,6 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="836" y="131"/>
-        </scene>
-        <scene sceneID="ZXb-24-2eg">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B9i-vy-5yC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="sZx-sZ-UMa" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dvv-M3-xC2">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xE0-UR-YQD">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="sZx-sZ-UMa" id="bka-xg-lyz"/>
-                            <outlet property="delegate" destination="sZx-sZ-UMa" id="aQO-Vd-O6t"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Ziji" id="bHR-wM-TH4"/>
-                </tableViewController>
-            </objects>
-            <point key="canvasLocation" x="1428" y="131"/>
         </scene>
         <scene sceneID="8mS-oA-BJU">
             <objects>
@@ -215,7 +183,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dog-ip-m5V">
-                                <rect key="frame" x="51" y="85" width="228" height="242"/>
+                                <rect key="frame" x="51" y="87" width="228" height="242"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -229,6 +197,10 @@
                                         </view>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZE0-Xc-ziV" id="GXK-u1-CyN"/>
+                                    <outlet property="delegate" destination="ZE0-Xc-ziV" id="lZp-Dx-XYd"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -495,14 +467,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0 sec" lineBreakMode="tailTruncation" minimumFontSize="10" id="2hA-ek-ZUW">
-                                <rect key="frame" x="139" y="100" width="42" height="21"/>
+                                <rect key="frame" x="139" y="75" width="151" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vBV-vn-2AG">
-                                <rect key="frame" x="124" y="305" width="72" height="37"/>
+                                <rect key="frame" x="124" y="302" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Stop">
@@ -523,12 +495,52 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=" " lineBreakMode="tailTruncation" minimumFontSize="10" id="Rxf-3X-aCN">
+                                <rect key="frame" x="20" y="181" width="79" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Time elapsed" lineBreakMode="tailTruncation" minimumFontSize="10" id="3ha-pQ-9Mo">
+                                <rect key="frame" x="20" y="230" width="103" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Number of Reps" lineBreakMode="tailTruncation" minimumFontSize="10" id="gKe-DQ-4sU">
+                                <rect key="frame" x="175" y="230" width="125" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Max degrees R" lineBreakMode="tailTruncation" minimumFontSize="10" id="B8y-S5-7wV">
+                                <rect key="frame" x="184" y="273" width="116" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Max degrees L" lineBreakMode="tailTruncation" minimumFontSize="10" id="EYT-1A-7ue">
+                                <rect key="frame" x="20" y="273" width="114" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.89411771297454834" blue="0.65490198135375977" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Ziji" id="rPL-b5-CEo"/>
                     <connections>
+                        <outlet property="Result_title" destination="Rxf-3X-aCN" id="fjU-U2-reb"/>
                         <outlet property="YawLabel" destination="ZZc-GX-Cs5" id="Qrh-f1-EaO"/>
+                        <outlet property="result_degL" destination="EYT-1A-7ue" id="Daj-sB-kMS"/>
+                        <outlet property="result_degR" destination="B8y-S5-7wV" id="L1V-Px-RKf"/>
+                        <outlet property="result_reps" destination="gKe-DQ-4sU" id="6Ok-PN-ftY"/>
+                        <outlet property="result_time" destination="3ha-pQ-9Mo" id="DIU-wv-zul"/>
                         <outlet property="timerlabel2" destination="2hA-ek-ZUW" id="9Gg-JN-0ft"/>
                     </connections>
                 </viewController>
@@ -566,6 +578,42 @@
         <image name="patient-1.png" width="320" height="480"/>
         <image name="session setup-1.png" width="320" height="480"/>
     </resources>
+    <classes>
+        <class className="CMMotionManagerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CMMotionManagerViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="degLeftSlider:"/>
+                <relationship kind="action" name="degRightSlider:"/>
+                <relationship kind="action" name="repSlider:"/>
+                <relationship kind="action" name="saveButton:"/>
+                <relationship kind="action" name="startSessionButton:"/>
+                <relationship kind="action" name="stopButton:"/>
+                <relationship kind="action" name="timerSlider:"/>
+                <relationship kind="action" name="toneSwitch:"/>
+                <relationship kind="action" name="vibrateSwitch:"/>
+                <relationship kind="action" name="voiceSwitch:"/>
+                <relationship kind="outlet" name="Result_degL" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="Result_degR" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="Result_reps" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="Result_time" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="Result_title" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="SessionNameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="YawLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dataLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="degLeftSliderLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="degRightSliderLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="estimatedtimelabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="repSliderLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sessionTypeTable" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="timerSliderLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timerlabel" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="timerlabel2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="toneSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="vibrateSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="voiceSwitch" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

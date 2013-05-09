@@ -21,11 +21,11 @@
 		BF8406DB17258DCA00BC8A11 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8406DA17258DC900BC8A11 /* AudioToolbox.framework */; };
 		BF8406E11725931C00BC8A11 /* Pop.aiff in Resources */ = {isa = PBXBuildFile; fileRef = BF8406E01725931C00BC8A11 /* Pop.aiff */; };
 		BFBD46C11739742800F52FD8 /* ModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD46C01739742800F52FD8 /* ModelController.m */; };
-		BFC8B22B1732E8610055BA13 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFC8B2291732E8610055BA13 /* MainStoryboard_iPhone.storyboard */; };
 		FA23FC291725E26800DF9649 /* SQLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA23FC281725E26800DF9649 /* SQLAppDelegate.m */; };
 		FA23FC2C1725E29200DF9649 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = FA23FC2B1725E29200DF9649 /* Session.m */; };
 		FA23FC2F1725E2A000DF9649 /* SessionType.m in Sources */ = {isa = PBXBuildFile; fileRef = FA23FC2E1725E2A000DF9649 /* SessionType.m */; };
 		FA23FC331725F12800DF9649 /* SQL-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA23FC311725F12800DF9649 /* SQL-Info.plist */; };
+		FA799842173BFFD300718B5A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA799840173BFFD300718B5A /* MainStoryboard_iPhone.storyboard */; };
 		FA7FB560172F178E0043193A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7FB55F172F178E0043193A /* ViewController.m */; };
 		FA7FB562172F31680043193A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7FB561172F31680043193A /* CoreMotion.framework */; };
 		FA8983A9172727840015C83E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8983A8172727840015C83E /* libsqlite3.dylib */; };
@@ -43,6 +43,8 @@
 		FACB231516E3FCCD005CE096 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB22ED16E3FCCD005CE096 /* Foundation.framework */; };
 		FACB231D16E3FCCD005CE096 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FACB231B16E3FCCD005CE096 /* InfoPlist.strings */; };
 		FACB232016E3FCCD005CE096 /* initialzijiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FACB231F16E3FCCD005CE096 /* initialzijiTests.m */; };
+		FAE0278E173BD833000B8115 /* SQL.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FAE0278D173BD833000B8115 /* SQL.sqlite */; };
+		FAE02791173BDD54000B8115 /* SessionTypeList.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE02790173BDD54000B8115 /* SessionTypeList.m */; };
 		FAE08AA8172DDDC000E0DDAC /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE08AA7172DDDC000E0DDAC /* icon.png */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +74,6 @@
 		BF8406E01725931C00BC8A11 /* Pop.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Pop.aiff; sourceTree = SOURCE_ROOT; };
 		BFBD46C01739742800F52FD8 /* ModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelController.m; sourceTree = "<group>"; };
 		BFBD46C21739743200F52FD8 /* ModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelController.h; sourceTree = "<group>"; };
-		BFC8B22A1732E8610055BA13 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		FA23FC271725E26800DF9649 /* SQLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLAppDelegate.h; sourceTree = "<group>"; };
 		FA23FC281725E26800DF9649 /* SQLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLAppDelegate.m; sourceTree = "<group>"; };
 		FA23FC2B1725E29200DF9649 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		FA23FC301725ECE800DF9649 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
 		FA23FC311725F12800DF9649 /* SQL-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SQL-Info.plist"; sourceTree = "<group>"; };
 		FA23FC321725F12800DF9649 /* SQL-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SQL-Prefix.pch"; sourceTree = "<group>"; };
+		FA799841173BFFD300718B5A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		FA7FB55E172F178E0043193A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FA7FB55F172F178E0043193A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FA7FB561172F31680043193A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -106,6 +108,9 @@
 		FACB231C16E3FCCD005CE096 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FACB231E16E3FCCD005CE096 /* initialzijiTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = initialzijiTests.h; sourceTree = "<group>"; };
 		FACB231F16E3FCCD005CE096 /* initialzijiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = initialzijiTests.m; sourceTree = "<group>"; };
+		FAE0278D173BD833000B8115 /* SQL.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = SQL.sqlite; sourceTree = "<group>"; };
+		FAE0278F173BDD54000B8115 /* SessionTypeList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionTypeList.h; sourceTree = "<group>"; };
+		FAE02790173BDD54000B8115 /* SessionTypeList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionTypeList.m; sourceTree = "<group>"; };
 		FAE08AA7172DDDC000E0DDAC /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -146,6 +151,8 @@
 				FA23FC2D1725E2A000DF9649 /* SessionType.h */,
 				FA23FC2B1725E29200DF9649 /* Session.m */,
 				FA23FC2E1725E2A000DF9649 /* SessionType.m */,
+				FAE0278F173BDD54000B8115 /* SessionTypeList.h */,
+				FAE02790173BDD54000B8115 /* SessionTypeList.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -207,7 +214,7 @@
 				FACB230116E3FCCD005CE096 /* DataViewController.m */,
 				BFBD46C21739743200F52FD8 /* ModelController.h */,
 				BFBD46C01739742800F52FD8 /* ModelController.m */,
-				BFC8B2291732E8610055BA13 /* MainStoryboard_iPhone.storyboard */,
+				FA799840173BFFD300718B5A /* MainStoryboard_iPhone.storyboard */,
 				FACB230916E3FCCD005CE096 /* MainStoryboard_iPad.storyboard */,
 				FA7FB55E172F178E0043193A /* ViewController.h */,
 				FA7FB55F172F178E0043193A /* ViewController.m */,
@@ -220,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				FA23FC311725F12800DF9649 /* SQL-Info.plist */,
+				FAE0278D173BD833000B8115 /* SQL.sqlite */,
 				FAE08AA7172DDDC000E0DDAC /* icon.png */,
 				FA23FC321725F12800DF9649 /* SQL-Prefix.pch */,
 				FACB22F316E3FCCD005CE096 /* initialziji-Info.plist */,
@@ -332,9 +340,10 @@
 				BF0122381732E0F000378F4A /* forward.aiff in Resources */,
 				BF0122391732E0F000378F4A /* left.aiff in Resources */,
 				BF01223A1732E0F000378F4A /* right.aiff in Resources */,
-				BFC8B22B1732E8610055BA13 /* MainStoryboard_iPhone.storyboard in Resources */,
 				BF512AD71732EB07008C8506 /* Ping.aiff in Resources */,
 				BF512ADA1732EB35008C8506 /* Purr.aiff in Resources */,
+				FAE0278E173BD833000B8115 /* SQL.sqlite in Resources */,
+				FA799842173BFFD300718B5A /* MainStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +387,7 @@
 				FA23FC2F1725E2A000DF9649 /* SessionType.m in Sources */,
 				FA7FB560172F178E0043193A /* ViewController.m in Sources */,
 				BFBD46C11739742800F52FD8 /* ModelController.m in Sources */,
+				FAE02791173BDD54000B8115 /* SessionTypeList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,10 +410,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BFC8B2291732E8610055BA13 /* MainStoryboard_iPhone.storyboard */ = {
+		FA799840173BFFD300718B5A /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BFC8B22A1732E8610055BA13 /* en */,
+				FA799841173BFFD300718B5A /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
